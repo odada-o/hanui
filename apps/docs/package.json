@@ -4,11 +4,11 @@
   "private": true,
   "description": "Documentation site for HANUI",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "clean": "rm -rf .next"
+    "dev": "echo 'Docs site will be implemented in Issue #18'",
+    "build": "echo 'Docs site will be implemented in Issue #18'",
+    "start": "echo 'Docs site will be implemented in Issue #18'",
+    "lint": "echo 'Docs site will be implemented in Issue #18'",
+    "clean": "echo 'Nothing to clean yet'"
   },
   "dependencies": {
     "@hanui/react": "workspace:*",

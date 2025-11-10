@@ -1,6 +1,9 @@
 // HANUI React Component Library
 // Korean Government Design System (KRDS) based components
 
+// Import styles
+import './styles.css';
+
 export const version = '0.0.0';
 
 // Components will be exported here

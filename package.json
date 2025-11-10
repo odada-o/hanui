@@ -2,6 +2,7 @@
   "name": "hanui",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "description": "Korean Government Design System (KRDS) based React Component Library",
   "author": "odada-o",
   "license": "MIT",
@@ -18,7 +19,11 @@
     "clean": "turbo run clean && rm -rf node_modules"
   },
   "devDependencies": {
-    "turbo": "^2.3.3",
-    "prettier": "^3.4.2"
+    "@tailwindcss/postcss": "^4.1.17",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "prettier": "^3.4.2",
+    "tailwindcss": "^4.1.17",
+    "turbo": "^2.3.3"
   }
 }
