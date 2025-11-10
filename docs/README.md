@@ -10,6 +10,7 @@
 ### 1. 기획 문서 ([planning/](./planning))
 
 #### [PRD.md](./planning/PRD.md) - 제품 요구사항 정의서
+
 ```
 프로젝트의 모든 것이 담긴 핵심 문서
 
@@ -29,6 +30,7 @@
 ```
 
 #### [DIFFERENTIATION.md](./planning/DIFFERENTIATION.md) - 차별화 전략
+
 ```
 "이미 있는데 왜 또 만들어?"에 대한 답
 
@@ -49,6 +51,7 @@
 ```
 
 #### [ROADMAP.md](./planning/ROADMAP.md) - 개발 로드맵
+
 ```
 4단계 12개월 계획 (주차별 상세)
 
@@ -72,6 +75,7 @@ Phase 4 (9-12개월): AI 협업 & 공식화 추진 ⭐ (변경)
 ```
 
 #### [GOVERNMENT_CERTIFICATION.md](./planning/GOVERNMENT_CERTIFICATION.md) - 정부 공식 인증 전략 ⭐ (신규)
+
 ```
 3단계 공식 인증 로드맵
 
@@ -97,6 +101,7 @@ Level 3: 완전 공식화 (2-3년)
 ```
 
 #### [ISSUE_PLANNING.md](./planning/ISSUE_PLANNING.md) - 이슈 전체 정리 ⭐ (신규)
+
 ```
 GitHub Issue 생성 전 전체 로드맵
 
@@ -118,6 +123,7 @@ GitHub Issue 생성 전 전체 로드맵
 ```
 
 #### [DECISION_SUMMARY.md](./planning/DECISION_SUMMARY.md) - 전략 결정 요약 ⭐ (신규)
+
 ```
 프로젝트 시작 전 핵심 결정사항
 
@@ -141,6 +147,7 @@ GitHub Issue 생성 전 전체 로드맵
 ### 2. 기술 문서 ([technical/](./technical))
 
 #### [ARCHITECTURE.md](./technical/ARCHITECTURE.md) - 시스템 아키텍처
+
 ```
 기술 설계의 모든 것
 
@@ -166,6 +173,7 @@ GitHub Issue 생성 전 전체 로드맵
 ### 3. 디자인 문서 ([design/](./design))
 
 #### [DESIGN_REFERENCE.md](./design/DESIGN_REFERENCE.md) - 디자인 레퍼런스 ⭐ (신규)
+
 ```
 KRDS + Vercel 기반 디자인 시스템
 
@@ -206,6 +214,7 @@ KRDS + Vercel 기반 디자인 시스템
 ### 4. 경쟁 분석 ([competition/](./competition))
 
 #### [ANALYSIS.md](./competition/ANALYSIS.md) - 경쟁사 분석
+
 ```
 "이미 있는데..." 걱정 해소
 
@@ -240,6 +249,7 @@ SWOT 분석:
 ### 역할별 추천 순서
 
 #### 👨‍💼 기획자 / PM
+
 ```
 1. PRD.md (전체 이해)
    → 프로젝트 비전, 타깃 고객, 비즈니스 모델
@@ -255,6 +265,7 @@ SWOT 분석:
 ```
 
 #### 👨‍💻 개발자
+
 ```
 1. ARCHITECTURE.md (기술 설계)
    → 시스템 구조, 기술 스택
@@ -270,6 +281,7 @@ SWOT 분석:
 ```
 
 #### 🎨 디자이너
+
 ```
 1. DESIGN_REFERENCE.md (디자인 시스템)
    → Vercel 레퍼런스, 컬러/타이포그래피
@@ -285,6 +297,7 @@ SWOT 분석:
 ```
 
 #### 💼 투자자 / 파트너
+
 ```
 1. PRD.md - "비즈니스 모델" 섹션
    → 수익 구조, 시장 규모
@@ -304,12 +317,14 @@ SWOT 분석:
 ## 📊 프로젝트 개요 (요약)
 
 ### 한 줄 요약
+
 ```
 npx create-krds-app으로 시작하는 공공 웹사이트 개발 플랫폼
 = 컴포넌트 라이브러리 + Starter Kit + 접근성 도구 + Marketplace + AI
 ```
 
 ### 핵심 가치 제안
+
 ```
 Before (현재):
 - KRDS 컴포넌트 직접 구현 (2주)
@@ -325,6 +340,7 @@ After (KRDS Platform):
 ```
 
 ### 타깃 고객
+
 ```
 Primary:
 - 공공 SI 프론트엔드 개발자 (5,000명+)
@@ -337,6 +353,7 @@ Secondary:
 ```
 
 ### 비즈니스 모델
+
 ```
 Free (오픈소스):
 - create-krds-app
@@ -359,6 +376,7 @@ Marketplace (수수료 30%):
 ```
 
 ### 1년 목표
+
 ```
 기술 지표:
 - NPM 다운로드: 10,000/주
@@ -383,6 +401,7 @@ Marketplace (수수료 30%):
 ### 지금 바로 시작하기
 
 #### Step 1: 문서 정독
+
 ```bash
 # 순서대로 읽기
 1. docs/planning/PRD.md
@@ -393,6 +412,7 @@ Marketplace (수수료 30%):
 ```
 
 #### Step 2: 프로젝트 세팅
+
 ```bash
 # ROADMAP.md의 Week 1 Day 1-2 실행
 - Turborepo 설정
@@ -401,6 +421,7 @@ Marketplace (수수료 30%):
 ```
 
 #### Step 3: 검증
+
 ```bash
 # 타깃 고객 인터뷰 (10명)
 - "이런 거 있으면 쓸 것 같아?"
@@ -409,6 +430,7 @@ Marketplace (수수료 30%):
 ```
 
 #### Step 4: MVP 개발 시작
+
 ```bash
 # ROADMAP.md의 Phase 1 실행
 - 2개월 안에 배포
@@ -421,6 +443,7 @@ Marketplace (수수료 30%):
 ## 📝 문서 업데이트 정책
 
 ### 버전 관리
+
 ```
 v0.1 (2025-01-08): 초기 기획 완료
 v0.2 (예정): MVP 개발 후 실사용 피드백 반영
@@ -429,6 +452,7 @@ v1.0 (예정): 정식 출시 시 확정
 ```
 
 ### 업데이트 기준
+
 ```
 Major Update (v0.x → v1.x):
 - Phase 완료 시
@@ -448,6 +472,7 @@ Patch Update (v1.1.x → v1.1.y):
 ## 🤝 기여 방법
 
 ### 문서 개선 제안
+
 ```
 1. GitHub Issue 생성
    - 제목: [DOC] 문서명 - 제안 내용
@@ -461,6 +486,7 @@ Patch Update (v1.1.x → v1.1.y):
 ```
 
 ### 피드백 환영
+
 ```
 다음 사항에 대한 피드백 특히 환영:
 ✓ 시장 규모 추정이 맞는지

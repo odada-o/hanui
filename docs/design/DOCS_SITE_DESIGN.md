@@ -8,6 +8,7 @@
 ## 🎯 디자인 레퍼런스
 
 ### 1순위: shadcn/ui
+
 **URL**: https://ui.shadcn.com/
 
 ```
@@ -20,6 +21,7 @@
 ```
 
 ### 2순위: Radix UI
+
 **URL**: https://www.radix-ui.com/
 
 ```
@@ -92,6 +94,7 @@ hanui.dev/
 #### 핵심 특징
 
 **1. Header (shadcn/ui 스타일)**
+
 ```tsx
 - Fixed position (top-0)
 - Backdrop blur (backdrop-blur-lg)
@@ -102,6 +105,7 @@ hanui.dev/
 ```
 
 **2. Sidebar (Radix UI 스타일)**
+
 ```tsx
 - Fixed position (left-0)
 - Scroll 가능 (overflow-y-auto)
@@ -111,6 +115,7 @@ hanui.dev/
 ```
 
 **3. Content (shadcn/ui 스타일)**
+
 ```tsx
 - Max-width: 800px
 - Prose 스타일 (typography)
@@ -119,6 +124,7 @@ hanui.dev/
 ```
 
 **4. On This Page (Radix UI 스타일)**
+
 ```tsx
 - Sticky position (top-24)
 - 현재 섹션 하이라이트
@@ -175,7 +181,7 @@ export default {
     },
   },
   plugins: [require('@tailwindcss/typography')],
-}
+};
 ```
 
 ### CSS Variables (globals.css)
@@ -186,22 +192,22 @@ export default {
 @layer base {
   :root {
     /* KRDS 기반 Light Theme */
-    --background: 0 0% 100%;           /* 흰색 */
-    --foreground: 222.2 84% 4.9%;      /* 진한 회색 */
+    --background: 0 0% 100%; /* 흰색 */
+    --foreground: 222.2 84% 4.9%; /* 진한 회색 */
 
-    --muted: 210 40% 96.1%;            /* 연한 회색 배경 */
+    --muted: 210 40% 96.1%; /* 연한 회색 배경 */
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --card: 0 0% 100%;                 /* 카드 배경 */
+    --card: 0 0% 100%; /* 카드 배경 */
     --card-foreground: 222.2 84% 4.9%;
 
-    --border: 214.3 31.8% 91.4%;       /* 테두리 */
+    --border: 214.3 31.8% 91.4%; /* 테두리 */
     --input: 214.3 31.8% 91.4%;
 
-    --primary: 214 100% 40%;           /* KRDS Primary (#0066CC) */
+    --primary: 214 100% 40%; /* KRDS Primary (#0066CC) */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 174 100% 33%;         /* KRDS Secondary (#00A896) */
+    --secondary: 174 100% 33%; /* KRDS Secondary (#00A896) */
     --secondary-foreground: 0 0% 100%;
 
     --accent: 210 40% 96.1%;
@@ -209,13 +215,13 @@ export default {
 
     --ring: 214 100% 40%;
 
-    --radius: 0.5rem;                  /* 8px */
+    --radius: 0.5rem; /* 8px */
   }
 
   .dark {
     /* KRDS 기반 Dark Theme */
-    --background: 222.2 84% 4.9%;      /* 진한 배경 */
-    --foreground: 210 40% 98%;         /* 연한 텍스트 */
+    --background: 222.2 84% 4.9%; /* 진한 배경 */
+    --foreground: 210 40% 98%; /* 연한 텍스트 */
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
@@ -226,10 +232,10 @@ export default {
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
 
-    --primary: 214 100% 50%;           /* 밝은 Primary */
+    --primary: 214 100% 50%; /* 밝은 Primary */
     --primary-foreground: 222.2 47.4% 11.2%;
 
-    --secondary: 174 100% 40%;         /* 밝은 Secondary */
+    --secondary: 174 100% 40%; /* 밝은 Secondary */
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --accent: 217.2 32.6% 17.5%;
@@ -245,7 +251,9 @@ export default {
   }
   body {
     @apply bg-background text-foreground;
-    font-feature-settings: 'rlig' 1, 'calt' 1;
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
   }
 }
 ```
@@ -297,9 +305,7 @@ export default function HomePage() {
             <a href="/docs">시작하기</a>
           </Button>
           <Button size="lg" variant="outline" asChild>
-            <a href="https://github.com/odada-o/hanui">
-              GitHub
-            </a>
+            <a href="https://github.com/odada-o/hanui">GitHub</a>
           </Button>
         </div>
       </section>
@@ -335,7 +341,7 @@ pnpm dev`}</code>
         </div>
       </section>
     </div>
-  )
+  );
 }
 ```
 
@@ -459,13 +465,17 @@ export default function MyComponent() {
                 <tr className="m-0 border-t p-0 even:bg-muted">
                   <th className="border px-4 py-2 text-left font-bold">Prop</th>
                   <th className="border px-4 py-2 text-left font-bold">Type</th>
-                  <th className="border px-4 py-2 text-left font-bold">Default</th>
+                  <th className="border px-4 py-2 text-left font-bold">
+                    Default
+                  </th>
                   <th className="border px-4 py-2 text-left font-bold">설명</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="m-0 border-t p-0 even:bg-muted">
-                  <td className="border px-4 py-2 font-mono text-sm">variant</td>
+                  <td className="border px-4 py-2 font-mono text-sm">
+                    variant
+                  </td>
                   <td className="border px-4 py-2 font-mono text-sm">
                     "default" | "secondary" | "outline" | "ghost"
                   </td>
@@ -478,7 +488,9 @@ export default function MyComponent() {
                     "sm" | "md" | "lg"
                   </td>
                   <td className="border px-4 py-2">"md"</td>
-                  <td className="border px-4 py-2">버튼 크기 (KRDS 기준: 32px/40px/48px)</td>
+                  <td className="border px-4 py-2">
+                    버튼 크기 (KRDS 기준: 32px/40px/48px)
+                  </td>
                 </tr>
                 {/* ... more props */}
               </tbody>
@@ -515,14 +527,25 @@ export default function MyComponent() {
           <div className="rounded-lg border bg-card p-6">
             <h3 className="font-semibold mb-3">키보드 네비게이션</h3>
             <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
-              <li><kbd className="px-2 py-1 rounded bg-muted">Tab</kbd> - 버튼으로 포커스 이동</li>
-              <li><kbd className="px-2 py-1 rounded bg-muted">Space</kbd> 또는 <kbd className="px-2 py-1 rounded bg-muted">Enter</kbd> - 버튼 활성화</li>
+              <li>
+                <kbd className="px-2 py-1 rounded bg-muted">Tab</kbd> - 버튼으로
+                포커스 이동
+              </li>
+              <li>
+                <kbd className="px-2 py-1 rounded bg-muted">Space</kbd> 또는{' '}
+                <kbd className="px-2 py-1 rounded bg-muted">Enter</kbd> - 버튼
+                활성화
+              </li>
             </ul>
 
             <h3 className="font-semibold mt-6 mb-3">스크린 리더</h3>
             <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
-              <li><code className="text-xs">role="button"</code> 자동 설정</li>
-              <li><code className="text-xs">aria-label</code> prop 지원</li>
+              <li>
+                <code className="text-xs">role="button"</code> 자동 설정
+              </li>
+              <li>
+                <code className="text-xs">aria-label</code> prop 지원
+              </li>
               <li>disabled 상태 스크린 리더 전달</li>
             </ul>
 
@@ -580,7 +603,7 @@ export default function MyComponent() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 ```
 
@@ -593,31 +616,31 @@ export default function MyComponent() {
 ```tsx
 // components/code-block.tsx
 
-'use client'
+'use client';
 
-import { useState } from 'react'
-import { Highlight, themes } from 'prism-react-renderer'
-import { Check, Copy } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { useState } from 'react';
+import { Highlight, themes } from 'prism-react-renderer';
+import { Check, Copy } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 interface CodeBlockProps {
-  children: string
-  language?: string
-  filename?: string
+  children: string;
+  language?: string;
+  filename?: string;
 }
 
 export function CodeBlock({
   children,
   language = 'tsx',
-  filename
+  filename,
 }: CodeBlockProps) {
-  const [isCopied, setIsCopied] = useState(false)
+  const [isCopied, setIsCopied] = useState(false);
 
   const copy = async () => {
-    await navigator.clipboard.writeText(children)
-    setIsCopied(true)
-    setTimeout(() => setIsCopied(false), 2000)
-  }
+    await navigator.clipboard.writeText(children);
+    setIsCopied(true);
+    setTimeout(() => setIsCopied(false), 2000);
+  };
 
   return (
     <div className="relative rounded-lg border bg-zinc-950 dark:bg-zinc-900">
@@ -666,7 +689,7 @@ export function CodeBlock({
         </Highlight>
       </div>
     </div>
-  )
+  );
 }
 ```
 
@@ -675,22 +698,22 @@ export function CodeBlock({
 ```tsx
 // components/component-preview.tsx
 
-'use client'
+'use client';
 
-import { useState } from 'react'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { CodeBlock } from './code-block'
+import { useState } from 'react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { CodeBlock } from './code-block';
 
 interface ComponentPreviewProps {
-  name: string
-  children: React.ReactNode
-  code: string
+  name: string;
+  children: React.ReactNode;
+  code: string;
 }
 
 export function ComponentPreview({
   name,
   children,
-  code
+  code,
 }: ComponentPreviewProps) {
   return (
     <div className="group relative my-4 flex flex-col space-y-2">
@@ -725,7 +748,7 @@ export function ComponentPreview({
         </TabsContent>
       </Tabs>
     </div>
-  )
+  );
 }
 ```
 
@@ -734,25 +757,25 @@ export function ComponentPreview({
 ```tsx
 // components/sidebar-nav.tsx
 
-'use client'
+'use client';
 
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { cn } from '@/lib/utils'
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { cn } from '@/lib/utils';
 
 interface SidebarNavProps {
   items: {
-    title: string
-    href?: string
+    title: string;
+    href?: string;
     items?: {
-      title: string
-      href: string
-    }[]
-  }[]
+      title: string;
+      href: string;
+    }[];
+  }[];
 }
 
 export function SidebarNav({ items }: SidebarNavProps) {
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   return (
     <div className="w-full">
@@ -782,7 +805,7 @@ export function SidebarNav({ items }: SidebarNavProps) {
         </div>
       ))}
     </div>
-  )
+  );
 }
 ```
 
@@ -795,13 +818,13 @@ export function SidebarNav({ items }: SidebarNavProps) {
 ```tsx
 // components/theme-provider.tsx
 
-'use client'
+'use client';
 
-import { ThemeProvider as NextThemesProvider } from 'next-themes'
-import type { ThemeProviderProps } from 'next-themes/dist/types'
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
+import type { ThemeProviderProps } from 'next-themes/dist/types';
 
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
-  return <NextThemesProvider {...props}>{children}</NextThemesProvider>
+  return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
 }
 ```
 
@@ -810,14 +833,14 @@ export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
 ```tsx
 // components/theme-toggle.tsx
 
-'use client'
+'use client';
 
-import { Moon, Sun } from 'lucide-react'
-import { useTheme } from 'next-themes'
-import { Button } from '@/components/ui/button'
+import { Moon, Sun } from 'lucide-react';
+import { useTheme } from 'next-themes';
+import { Button } from '@/components/ui/button';
 
 export function ThemeToggle() {
-  const { setTheme, theme } = useTheme()
+  const { setTheme, theme } = useTheme();
 
   return (
     <Button
@@ -829,7 +852,7 @@ export function ThemeToggle() {
       <Moon className="hidden h-5 w-5 dark:block" />
       <span className="sr-only">테마 전환</span>
     </Button>
-  )
+  );
 }
 ```
 
@@ -853,7 +876,9 @@ screens: {
 ### 반응형 레이아웃
 
 ```tsx
-{/* 모바일: Hamburger Menu */}
+{
+  /* 모바일: Hamburger Menu */
+}
 <div className="lg:hidden">
   <Sheet>
     <SheetTrigger asChild>
@@ -865,17 +890,21 @@ screens: {
       <SidebarNav items={docsConfig.sidebarNav} />
     </SheetContent>
   </Sheet>
-</div>
+</div>;
 
-{/* 데스크탑: Fixed Sidebar */}
+{
+  /* 데스크탑: Fixed Sidebar */
+}
 <aside className="hidden lg:block fixed top-14 z-30 h-[calc(100vh-3.5rem)] w-full shrink-0 border-r lg:sticky lg:block">
   <SidebarNav items={docsConfig.sidebarNav} />
-</aside>
+</aside>;
 
-{/* 큰 데스크탑: On This Page */}
+{
+  /* 큰 데스크탑: On This Page */
+}
 <div className="hidden text-sm xl:block">
   <OnThisPage />
-</div>
+</div>;
 ```
 
 ---
@@ -887,10 +916,10 @@ screens: {
 ```tsx
 // components/search.tsx
 
-'use client'
+'use client';
 
-import { DocSearch } from '@docsearch/react'
-import '@docsearch/css'
+import { DocSearch } from '@docsearch/react';
+import '@docsearch/css';
 
 export function Search() {
   return (
@@ -906,7 +935,7 @@ export function Search() {
         },
       }}
     />
-  )
+  );
 }
 ```
 

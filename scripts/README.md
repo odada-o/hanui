@@ -31,16 +31,19 @@ cd /Users/odada/jeongmiae/-github/hanui
 #### 생성되는 이슈 목록
 
 **Epic 1: 프로젝트 기반 설정 (3개)**
+
 - Issue #1: Monorepo 설정
 - Issue #2: TypeScript 설정
 - Issue #3: Linting 설정
 
 **Epic 2: 디자인 시스템 기초 (3개)**
+
 - Issue #4: KRDS 컬러 토큰 시스템
 - Issue #5: 타이포그래피 시스템
 - Issue #6: Spacing 시스템
 
 **Epic 3: 핵심 컴포넌트 개발 (9개)**
+
 - Issue #7: Button 컴포넌트
 - Issue #8: Input 컴포넌트
 - Issue #9: Card 컴포넌트
@@ -52,15 +55,18 @@ cd /Users/odada/jeongmiae/-github/hanui
 - Issue #15: Select 컴포넌트
 
 **Epic 4: CLI 도구 (2개)**
+
 - Issue #16: create-hanui-app CLI 구현
 - Issue #17: 템플릿 2개 개발 (Portal + Admin)
 
 **Epic 5: 문서 사이트 (3개)**
+
 - Issue #18: Docs 사이트 기본 구조
 - Issue #19: 컴포넌트 API 문서
 - Issue #20: 메인 페이지 디자인
 
 **Epic 6: NPM 배포 (3개)**
+
 - Issue #21: NPM 배포 준비
 - Issue #22: CI/CD 설정
 - Issue #23: v0.1.0 배포
@@ -145,6 +151,7 @@ chmod +x scripts/create-issues.sh
 중복 실행 시 같은 이슈가 여러 번 생성되므로 주의하세요.
 
 중복 생성된 이슈 삭제:
+
 ```bash
 # 특정 이슈 닫기
 gh issue close <issue-number>

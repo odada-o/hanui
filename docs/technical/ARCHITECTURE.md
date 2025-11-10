@@ -5,6 +5,7 @@
 ---
 
 ## 📋 목차
+
 1. [시스템 개요](#시스템-개요)
 2. [전체 아키텍처](#전체-아키텍처)
 3. [Phase별 기술 스택](#phase별-기술-스택)
@@ -53,16 +54,16 @@
 
 ### 1.2 기술 선택 기준
 
-| 항목 | 선택 | 이유 |
-|------|------|------|
-| **모노레포** | Turborepo | 빠른 빌드, 간단한 설정 |
-| **번들러** | Vite | 빠른 HMR, ESM 네이티브 |
-| **패키지 매니저** | pnpm | 디스크 효율, workspace 지원 |
-| **컴포넌트 베이스** | Headless UI | 접근성 기본 탑재 |
-| **스타일** | Tailwind CSS | 커스터마이징 쉬움, KRDS 토큰 매핑 |
-| **문서** | Next.js 14 | SSR, MDX, SEO |
-| **테스트** | Vitest + Playwright | 빠름, 모던 |
-| **CI/CD** | GitHub Actions | 무료, 통합 쉬움 |
+| 항목                | 선택                | 이유                              |
+| ------------------- | ------------------- | --------------------------------- |
+| **모노레포**        | Turborepo           | 빠른 빌드, 간단한 설정            |
+| **번들러**          | Vite                | 빠른 HMR, ESM 네이티브            |
+| **패키지 매니저**   | pnpm                | 디스크 효율, workspace 지원       |
+| **컴포넌트 베이스** | Headless UI         | 접근성 기본 탑재                  |
+| **스타일**          | Tailwind CSS        | 커스터마이징 쉬움, KRDS 토큰 매핑 |
+| **문서**            | Next.js 14          | SSR, MDX, SEO                     |
+| **테스트**          | Vitest + Playwright | 빠름, 모던                        |
+| **CI/CD**           | GitHub Actions      | 무료, 통합 쉬움                   |
 
 ---
 
@@ -229,6 +230,7 @@ krds-platform/
 ### Phase 1: Starter Kit (1-2개월)
 
 #### 핵심 기술 스택
+
 ```typescript
 // packages/react/package.json
 {
@@ -253,11 +255,12 @@ krds-platform/
 ```
 
 #### 빌드 설정
+
 ```typescript
 // packages/react/vite.config.ts
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react()],
@@ -266,28 +269,29 @@ export default defineConfig({
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'KRDSReact',
       fileName: (format) => `krds-react.${format}.js`,
-      formats: ['es', 'cjs']
+      formats: ['es', 'cjs'],
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
       output: {
         globals: {
           react: 'React',
-          'react-dom': 'ReactDOM'
-        }
-      }
+          'react-dom': 'ReactDOM',
+        },
+      },
     },
     minify: 'terser',
     terserOptions: {
       compress: {
-        drop_console: true
-      }
-    }
-  }
-})
+        drop_console: true,
+      },
+    },
+  },
+});
 ```
 
 #### Tailwind 설정
+
 ```javascript
 // packages/react/tailwind.config.js
 module.exports = {
@@ -300,23 +304,24 @@ module.exports = {
           50: '#E6F0FF',
           100: '#CCE0FF',
           // ...
-          900: '#001A3D'
+          900: '#001A3D',
         },
         // ...
       },
       fontFamily: {
-        sans: ['Pretendard', 'system-ui', 'sans-serif']
+        sans: ['Pretendard', 'system-ui', 'sans-serif'],
       },
       // KRDS 가이드에 맞는 spacing, fontSize 등
-    }
+    },
   },
-  plugins: []
-}
+  plugins: [],
+};
 ```
 
 ### Phase 2: 접근성 도구 (3-4개월)
 
 #### VSCode Extension 기술 스택
+
 ```json
 // tooling/vscode-extension/package.json
 {
@@ -326,18 +331,16 @@ module.exports = {
     "vscode": "^1.85.0"
   },
   "dependencies": {
-    "axe-core": "^4.8.0",          // 접근성 검사
+    "axe-core": "^4.8.0", // 접근성 검사
     "@typescript-eslint/parser": "^6.0.0",
     "typescript": "^5.0.0"
   },
-  "activationEvents": [
-    "onLanguage:typescript",
-    "onLanguage:typescriptreact"
-  ]
+  "activationEvents": ["onLanguage:typescript", "onLanguage:typescriptreact"]
 }
 ```
 
 #### 린트 규칙
+
 ```typescript
 // tooling/eslint-config/index.js
 module.exports = {
@@ -345,20 +348,21 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:jsx-a11y/recommended'  // 접근성 린트
+    'plugin:jsx-a11y/recommended', // 접근성 린트
   ],
   rules: {
     // KRDS 커스텀 규칙
     'krds/button-aria-label': 'error',
     'krds/color-contrast': 'warn',
-    'krds/keyboard-accessible': 'error'
-  }
-}
+    'krds/keyboard-accessible': 'error',
+  },
+};
 ```
 
 ### Phase 3: Marketplace (5-8개월)
 
 #### 백엔드 기술 스택
+
 ```typescript
 // apps/marketplace/package.json
 {
@@ -374,6 +378,7 @@ module.exports = {
 ```
 
 #### 데이터베이스 스키마
+
 ```prisma
 // apps/marketplace/prisma/schema.prisma
 datasource db {
@@ -431,6 +436,7 @@ model Purchase {
 ### Phase 4: AI Generator (9-12개월)
 
 #### AI 기술 스택
+
 ```typescript
 // apps/ai-generator/package.json
 {
@@ -445,6 +451,7 @@ model Purchase {
 ```
 
 #### 프롬프트 엔지니어링
+
 ```typescript
 // apps/ai-generator/lib/prompts.ts
 export const SYSTEM_PROMPT = `
@@ -463,7 +470,7 @@ export const SYSTEM_PROMPT = `
 \`\`\`tsx
 // 파일명과 코드
 \`\`\`
-`
+`;
 
 export const generateComponentPrompt = (userInput: string) => {
   return `
@@ -473,8 +480,8 @@ ${SYSTEM_PROMPT}
 "${userInput}"
 
 위 요청에 맞는 KRDS 준수 React 컴포넌트를 생성해주세요.
-`
-}
+`;
+};
 ```
 
 ---
@@ -484,6 +491,7 @@ ${SYSTEM_PROMPT}
 ### 4.1 컴포넌트 API 디자인
 
 #### Button 컴포넌트 예시
+
 ```typescript
 // packages/react/src/components/Button/Button.tsx
 import { forwardRef } from 'react'

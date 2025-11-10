@@ -1,9 +1,11 @@
 # Dependency Update and Analysis Command
 
 ## Overview
+
 이 명령어는 프로젝트의 루트, 백엔드, 프론트엔드 의존성을 체계적으로 분석하고 최적화합니다.
 
 ## Command Usage
+
 ```
 dependency update
 ```
@@ -15,16 +17,19 @@ dependency update
 ### 1. 현재 상태 분석
 
 **루트 package.json 분석:**
+
 - `/package.json` 파일을 읽고 현재 의존성 목록 확인
 - 각 의존성이 실제로 루트 레벨에서 사용되는지 확인
 - husky, lint-staged 등 개발 도구의 적절한 배치 확인
 
 **백엔드 의존성 분석:**
+
 - `/backend/go.mod` 파일을 읽고 Go 모듈 의존성 확인
 - 사용되지 않는 모듈이나 버전 충돌 확인
 - `go mod tidy` 실행으로 정리 필요성 확인
 
 **프론트엔드 package.json 분석:**
+
 - `/frontend/package.json` 파일을 읽고 현재 의존성 목록 확인
 - dependencies vs devDependencies 분류의 적절성 확인
 - 실제 코드에서 사용되는 패키지와 package.json의 일치성 확인
@@ -32,16 +37,19 @@ dependency update
 ### 2. 의존성 검증
 
 **실제 사용 여부 확인:**
+
 - 각 패키지가 실제 코드에서 import/require되는지 검색
 - `grep -r "import.*package-name" src/` 등으로 사용처 확인
 - TypeScript 타입 패키지의 필요성 확인
 
 **중복 의존성 탐지:**
+
 - 루트와 프론트엔드 간 중복되는 패키지 확인
 - 같은 기능을 하는 다른 패키지들의 중복 설치 확인
 - 버전 불일치로 인한 문제 가능성 확인
 
 **분류 오류 탐지:**
+
 - runtime dependencies가 devDependencies에 있는 경우
 - development-only 패키지가 dependencies에 있는 경우
 - TypeScript 타입 패키지의 올바른 분류 확인
@@ -49,16 +57,19 @@ dependency update
 ### 3. 최적화 제안
 
 **제거 대상 식별:**
+
 - 사용되지 않는 패키지 목록 작성
 - 대체 가능한 더 가벼운 패키지 제안
 - 내장 기능으로 대체 가능한 패키지 식별
 
 **이동 대상 식별:**
+
 - 잘못 분류된 패키지들의 올바른 위치 제안
 - 루트에서 개별 프로젝트로 이동할 패키지들
 - 공통으로 사용되어 루트로 올려야 할 패키지들
 
 **추가 필요 패키지:**
+
 - 코드에서 사용 중이지만 package.json에 없는 패키지
 - 보안 업데이트가 필요한 패키지
 - 호환성 개선을 위해 필요한 패키지
@@ -66,6 +77,7 @@ dependency update
 ### 4. 실행 및 검증
 
 **정리 작업 수행:**
+
 ```bash
 # 백엔드 Go 모듈 정리
 cd backend && go mod tidy
@@ -82,6 +94,7 @@ cd .. && npm uninstall [duplicated-packages]
 ```
 
 **검증 테스트:**
+
 ```bash
 # 백엔드 빌드 및 테스트
 cd backend && go build ./... && go test ./...
@@ -96,12 +109,14 @@ npm run test && npm run build
 ### 5. 보고서 작성
 
 **분석 결과 요약:**
+
 - 제거된 불필요한 의존성 목록
 - 추가된 누락 의존성 목록
 - 재분류된 의존성 목록
 - 최적화로 인한 패키지 크기 변화
 
 **권장사항 제시:**
+
 - 향후 의존성 관리 가이드라인
 - 정기적인 의존성 점검 일정 제안
 - 보안 업데이트 모니터링 방법
@@ -109,6 +124,7 @@ npm run test && npm run build
 ### 6. 품질 검증
 
 **최종 확인사항:**
+
 - [ ] 모든 테스트가 통과하는가?
 - [ ] 빌드가 성공하는가?
 - [ ] 린트 검사가 통과하는가?
@@ -116,6 +132,7 @@ npm run test && npm run build
 - [ ] 프로덕션 빌드가 정상 동작하는가?
 
 **성능 확인:**
+
 - 설치 시간 개선 여부
 - 번들 크기 최적화 여부
 - 빌드 시간 개선 여부
@@ -126,26 +143,33 @@ npm run test && npm run build
 # 의존성 분석 및 최적화 보고서
 
 ## 📊 현재 상태 분석
+
 - 루트: X개 의존성 (Y개 중복, Z개 미사용)
 - 백엔드: A개 Go 모듈 (B개 정리 필요)
 - 프론트엔드: C개 패키지 (D개 잘못 분류, E개 미사용)
 
 ## 🔧 수행된 최적화
+
 ### 제거된 패키지
+
 - package-name@version (이유: 미사용)
 
 ### 추가된 패키지
+
 - package-name@version (이유: 코드에서 사용 중이지만 누락)
 
 ### 재분류된 패키지
+
 - package-name: dependencies → devDependencies
 
 ## 📈 개선 결과
+
 - 패키지 크기: X% 감소
 - 설치 시간: Y% 단축
 - 빌드 시간: Z% 개선
 
 ## ✅ 검증 완료
+
 - [x] 모든 테스트 통과
 - [x] 빌드 성공
 - [x] 린트 검사 통과

@@ -7,10 +7,12 @@
 ## 📦 1. NPM 패키지 배포
 
 ### 대상 패키지
+
 - `@hanui/react` - React 컴포넌트 라이브러리
 - `create-hanui-app` - CLI 도구
 
 ### 배포 시점
+
 - **Issue #21**: NPM 배포 준비
 - **Issue #22**: GitHub Actions CI/CD 설정
 - **Issue #23**: v0.1.0 First Release
@@ -20,6 +22,7 @@
 #### A. NPM 계정 설정 (Issue #21)
 
 1. **NPM 가입**
+
    ```bash
    npm adduser
    # Username: odada-o
@@ -27,6 +30,7 @@
    ```
 
 2. **Organization 생성**
+
    ```
    https://www.npmjs.com/org/create
    Organization name: hanui
@@ -34,6 +38,7 @@
    ```
 
 3. **NPM 토큰 발급**
+
    ```
    https://www.npmjs.com/settings/your-username/tokens
    → Generate New Token
@@ -121,9 +126,11 @@ https://www.npmjs.com/package/create-hanui-app
 ## 🌐 2. Vercel 문서 사이트 배포
 
 ### 대상
+
 - `apps/docs` - Next.js 문서 사이트
 
 ### 배포 시점
+
 - **Issue #18**: 문서 사이트 초기 설정 + Vercel 배포
 
 ### 배포 방법
@@ -131,12 +138,14 @@ https://www.npmjs.com/package/create-hanui-app
 #### A. Vercel 프로젝트 생성
 
 1. **Vercel 가입**
+
    ```
    https://vercel.com
    → Continue with GitHub
    ```
 
 2. **프로젝트 연결**
+
    ```
    Dashboard → New Project
    → Import Git Repository
@@ -144,6 +153,7 @@ https://www.npmjs.com/package/create-hanui-app
    ```
 
 3. **프로젝트 설정**
+
    ```
    Project Name: hanui-docs
    Framework Preset: Next.js (자동 감지)
@@ -154,6 +164,7 @@ https://www.npmjs.com/package/create-hanui-app
    ```
 
 4. **환경 변수 (필요 시)**
+
    ```
    NODE_VERSION=20
    ```
@@ -168,6 +179,7 @@ https://www.npmjs.com/package/create-hanui-app
 #### B. 도메인 연결 (`hanui.io`)
 
 1. **Vercel에서 도메인 추가**
+
    ```
    Project → Settings → Domains
    → Add 버튼 클릭
@@ -176,6 +188,7 @@ https://www.npmjs.com/package/create-hanui-app
    ```
 
 2. **DNS 설정값 확인**
+
    ```
    Vercel이 제공하는 DNS 레코드:
 
@@ -188,6 +201,7 @@ https://www.npmjs.com/package/create-hanui-app
 3. **가비아 DNS 설정**
 
    **가비아 로그인:**
+
    ```
    https://www.gabia.com
    → My가비아 → 서비스 관리
@@ -196,6 +210,7 @@ https://www.npmjs.com/package/create-hanui-app
    ```
 
    **DNS 레코드 추가:**
+
    ```
    타입: A
    호스트: @
@@ -213,6 +228,7 @@ https://www.npmjs.com/package/create-hanui-app
    **저장 및 적용**
 
 4. **DNS 전파 확인**
+
    ```bash
    # 터미널에서 확인
    nslookup hanui.io
@@ -223,6 +239,7 @@ https://www.npmjs.com/package/create-hanui-app
    ```
 
    **온라인 도구:**
+
    ```
    https://dnschecker.org
    → hanui.io 입력
@@ -232,6 +249,7 @@ https://www.npmjs.com/package/create-hanui-app
    **대기 시간:** 5분 ~ 48시간 (보통 10-30분)
 
 5. **Vercel에서 확인**
+
    ```
    Settings → Domains
    → hanui.io 상태: Valid Configuration ✅
@@ -246,12 +264,14 @@ https://www.npmjs.com/package/create-hanui-app
 #### C. 자동 배포 설정
 
 **기본 설정 (자동):**
+
 ```
 main 브랜치 푸시 → 자동 배포
 PR 생성 → 프리뷰 배포
 ```
 
 **수동 배포:**
+
 ```bash
 git push origin main
 # → Vercel이 자동으로 감지하여 배포
@@ -314,18 +334,21 @@ Preview: https://hanui-docs-git-feat-xxx.vercel.app
 ## 📊 4. 배포 상태 확인
 
 ### NPM 패키지
+
 ```
 https://www.npmjs.com/package/@hanui/react
 https://www.npmjs.com/package/create-hanui-app
 ```
 
 ### 문서 사이트
+
 ```
 Production: https://hanui.io
 Vercel Dashboard: https://vercel.com/odada-o/hanui-docs
 ```
 
 ### GitHub Actions
+
 ```
 https://github.com/odada-o/hanui/actions
 ```
@@ -337,6 +360,7 @@ https://github.com/odada-o/hanui/actions
 ### NPM 배포 실패
 
 **토큰 만료:**
+
 ```bash
 # NPM 토큰 재발급
 https://www.npmjs.com/settings/your-username/tokens
@@ -345,6 +369,7 @@ https://www.npmjs.com/settings/your-username/tokens
 ```
 
 **권한 오류:**
+
 ```bash
 # Organization 멤버 확인
 https://www.npmjs.com/settings/hanui/members
@@ -353,6 +378,7 @@ https://www.npmjs.com/settings/hanui/members
 ### Vercel 배포 실패
 
 **빌드 오류:**
+
 ```
 Vercel Dashboard → Deployments
 → 실패한 배포 클릭
@@ -360,6 +386,7 @@ Vercel Dashboard → Deployments
 ```
 
 **DNS 전파 안됨:**
+
 ```bash
 # DNS 설정 확인
 nslookup hanui.io
@@ -369,6 +396,7 @@ https://www.gabia.com
 ```
 
 **HTTPS 오류:**
+
 ```
 Vercel Dashboard → Settings → Domains
 → hanui.io 클릭
@@ -380,6 +408,7 @@ Vercel Dashboard → Settings → Domains
 ## ✅ 체크리스트
 
 ### Issue #21: NPM 배포 준비
+
 - [ ] NPM 계정 생성
 - [ ] @hanui organization 생성
 - [ ] NPM 토큰 발급
@@ -388,10 +417,12 @@ Vercel Dashboard → Settings → Domains
 - [ ] .npmignore 작성
 
 ### Issue #22: GitHub Actions CI/CD
+
 - [ ] `.github/workflows/publish.yml` 작성
 - [ ] 워크플로우 테스트 (dry-run)
 
 ### Issue #18: Vercel 배포
+
 - [ ] Vercel 프로젝트 생성
 - [ ] GitHub 저장소 연결
 - [ ] `hanui.io` 도메인 추가
@@ -403,6 +434,7 @@ Vercel Dashboard → Settings → Domains
 - [ ] 자동 배포 테스트
 
 ### Issue #23: First Release
+
 - [ ] 버전 0.1.0 확정
 - [ ] CHANGELOG 작성
 - [ ] git tag v0.1.0 생성

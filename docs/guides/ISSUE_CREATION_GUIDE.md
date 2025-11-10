@@ -28,12 +28,14 @@
 ## 🎯 핵심 기술 스택
 
 ### 스타일링 & 컴포넌트
+
 - **Tailwind CSS** - KRDS 디자인 시스템 통합 ⭐
 - **Headless UI** - 접근성 자동 보장 (Modal, Select 등) ⭐
 - **React 18** - UI 라이브러리
 - **TypeScript 5** - 타입 안정성
 
 ### 빌드 & 개발 도구
+
 - **Turborepo** - 모노레포 관리
 - **Vite** - 빠른 빌드
 - **pnpm** - 패키지 관리
@@ -46,16 +48,19 @@
 ## 📋 생성되는 이슈 목록
 
 ### Epic 1: 프로젝트 기반 설정 (3개)
+
 - **Issue #1**: [Setup] Turborepo + pnpm Monorepo 설정 (4h)
 - **Issue #2**: [Setup] TypeScript + Tailwind CSS + 빌드 설정 (5h) ⭐ 업데이트
 - **Issue #3**: [Setup] ESLint + Prettier + Husky 설정 (2h)
 
 ### Epic 2: 디자인 시스템 기초 (3개)
+
 - **Issue #4**: [Core] KRDS 컬러 토큰 시스템 구현 (6h)
 - **Issue #5**: [Core] 타이포그래피 시스템 구현 (4h)
 - **Issue #6**: [Core] Spacing 및 Layout 시스템 구현 (5h)
 
 ### Epic 3: 핵심 컴포넌트 개발 (9개)
+
 - **Issue #7**: [Component] Button 컴포넌트 구현 (8h)
 - **Issue #8**: [Component] Input 컴포넌트 구현 (8h)
 - **Issue #9**: [Component] Card 컴포넌트 구현 (6h)
@@ -67,17 +72,20 @@
 - **Issue #15**: [Component] Select 컴포넌트 구현 (8h) - Headless UI ⭐ 업데이트
 
 ### Epic 4: CLI 도구 (2개)
+
 - **Issue #16**: [CLI] create-hanui-app 기본 구현 (12h)
 - **Issue #17**: [CLI] 공공 프로젝트 특화 템플릿 2개 개발 (27h) 🔥 핵심 차별화
   - Portal Template (Next.js) - 13h
   - Admin Template (React + Vite) - 14h
 
 ### Epic 5: 문서 사이트 (3개)
+
 - **Issue #18**: [Docs] Next.js 문서 사이트 초기 설정 (12h)
 - **Issue #19**: [Docs] 컴포넌트 API 자동 생성 (10h)
 - **Issue #20**: [Docs] 메인 페이지 구현 (8h)
 
 ### Epic 6: NPM 배포 (3개)
+
 - **Issue #21**: [Release] NPM 배포 준비 (4h)
 - **Issue #22**: [Release] GitHub Actions CI/CD 설정 (6h)
 - **Issue #23**: [Release] v0.1.0 First Release 🚀 (4h)
@@ -86,20 +94,21 @@
 
 ## 📊 개발 시간 예상
 
-| Epic | 이슈 수 | 예상 시간 | 변경 |
-|------|---------|-----------|------|
-| Epic 1 (프로젝트 설정) | 3개 | 11h | +2h (Tailwind) |
-| Epic 2 (디자인 시스템) | 3개 | 15h | - |
-| Epic 3 (컴포넌트) | 9개 | 70h | -4h (Headless UI) |
-| Epic 4 (CLI + 템플릿) | 2개 | 39h | - |
-| Epic 5 (문서) | 3개 | 30h | - |
-| Epic 6 (배포) | 3개 | 14h | - |
-| **총합** | **23개** | **179h** | **-2h** |
+| Epic                   | 이슈 수  | 예상 시간 | 변경              |
+| ---------------------- | -------- | --------- | ----------------- |
+| Epic 1 (프로젝트 설정) | 3개      | 11h       | +2h (Tailwind)    |
+| Epic 2 (디자인 시스템) | 3개      | 15h       | -                 |
+| Epic 3 (컴포넌트)      | 9개      | 70h       | -4h (Headless UI) |
+| Epic 4 (CLI + 템플릿)  | 2개      | 39h       | -                 |
+| Epic 5 (문서)          | 3개      | 30h       | -                 |
+| Epic 6 (배포)          | 3개      | 14h       | -                 |
+| **총합**               | **23개** | **179h**  | **-2h**           |
 
 **→ 약 22일 (하루 8시간 기준)**
 **→ 약 4.5주 (주 5일, 하루 8시간)**
 
 ### 기술 스택 효과
+
 - ✅ **Tailwind CSS**: 설정 +2h, 하지만 컴포넌트 개발 속도 향상
 - ✅ **Headless UI**: Modal, Select 개발 시간 -4h (접근성 자동 처리)
 - ✅ **순 효과**: -2h 절감
@@ -110,30 +119,31 @@
 
 스크립트가 자동으로 생성하는 Labels:
 
-| Label | 색상 | 설명 |
-|-------|------|------|
-| `phase-1` | 🔵 Blue | Phase 1 이슈 |
-| `setup` | 🟣 Purple | 프로젝트 설정 |
-| `core` | 🟡 Yellow | 코어 기능 |
-| `design-system` | 🟠 Orange | 디자인 시스템 |
-| `component` | 🔵 Light Blue | 컴포넌트 |
-| `react` | 🔵 Cyan | React 관련 |
-| `vue` | 🟢 Green | Vue 관련 |
-| `cli` | 🔵 Blue | CLI 도구 |
-| `templates` | 🟡 Yellow | 템플릿 |
-| `docs` | 🔵 Blue | 문서 |
-| `release` | 🔴 Red | 배포 |
-| `devops` | 🟣 Purple | DevOps |
-| `public-essential` | 🔴 Dark Orange | 공공 필수 |
-| `high-priority` | 🔴 Red | 높은 우선순위 |
-| `high-complexity` | 🟡 Yellow | 높은 복잡도 |
-| `critical` | 🔴 Red | 치명적 |
+| Label              | 색상           | 설명          |
+| ------------------ | -------------- | ------------- |
+| `phase-1`          | 🔵 Blue        | Phase 1 이슈  |
+| `setup`            | 🟣 Purple      | 프로젝트 설정 |
+| `core`             | 🟡 Yellow      | 코어 기능     |
+| `design-system`    | 🟠 Orange      | 디자인 시스템 |
+| `component`        | 🔵 Light Blue  | 컴포넌트      |
+| `react`            | 🔵 Cyan        | React 관련    |
+| `vue`              | 🟢 Green       | Vue 관련      |
+| `cli`              | 🔵 Blue        | CLI 도구      |
+| `templates`        | 🟡 Yellow      | 템플릿        |
+| `docs`             | 🔵 Blue        | 문서          |
+| `release`          | 🔴 Red         | 배포          |
+| `devops`           | 🟣 Purple      | DevOps        |
+| `public-essential` | 🔴 Dark Orange | 공공 필수     |
+| `high-priority`    | 🔴 Red         | 높은 우선순위 |
+| `high-complexity`  | 🟡 Yellow      | 높은 복잡도   |
+| `critical`         | 🔴 Red         | 치명적        |
 
 ---
 
 ## 🎯 Milestone
 
 **Milestone: v0.1.0**
+
 - 설명: Phase 1 첫 배포
 - 마감일: 2025-02-28
 - 총 이슈: 23개
@@ -182,6 +192,7 @@ ls -la | grep .git
 ```
 
 **출력 예시:**
+
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 생성 예정 이슈: 23개
@@ -205,6 +216,7 @@ Issue #1
 ```
 
 **출력 예시:**
+
 ```
 ========================================
 HANUI GitHub Issues 자동 생성
@@ -295,6 +307,7 @@ gh auth login
 **해결 방법:**
 
 1. **이슈 닫기** (삭제는 웹에서만 가능)
+
 ```bash
 # 특정 이슈 닫기
 gh issue close <issue-number>
@@ -326,12 +339,14 @@ open https://github.com/odada-o/hanui/projects
 ```
 
 **추천 구조:**
+
 - Column 1: Todo (P0 이슈만)
 - Column 2: In Progress
 - Column 3: In Review
 - Column 4: Done
 
 또는 Epic별로 구성:
+
 - Column 1: Epic 1 (Setup)
 - Column 2: Epic 2 (Design System)
 - Column 3: Epic 3 (Components)
@@ -342,6 +357,7 @@ open https://github.com/odada-o/hanui/projects
 #### Week 1 Day 1-2: 프로젝트 설정
 
 **시작할 이슈:**
+
 - [ ] Issue #1: Monorepo 설정 (4h)
 - [ ] Issue #2: TypeScript 설정 (3h)
 - [ ] Issue #3: Linting 설정 (2h)
@@ -396,11 +412,13 @@ hanui/
 ### ✅ DO (해야 할 것)
 
 1. **미리보기 먼저 실행**
+
    ```bash
    ./scripts/preview-issues.sh
    ```
 
 2. **한 번만 실행**
+
    ```bash
    ./scripts/create-issues.sh  # 한 번만!
    ```
@@ -434,6 +452,7 @@ git checkout -b feat/setup-monorepo
 ```
 
 **다음 문서:**
+
 - [ISSUE_PLANNING.md](docs/planning/ISSUE_PLANNING.md) - 전체 이슈 상세 계획
 - [DECISION_SUMMARY.md](docs/planning/DECISION_SUMMARY.md) - 전략적 결정 요약
 - [TEMPLATE_PAGES.md](docs/planning/TEMPLATE_PAGES.md) - 템플릿 페이지 구성

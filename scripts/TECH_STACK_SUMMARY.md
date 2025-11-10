@@ -10,6 +10,7 @@
 ### 핵심 추가 사항
 
 #### 1. Tailwind CSS ⭐
+
 ```
 용도: KRDS 디자인 시스템 구현
 위치: Issue #2에 추가
@@ -26,6 +27,7 @@
 ```
 
 #### 2. Headless UI ⭐
+
 ```
 용도: 접근성 자동 보장 컴포넌트
 적용: Modal, Select 컴포넌트
@@ -50,6 +52,7 @@ Select (Issue #15):
 ## 📊 개발 시간 변화
 
 ### Before (기존)
+
 ```
 Epic 1:  9h   (Setup)
 Epic 2:  15h  (Design System)
@@ -62,6 +65,7 @@ Epic 6:  14h  (Release)
 ```
 
 ### After (업데이트)
+
 ```
 Epic 1:  11h  (Setup) ..................... +2h (Tailwind 설정)
 Epic 2:  15h  (Design System) ............. 변동 없음
@@ -81,6 +85,7 @@ Epic 6:  14h  (Release)
 ## 📝 업데이트된 이슈
 
 ### Issue #2: TypeScript + Tailwind CSS + 빌드 설정
+
 ```diff
 - Title: [Setup] TypeScript 및 빌드 설정
 + Title: [Setup] TypeScript + Tailwind CSS + 빌드 설정
@@ -96,6 +101,7 @@ Epic 6:  14h  (Release)
 ```
 
 ### Issue #11: Modal 컴포넌트 (Headless UI)
+
 ```diff
 - Title: [Component] Modal 컴포넌트 구현
 + Title: [Component] Modal 컴포넌트 구현 (Headless UI)
@@ -113,6 +119,7 @@ Epic 6:  14h  (Release)
 ```
 
 ### Issue #15: Select 컴포넌트 (Headless UI)
+
 ```diff
 - Title: [Component] Select 컴포넌트 구현
 + Title: [Component] Select 컴포넌트 구현 (Headless UI)
@@ -134,6 +141,7 @@ Epic 6:  14h  (Release)
 ## ✅ 주요 이점
 
 ### 1. 개발 속도 향상
+
 ```
 Tailwind CSS:
 ✓ 유틸리티 클래스로 빠른 스타일링
@@ -147,6 +155,7 @@ Headless UI:
 ```
 
 ### 2. 코드 품질 향상
+
 ```
 Tailwind CSS:
 ✓ 일관된 디자인 시스템
@@ -160,6 +169,7 @@ Headless UI:
 ```
 
 ### 3. 유지보수성 향상
+
 ```
 Tailwind CSS:
 ✓ KRDS 컬러 변경 시 config만 수정
@@ -175,6 +185,7 @@ Headless UI:
 ## 📚 추가 문서
 
 ### 새로 생성된 문서
+
 - **[TECH_STACK.md](../TECH_STACK.md)** - 전체 기술 스택 상세 설명
   - Tailwind Config 예시
   - Headless UI 사용 가이드
@@ -182,6 +193,7 @@ Headless UI:
   - 학습 자료 링크
 
 ### 업데이트된 문서
+
 - **[ISSUE_CREATION_GUIDE.md](../ISSUE_CREATION_GUIDE.md)** - 기술 스택 섹션 추가
 - **[scripts/create-issues.sh](./create-issues.sh)** - Issue #2, #11, #15 업데이트
 - **[scripts/preview-issues.sh](./preview-issues.sh)** - 예상 시간 업데이트 필요
@@ -222,18 +234,21 @@ pnpm add lucide-react
 ## 📋 체크리스트
 
 ### 스크립트 업데이트 완료
+
 - [x] Issue #2: Tailwind CSS 설정 추가 (3h → 5h)
 - [x] Issue #11: Headless UI Dialog 사용 (10h → 8h)
 - [x] Issue #15: Headless UI Listbox/Combobox 사용 (10h → 8h)
 - [x] 총 개발 시간 재계산 (181h → 179h)
 
 ### 문서 업데이트 완료
+
 - [x] TECH_STACK.md 생성
 - [x] ISSUE_CREATION_GUIDE.md 업데이트
 - [x] scripts/README.md 확인
 - [x] scripts/TECH_STACK_SUMMARY.md 생성 (이 파일)
 
 ### 다음 작업
+
 - [ ] scripts/preview-issues.sh 예상 시간 업데이트
 - [ ] 스크립트 실행 (./scripts/create-issues.sh)
 - [ ] GitHub Issues 확인

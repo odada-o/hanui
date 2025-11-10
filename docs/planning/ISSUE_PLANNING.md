@@ -10,6 +10,7 @@
 ### Decision 1: 개발 우선순위
 
 #### 옵션 A: Starter Kit 우선 🚀
+
 ```
 장점:
 ✅ 빠른 검증 가능 (2주 내 MVP)
@@ -30,6 +31,7 @@ Week 4: NPM 배포
 ```
 
 #### 옵션 B: 컴포넌트 문서 사이트 우선 📚
+
 ```
 장점:
 ✅ 완성도 높은 첫인상
@@ -50,6 +52,7 @@ Week 6: 런칭
 ```
 
 #### 옵션 C: 병행 (절충안) ⚖️
+
 ```
 Week 1-2: 핵심 컴포넌트 5개 + 기본 문서
 Week 3: CLI 도구 + 간단한 Docs 사이트
@@ -66,6 +69,7 @@ Week 5-6: 피드백 받으며 문서 확장
 ```
 
 **추천: 옵션 A (Starter Kit 우선)** ⭐
+
 ```
 이유:
 1. Lean Startup 원칙 (빠른 검증)
@@ -84,6 +88,7 @@ Week 5-6: 피드백 받으며 문서 확장
 ### Decision 2: 프레임워크 우선순위
 
 #### 현황 분석:
+
 ```
 한국 공공 SI 시장 프레임워크 점유율 (추정):
 
@@ -104,6 +109,7 @@ Svelte/기타: 2%
 ```
 
 #### 옵션 A: React 먼저 🔷
+
 ```
 장점:
 ✅ 시장 점유율 높음
@@ -121,6 +127,7 @@ Svelte/기타: 2%
 ```
 
 #### 옵션 B: Vue 먼저 🟢
+
 ```
 장점:
 ✅ 경쟁자 적음 (@krds.ui/vue 정도)
@@ -139,6 +146,7 @@ Svelte/기타: 2%
 ```
 
 #### 옵션 C: Mono-framework (React + Vue Wrapper) 🎯
+
 ```
 구조:
 @hanui/core (Vanilla TS) ← 핵심 로직
@@ -161,6 +169,7 @@ Svelte/기타: 2%
 ```
 
 **추천: 옵션 A (React 먼저)** ⭐
+
 ```
 이유:
 1. 시장 규모가 크고, 초기 사용자 확보 쉬움
@@ -183,6 +192,7 @@ Month 4+: Svelte 등 고려 (수요 있을 시)
 ### Decision 3: 프로젝트 구조
 
 #### 옵션 A: Simple Monorepo (추천) 🏗️
+
 ```
 hanui/
 ├── packages/
@@ -216,6 +226,7 @@ hanui/
 ```
 
 #### 옵션 B: Mega Monorepo
+
 ```
 모든 것을 하나의 리포지토리에
 (Docs, Marketplace, VSCode Extension까지)
@@ -234,10 +245,12 @@ hanui/
 ### Epic 1: 프로젝트 기반 설정 (Week 1: Day 1-2)
 
 #### Issue #1: Monorepo 초기 설정
+
 ```markdown
 Title: [Setup] Turborepo + pnpm Monorepo 설정
 
 Description:
+
 - [ ] Turborepo 설정
 - [ ] pnpm workspace 설정
 - [ ] packages/ 폴더 구조 생성
@@ -251,10 +264,12 @@ Estimate: 4h
 ```
 
 #### Issue #2: TypeScript 및 빌드 설정
+
 ```markdown
 Title: [Setup] TypeScript 및 빌드 설정
 
 Description:
+
 - [ ] tsconfig.json (base, packages, apps)
 - [ ] Vite 설정 (@hanui/react 빌드용)
 - [ ] tsup 설정 (CLI 빌드용)
@@ -266,10 +281,12 @@ Estimate: 3h
 ```
 
 #### Issue #3: Linting 및 포매팅 설정
+
 ```markdown
 Title: [Setup] ESLint + Prettier + Husky 설정
 
 Description:
+
 - [ ] ESLint 설정 (React, TS)
 - [ ] Prettier 설정
 - [ ] Husky pre-commit hook
@@ -285,6 +302,7 @@ Estimate: 2h
 ### Epic 2: 디자인 시스템 기초 (Week 1: Day 3-5)
 
 #### Issue #4: KRDS 컬러 토큰 시스템
+
 ```markdown
 Title: [Core] KRDS 컬러 토큰 시스템 구현
 
@@ -299,6 +317,7 @@ KRDS 가이드 기반 컬러 팔레트 구현
 - [ ] CSS Variables 생성 유틸
 
 참고:
+
 - [KRDS 컬러 가이드](https://www.kads.or.kr/)
 - WCAG 2.1 AA 기준
 
@@ -308,10 +327,12 @@ Estimate: 6h
 ```
 
 #### Issue #5: 타이포그래피 시스템
+
 ```markdown
 Title: [Core] 타이포그래피 시스템 구현
 
 Description:
+
 - [ ] 폰트 스택 정의 (Pretendard, Noto Sans KR)
 - [ ] Type Scale (Display, H1-H6, Body, Caption)
 - [ ] Line Height, Letter Spacing
@@ -324,10 +345,12 @@ Estimate: 4h
 ```
 
 #### Issue #6: Spacing 및 Layout 시스템
+
 ```markdown
 Title: [Core] Spacing 및 Layout 시스템 구현
 
 Description:
+
 - [ ] 8px Grid 기반 Spacing Scale
 - [ ] Container 유틸리티
 - [ ] Grid System (12 column)
@@ -344,13 +367,15 @@ Estimate: 5h
 ### Epic 3: 핵심 컴포넌트 개발 (Week 1: Day 6-7 + Week 2)
 
 #### Issue #7: Button 컴포넌트
-```markdown
+
+````markdown
 Title: [Component] Button 컴포넌트 구현
 
 Description:
 KRDS 기준 Button 컴포넌트
 
 Features:
+
 - [ ] Variants (primary, secondary, outline, ghost)
 - [ ] Sizes (sm, md, lg)
 - [ ] States (default, hover, active, disabled)
@@ -360,6 +385,7 @@ Features:
 - [ ] 명도 대비 4.5:1 검증
 
 API:
+
 ```tsx
 <Button
   variant="primary"
@@ -372,11 +398,13 @@ API:
   버튼
 </Button>
 ```
+````
 
 Labels: component, react, phase-1
 Priority: P0
 Estimate: 8h
-```
+
+````
 
 #### Issue #8: Input 컴포넌트
 ```markdown
@@ -395,13 +423,15 @@ Description:
 Labels: component, react, phase-1
 Priority: P0
 Estimate: 8h
-```
+````
 
 #### Issue #9: Card 컴포넌트
+
 ```markdown
 Title: [Component] Card 컴포넌트 구현
 
 Description:
+
 - [ ] 기본 Card
 - [ ] CardHeader, CardBody, CardFooter
 - [ ] Variants (elevated, outlined, filled)
@@ -414,6 +444,7 @@ Estimate: 6h
 ```
 
 #### Issue #10: Table 컴포넌트
+
 ```markdown
 Title: [Component] Table 컴포넌트 구현
 
@@ -433,10 +464,12 @@ Estimate: 10h
 ```
 
 #### Issue #11: Modal 컴포넌트
+
 ```markdown
 Title: [Component] Modal 컴포넌트 구현
 
 Description:
+
 - [ ] 기본 Modal
 - [ ] Overlay (Backdrop)
 - [ ] Sizes (sm, md, lg, xl, full)
@@ -450,13 +483,15 @@ Estimate: 10h
 ```
 
 #### Issue #11-1: Pagination 컴포넌트 (공공 필수) ⭐
-```markdown
+
+````markdown
 Title: [Component] Pagination 컴포넌트 구현
 
 Description:
 공공 게시판 필수 컴포넌트
 
 Features:
+
 - [ ] 기본 Pagination (1 2 3 ... 10)
 - [ ] 이전/다음 버튼
 - [ ] 첫 페이지/마지막 페이지 이동
@@ -466,6 +501,7 @@ Features:
 - [ ] 접근성 (aria-label, role="navigation")
 
 API:
+
 ```tsx
 <Pagination
   currentPage={1}
@@ -475,11 +511,13 @@ API:
   onPageSizeChange={(size) => {}}
 />
 ```
+````
 
 Labels: component, react, phase-1, public-essential
 Priority: P0 (공공 프로젝트 필수)
 Estimate: 6h
-```
+
+````
 
 #### Issue #11-2: Breadcrumb 컴포넌트 (공공 필수) ⭐
 ```markdown
@@ -503,12 +541,13 @@ API:
   <BreadcrumbItem href="/notice">공지사항</BreadcrumbItem>
   <BreadcrumbItem current>상세보기</BreadcrumbItem>
 </Breadcrumb>
-```
+````
 
 Labels: component, react, phase-1, public-essential
 Priority: P0
 Estimate: 4h
-```
+
+````
 
 #### Issue #11-3: FileUpload 컴포넌트 (공공 필수) ⭐
 ```markdown
@@ -537,12 +576,13 @@ API:
   onUpload={(files) => {}}
   onError={(error) => {}}
 />
-```
+````
 
 Labels: component, react, phase-1, public-essential, high-complexity
 Priority: P0
 Estimate: 12h
-```
+
+````
 
 #### Issue #11-4: Select 컴포넌트 ⭐
 ```markdown
@@ -572,12 +612,13 @@ API:
   searchable
   multiple
 />
-```
+````
 
 Labels: component, react, phase-1, high-priority
 Priority: P0
 Estimate: 10h
-```
+
+````
 
 ---
 
@@ -603,10 +644,11 @@ Features:
 Labels: cli, phase-1
 Priority: P0
 Estimate: 12h
-```
+````
 
 #### Issue #13: 템플릿 2개 개발 (포털 + 어드민) ⭐ 중요 변경
-```markdown
+
+````markdown
 Title: [CLI] 공공 프로젝트 특화 템플릿 2개 개발
 
 Description:
@@ -619,12 +661,14 @@ Description:
 **1. Portal Template (Next.js 14 App Router) - 대국민 서비스**
 
 기술 스택:
+
 - Next.js 14 (App Router)
 - SSR/SSG 지원
 - SEO 최적화
 - 접근성 강화 (대국민 서비스 특성)
 
 **P0 페이지 (필수 - 6개):**
+
 - [ ] 공통 레이아웃 (Header, Footer)
 - [ ] 메인 페이지 (/)
 - [ ] 공지사항 목록 (/notice)
@@ -633,11 +677,13 @@ Description:
 - [ ] 로그인 (/login)
 
 **P1 페이지 (선택 - 3개):**
+
 - [ ] 자료실 (/library)
 - [ ] FAQ (/faq)
 - [ ] 소개 (/about)
 
 주요 기능:
+
 - [ ] Header (GNB, 검색, 로그인, 반응형 햄버거)
 - [ ] Footer (사이트맵, 저작권, 접근성 마크)
 - [ ] Breadcrumb (모든 페이지)
@@ -645,6 +691,7 @@ Description:
 - [ ] 반응형 디자인 (모바일 우선)
 
 접근성:
+
 - [ ] 건너뛰기 링크
 - [ ] 웹 접근성 인증 마크 위치
 - [ ] WCAG 2.1 AA 준수
@@ -656,12 +703,14 @@ Description:
 **2. Admin Template (React + Vite) - 관리자 페이지**
 
 기술 스택:
+
 - React 18
 - Vite (빠른 개발 환경)
 - React Router
 - SPA (서버 부담 적음)
 
 **P0 페이지 (필수 - 6개):**
+
 - [ ] 공통 레이아웃 (Sidebar, TopBar)
 - [ ] 로그인 (/admin/login)
 - [ ] 대시보드 (/admin/dashboard) - 차트 포함
@@ -670,10 +719,12 @@ Description:
 - [ ] 사용자 관리 (/admin/users)
 
 **P1 페이지 (선택 - 2개):**
+
 - [ ] 파일 관리 (/admin/files)
 - [ ] 설정 (/admin/settings)
 
 주요 기능:
+
 - [ ] Sidebar 네비게이션 (2-depth, 반응형)
 - [ ] TopBar (페이지 제목, 알림, 사용자 드롭다운)
 - [ ] Data Table (정렬, 필터, 페이징, 일괄 선택)
@@ -683,6 +734,7 @@ Description:
 - [ ] 차트 (Chart.js or Recharts)
 
 접근성:
+
 - [ ] 키보드 네비게이션
 - [ ] 스크린 리더 대응
 - [ ] ARIA 속성
@@ -692,6 +744,7 @@ Description:
 ---
 
 **템플릿 선택 시나리오:**
+
 ```bash
 npx create-hanui-app my-project
 
@@ -700,8 +753,10 @@ npx create-hanui-app my-project
     Admin (React + Vite) - 관리자 페이지
     Both - 포털 + 어드민 (Monorepo)
 ```
+````
 
 **Both 선택 시 구조:**
+
 ```
 my-project/
 ├── apps/
@@ -715,11 +770,13 @@ my-project/
 ---
 
 **Mock Data 제공:**
+
 - [ ] notices.json (공지사항 샘플)
 - [ ] users.json (사용자 샘플)
 - [ ] files.json (파일 샘플)
 
 **README 포함:**
+
 - [ ] 페이지 구조 설명
 - [ ] API 연동 방법
 - [ ] 커스터마이징 가이드
@@ -728,7 +785,7 @@ my-project/
 Labels: cli, templates, phase-1, critical
 Priority: P0 (최우선)
 Estimate: 27h (P0: Portal 13h + Admin 14h)
-         +7h (P1 선택 시)
++7h (P1 선택 시)
 Dependencies: #12 (CLI 구현 필요)
 
 Acceptance Criteria:
@@ -739,7 +796,8 @@ Acceptance Criteria:
 ✅ 9개 컴포넌트가 모두 사용됨
 ✅ Mock Data로 실제 동작하는 것처럼 보임
 ✅ README가 명확함
-```
+
+````
 
 ---
 
@@ -761,13 +819,15 @@ Vercel 디자인 레퍼런스 기반
 Labels: docs, phase-1
 Priority: P0
 Estimate: 12h
-```
+````
 
 #### Issue #15: 컴포넌트 API 문서
+
 ```markdown
 Title: [Docs] 컴포넌트 API 자동 생성
 
 Description:
+
 - [ ] JSDoc → Markdown 변환 도구
 - [ ] Props Table 생성
 - [ ] 예제 코드 하이라이팅
@@ -779,6 +839,7 @@ Estimate: 10h
 ```
 
 #### Issue #16: 메인 페이지 디자인
+
 ```markdown
 Title: [Docs] 메인 페이지 구현
 
@@ -800,10 +861,12 @@ Estimate: 8h
 ### Epic 6: NPM 배포 (Week 4)
 
 #### Issue #17: NPM 배포 준비
+
 ```markdown
 Title: [Release] NPM 배포 준비
 
 Description:
+
 - [ ] package.json 메타데이터 작성
 - [ ] README.md 작성
 - [ ] LICENSE (MIT)
@@ -817,10 +880,12 @@ Estimate: 4h
 ```
 
 #### Issue #18: CI/CD 설정
+
 ```markdown
 Title: [Release] GitHub Actions CI/CD 설정
 
 Description:
+
 - [ ] Test 워크플로우
 - [ ] Build 워크플로우
 - [ ] NPM 배포 워크플로우 (Release)
@@ -832,6 +897,7 @@ Estimate: 6h
 ```
 
 #### Issue #19: v0.1.0 배포
+
 ```markdown
 Title: [Release] v0.1.0 First Release
 
@@ -839,6 +905,7 @@ Description:
 첫 번째 공식 배포
 
 Checklist:
+
 - [ ] 모든 컴포넌트 테스트 통과
 - [ ] Docs 사이트 배포 완료
 - [ ] NPM 배포 (@hanui/react)
@@ -855,6 +922,7 @@ Estimate: 4h
 ## 🚀 Phase 1.5 이슈 (Vue 지원, Month 2-3)
 
 ### Issue #20: Vue 3 컴포넌트 포팅
+
 ```markdown
 Title: [Vue] React → Vue 3 포팅
 
@@ -877,6 +945,7 @@ Estimate: 30h
 ## 🎯 우선순위 요약
 
 ### P0 (Blocker - 반드시 해야 함)
+
 ```
 Week 1 (프로젝트 기반 + 디자인 시스템 + 핵심 컴포넌트):
 - #1: Monorepo 설정
@@ -910,6 +979,7 @@ Week 4 (배포):
 ```
 
 ### P1 (High - 가능하면 해야 함)
+
 ```
 - #3: Linting
 - #6: Spacing 시스템
@@ -920,6 +990,7 @@ Week 4 (배포):
 ```
 
 ### P2 (Medium - 나중에)
+
 ```
 - Vue 지원 (#20)
 - 추가 컴포넌트
@@ -980,6 +1051,7 @@ Day 5: v0.1.0 배포! (#19) - 4h
 ## 💡 전략적 권고사항 (업데이트)
 
 ### 0. 포털 + 어드민 템플릿 전략 ⭐ 핵심 차별화
+
 ```
 기존 경쟁자들:
 - KRDS-community/krds-react: 컴포넌트만 제공
@@ -1011,6 +1083,7 @@ HANUI의 차별화:
 ```
 
 ### 1. Starter Kit 우선 전략 채택 ✅
+
 ```
 이유:
 - 빠른 검증 (Lean Startup)
@@ -1025,6 +1098,7 @@ Week 4: 배포
 ```
 
 ### 2. React 먼저 개발 ✅
+
 ```
 이유:
 - 시장 규모 60% (Vue 30%)
@@ -1037,6 +1111,7 @@ Month 2-3: Vue 추가
 ```
 
 ### 3. 최소 완성도 전략
+
 ```
 Week 4 배포 시 반드시 포함:
 ✅ Button, Input, Table, Card, Modal
@@ -1051,6 +1126,7 @@ Week 4 배포 시 반드시 포함:
 ```
 
 ### 4. 커뮤니티 준비
+
 ```
 Week 4 배포 전 준비:
 - [ ] GitHub Discussions 활성화
@@ -1064,6 +1140,7 @@ Week 4 배포 전 준비:
 ## 📝 다음 단계
 
 ### 지금 바로 해야 할 일:
+
 1. **전략 결정 확정**
    - ✅ Starter Kit 우선
    - ✅ React 먼저
