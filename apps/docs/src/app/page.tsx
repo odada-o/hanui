@@ -53,19 +53,35 @@ export default function Home() {
             </p>
 
             <div className="flex items-center justify-center gap-4 flex-wrap">
-              <Button variant="primary" size="large">
-                시작하기
-              </Button>
-              <Button variant="secondary" size="large">
-                컴포넌트 보기
-              </Button>
+              <Link href="/components">
+                <Button variant="primary" size="large">
+                  시작하기
+                </Button>
+              </Link>
+              <Link
+                href="https://github.com/odada-o/hanui"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="secondary" size="large">
+                  GitHub
+                </Button>
+              </Link>
             </div>
 
             {/* Features Grid */}
-            <div className="grid md:grid-cols-3 gap-8 pt-16">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 pt-16">
+              <div className="p-6 rounded-lg border border-gray-20 dark:border-gray-80 hover:border-primary-60 dark:hover:border-primary-60 transition">
+                <div className="text-4xl mb-4">📦</div>
+                <h3 className="text-xl font-bold mb-2">Portal + Admin</h3>
+                <p className="text-gray-60 dark:text-gray-40">
+                  공공 포털과 관리자 템플릿 모두 제공
+                </p>
+              </div>
+
               <div className="p-6 rounded-lg border border-gray-20 dark:border-gray-80 hover:border-primary-60 dark:hover:border-primary-60 transition">
                 <div className="text-4xl mb-4">🎨</div>
-                <h3 className="text-xl font-bold mb-2">KRDS 준수</h3>
+                <h3 className="text-xl font-bold mb-2">KRDS 100% 준수</h3>
                 <p className="text-gray-60 dark:text-gray-40">
                   공공 웹 디자인 시스템을 완벽히 따르는 컴포넌트
                 </p>
@@ -73,7 +89,7 @@ export default function Home() {
 
               <div className="p-6 rounded-lg border border-gray-20 dark:border-gray-80 hover:border-primary-60 dark:hover:border-primary-60 transition">
                 <div className="text-4xl mb-4">♿️</div>
-                <h3 className="text-xl font-bold mb-2">접근성 우선</h3>
+                <h3 className="text-xl font-bold mb-2">접근성 AA 등급</h3>
                 <p className="text-gray-60 dark:text-gray-40">
                   WCAG 2.1 AA 준수 및 스크린 리더 완벽 지원
                 </p>
@@ -81,9 +97,9 @@ export default function Home() {
 
               <div className="p-6 rounded-lg border border-gray-20 dark:border-gray-80 hover:border-primary-60 dark:hover:border-primary-60 transition">
                 <div className="text-4xl mb-4">⚡️</div>
-                <h3 className="text-xl font-bold mb-2">빠른 개발</h3>
+                <h3 className="text-xl font-bold mb-2">즉시 사용 가능</h3>
                 <p className="text-gray-60 dark:text-gray-40">
-                  즉시 사용 가능한 9개의 핵심 컴포넌트
+                  30초 만에 시작하는 9개의 핵심 컴포넌트
                 </p>
               </div>
             </div>
