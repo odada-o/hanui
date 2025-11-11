@@ -13,5 +13,16 @@ export type { ButtonProps } from './components/Button';
 export { Input, inputVariants } from './components/Input';
 export type { InputProps } from './components/Input';
 
+export {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardBody,
+  CardFooter,
+  cardVariants,
+} from './components/Card';
+export type { CardProps } from './components/Card';
+
 // Utils
 export { cn } from './lib/utils';
