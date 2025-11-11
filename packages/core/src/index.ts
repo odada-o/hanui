@@ -25,6 +25,28 @@ export type {
   DarkColors,
 } from './tokens/colors';
 
+// Typography tokens
+export {
+  typography,
+  fontFamily,
+  fontWeight,
+  fontSize,
+  fontSizeMobile,
+  lineHeight,
+  letterSpacing,
+  typeScale,
+} from './tokens/typography';
+
+export type {
+  Typography,
+  FontFamily,
+  FontWeight,
+  FontSize,
+  LineHeight,
+  LetterSpacing,
+  TypeScale,
+} from './tokens/typography';
+
 // CSS utilities
 export {
   flattenObject,
