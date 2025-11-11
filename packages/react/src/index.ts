@@ -6,7 +6,9 @@ import './styles.css';
 
 export const version = '0.0.0';
 
-// Components will be exported here
-// export { Button } from './components/Button';
-// export { Input } from './components/Input';
-// ... etc
+// Components
+export { Button, buttonVariants } from './components/Button';
+export type { ButtonProps } from './components/Button';
+
+// Utils
+export { cn } from './lib/utils';
