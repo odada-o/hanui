@@ -1,88 +1,103 @@
 /**
  * KRDS (Korean Government Design System) Color Tokens
  *
+ * Official color palette from KRDS Figma tokens
+ * Source: https://github.com/KRDS-uiux/krds-uiux/blob/main/tokens/figma_token.json
+ *
  * All colors are verified to meet WCAG 2.1 AA contrast ratio (4.5:1)
  * when used appropriately with their corresponding backgrounds.
  */
 
 /**
- * Color palette scale type
+ * Color palette scale type (KRDS official scale)
+ * Uses 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95 scale
  */
 export interface ColorScale {
+  5: string;
+  10: string;
+  20: string;
+  30: string;
+  40: string;
   50: string;
-  100: string;
-  200: string;
-  300: string;
-  400: string;
-  500: string;
-  600: string;
-  700: string;
-  800: string;
-  900: string;
+  60: string;
+  70: string;
+  80: string;
+  90: string;
+  95: string;
 }
 
 /**
  * KRDS Primary Color Scale
- * Official government primary color: #0066CC
+ * Official government primary color
  *
  * Usage: Main actions, links, primary information
  * Contrast ratios (on white):
- * - 500-900: ✓ AA compliant (4.5:1+)
- * - 50-400: Use with dark backgrounds
+ * - 50-95: ✓ AA compliant (4.5:1+)
+ * - 5-40: Use with dark backgrounds
  */
 export const primary: ColorScale = {
-  50: '#E6F0FF',
-  100: '#CCE1FF',
-  200: '#99C3FF',
-  300: '#66A5FF',
-  400: '#3387FF',
-  500: '#0066CC', // KRDS Primary - Contrast: 6.67:1 (AA ✓)
-  600: '#0052A3',
-  700: '#003D7A',
-  800: '#002952',
-  900: '#001429',
+  5: '#ecf2fe',
+  10: '#d8e5fd',
+  20: '#b1cefb',
+  30: '#86aff9',
+  40: '#4c87f6',
+  50: '#256ef4',
+  60: '#0b50d0',
+  70: '#083891',
+  80: '#052561',
+  90: '#03163a',
+  95: '#020f27',
 };
 
 /**
  * KRDS Secondary Color Scale
- * Secondary accent color: #00A896
+ * Secondary accent color
  *
  * Usage: Secondary actions, accents, highlights
  * Contrast ratios (on white):
- * - 500-900: ✓ AA compliant (4.5:1+)
+ * - 50-95: ✓ AA compliant (4.5:1+)
  */
 export const secondary: ColorScale = {
-  50: '#E6F7F5',
-  100: '#CCEFEB',
-  200: '#99DFD7',
-  300: '#66CFC3',
-  400: '#33BFAF',
-  500: '#00A896', // KRDS Secondary
-  600: '#008778',
-  700: '#00655A',
-  800: '#00433C',
-  900: '#00221E',
+  5: '#eef2f7',
+  10: '#d6e0eb',
+  20: '#bacbde',
+  30: '#90b0d5',
+  40: '#6b96c7',
+  50: '#346fb2',
+  60: '#1c589c',
+  70: '#063a74',
+  80: '#052b57',
+  90: '#031f3f',
+  95: '#02162c',
 };
 
 /**
- * Gray Scale
+ * Gray Scale with extended range (0-100)
  * Neutral colors for backgrounds, borders, and text
  *
  * Contrast ratios (on white):
- * - 600-900: ✓ AA compliant for body text (4.5:1+)
- * - 700-900: ✓ AAA compliant for body text (7:1+)
+ * - 50-100: ✓ AA compliant for body text (4.5:1+)
+ * - 70-100: ✓ AAA compliant for body text (7:1+)
  */
-export const gray: ColorScale = {
-  50: '#F9FAFB',
-  100: '#F3F4F6',
-  200: '#E5E7EB',
-  300: '#D1D5DB',
-  400: '#9CA3AF',
-  500: '#6B7280',
-  600: '#4B5563', // Contrast: 7.52:1 (AAA ✓)
-  700: '#374151', // Contrast: 10.25:1 (AAA ✓)
-  800: '#1F2937', // Contrast: 14.12:1 (AAA ✓)
-  900: '#111827', // Contrast: 16.78:1 (AAA ✓)
+export interface GrayScale extends ColorScale {
+  0: string;
+  100: string;
+}
+
+export const gray: GrayScale = {
+  0: '#ffffff',
+  5: '#f4f5f6',
+  10: '#e6e8ea',
+  20: '#cdd1d5',
+  30: '#b1b8be',
+  40: '#8a949e',
+  50: '#6d7882',
+  60: '#58616a',
+  70: '#464c53',
+  80: '#33363d',
+  90: '#1e2124',
+  95: '#131416',
+  100: '#000000',
 };
 
 /**
@@ -90,19 +105,20 @@ export const gray: ColorScale = {
  * Positive feedback, success states, confirmations
  *
  * Contrast ratios (on white):
- * - 600-900: ✓ AA compliant (4.5:1+)
+ * - 50-95: ✓ AA compliant (4.5:1+)
  */
 export const success: ColorScale = {
-  50: '#E8F5E9',
-  100: '#C8E6C9',
-  200: '#A5D6A7',
-  300: '#81C784',
-  400: '#66BB6A',
-  500: '#4CAF50',
-  600: '#43A047', // Contrast: 4.52:1 (AA ✓)
-  700: '#388E3C',
-  800: '#2E7D32',
-  900: '#1B5E20',
+  5: '#eaf6ec',
+  10: '#d8eedd',
+  20: '#a9dab4',
+  30: '#7ec88e',
+  40: '#3fa654',
+  50: '#228738',
+  60: '#267337',
+  70: '#285d33',
+  80: '#1f4727',
+  90: '#122b18',
+  95: '#0e2012',
 };
 
 /**
@@ -110,20 +126,21 @@ export const success: ColorScale = {
  * Warnings, cautions, attention needed
  *
  * Contrast ratios (on white):
- * - 700-900: ✓ AA compliant (4.5:1+)
- * - 500-600: Use with caution, border contrast only
+ * - 50-95: ✓ AA compliant (4.5:1+)
+ * - 5-40: Use with caution, border contrast only
  */
 export const warning: ColorScale = {
-  50: '#FFF8E1',
-  100: '#FFECB3',
-  200: '#FFE082',
-  300: '#FFD54F',
-  400: '#FFCA28',
-  500: '#FFC107',
-  600: '#FFB300',
-  700: '#FFA000', // Contrast: 4.55:1 (AA ✓)
-  800: '#FF8F00',
-  900: '#FF6F00',
+  5: '#fff3db',
+  10: '#ffe0a3',
+  20: '#ffc95c',
+  30: '#ffb114',
+  40: '#c78500',
+  50: '#9e6a00',
+  60: '#8a5c00',
+  70: '#614100',
+  80: '#422c00',
+  90: '#2e1f00',
+  95: '#241800',
 };
 
 /**
@@ -131,26 +148,42 @@ export const warning: ColorScale = {
  * Errors, destructive actions, alerts
  *
  * Contrast ratios (on white):
- * - 600-900: ✓ AA compliant (4.5:1+)
+ * - 50-95: ✓ AA compliant (4.5:1+)
  */
 export const danger: ColorScale = {
-  50: '#FFEBEE',
-  100: '#FFCDD2',
-  200: '#EF9A9A',
-  300: '#E57373',
-  400: '#EF5350',
-  500: '#F44336',
-  600: '#E53935', // Contrast: 4.61:1 (AA ✓)
-  700: '#D32F2F',
-  800: '#C62828',
-  900: '#B71C1C',
+  5: '#fdefec',
+  10: '#fcdfd9',
+  20: '#f7afa1',
+  30: '#f48771',
+  40: '#f05f42',
+  50: '#de3412',
+  60: '#bd2c0f',
+  70: '#8a240f',
+  80: '#5c180a',
+  90: '#390d05',
+  95: '#260903',
 };
 
 /**
- * Info Color Scale (Alias to Primary)
+ * Information Color Scale
  * Informational messages, tips, helpful content
+ *
+ * Contrast ratios (on white):
+ * - 50-95: ✓ AA compliant (4.5:1+)
  */
-export const info: ColorScale = primary;
+export const info: ColorScale = {
+  5: '#e7f4fe',
+  10: '#d3ebfd',
+  20: '#9ed2fa',
+  30: '#5fb5f7',
+  40: '#2098f3',
+  50: '#0b78cb',
+  60: '#096ab3',
+  70: '#085691',
+  80: '#053961',
+  90: '#03253f',
+  95: '#021a2c',
+};
 
 /**
  * Complete color palette
@@ -175,55 +208,55 @@ export const colors = {
 export const semanticColors = {
   // Text colors (all AA/AAA compliant on white)
   text: {
-    primary: gray[900], // 16.78:1 (AAA ✓)
-    secondary: gray[700], // 10.25:1 (AAA ✓)
-    tertiary: gray[600], // 7.52:1 (AAA ✓)
-    disabled: gray[400],
-    inverse: '#FFFFFF',
+    primary: gray[95], // Darkest text (AAA ✓)
+    secondary: gray[70], // Secondary text (AA ✓)
+    tertiary: gray[60], // Tertiary text (AA ✓)
+    disabled: gray[40],
+    inverse: gray[0], // White
   },
   // Background colors
   background: {
-    primary: '#FFFFFF',
-    secondary: gray[50],
-    tertiary: gray[100],
-    disabled: gray[200],
-    inverse: gray[900],
+    primary: gray[0], // White
+    secondary: gray[5],
+    tertiary: gray[10],
+    disabled: gray[20],
+    inverse: gray[95],
   },
   // Border colors
   border: {
-    default: gray[200],
-    hover: gray[300],
-    focus: primary[500],
-    error: danger[500],
+    default: gray[20],
+    hover: gray[30],
+    focus: primary[50],
+    error: danger[50],
   },
   // State colors (interactive elements)
   state: {
     success: {
-      text: success[700],
-      background: success[50],
-      border: success[600],
+      text: success[70],
+      background: success[5],
+      border: success[50],
     },
     warning: {
-      text: warning[800],
-      background: warning[50],
-      border: warning[700],
+      text: warning[80],
+      background: warning[5],
+      border: warning[50],
     },
     error: {
-      text: danger[700],
-      background: danger[50],
-      border: danger[600],
+      text: danger[70],
+      background: danger[5],
+      border: danger[50],
     },
     info: {
-      text: primary[700],
-      background: primary[50],
-      border: primary[600],
+      text: info[70],
+      background: info[5],
+      border: info[50],
     },
   },
   // Link colors
   link: {
-    default: primary[600],
-    hover: primary[700],
-    visited: primary[800],
+    default: primary[60],
+    hover: primary[70],
+    visited: primary[80],
   },
 } as const;
 
@@ -235,55 +268,55 @@ export const semanticColors = {
 export const darkColors = {
   // Text colors (on dark background)
   text: {
-    primary: gray[50],
-    secondary: gray[300],
-    tertiary: gray[400],
-    disabled: gray[600],
-    inverse: gray[900],
+    primary: gray[5],
+    secondary: gray[30],
+    tertiary: gray[40],
+    disabled: gray[60],
+    inverse: gray[95],
   },
   // Background colors
   background: {
-    primary: gray[900],
-    secondary: gray[800],
-    tertiary: gray[700],
-    disabled: gray[600],
-    inverse: '#FFFFFF',
+    primary: gray[95],
+    secondary: gray[90],
+    tertiary: gray[80],
+    disabled: gray[70],
+    inverse: gray[0],
   },
   // Border colors
   border: {
-    default: gray[700],
-    hover: gray[600],
-    focus: primary[400],
-    error: danger[400],
+    default: gray[80],
+    hover: gray[70],
+    focus: primary[40],
+    error: danger[40],
   },
   // State colors (adjusted for dark backgrounds)
   state: {
     success: {
-      text: success[300],
-      background: success[900],
-      border: success[400],
+      text: success[30],
+      background: success[95],
+      border: success[40],
     },
     warning: {
-      text: warning[300],
-      background: warning[900],
-      border: warning[400],
+      text: warning[30],
+      background: warning[95],
+      border: warning[40],
     },
     error: {
-      text: danger[300],
-      background: danger[900],
-      border: danger[400],
+      text: danger[30],
+      background: danger[95],
+      border: danger[40],
     },
     info: {
-      text: primary[300],
-      background: primary[900],
-      border: primary[400],
+      text: info[30],
+      background: info[95],
+      border: info[40],
     },
   },
   // Link colors
   link: {
-    default: primary[400],
-    hover: primary[300],
-    visited: primary[500],
+    default: primary[40],
+    hover: primary[30],
+    visited: primary[50],
   },
 } as const;
 
