@@ -35,5 +35,14 @@ export {
   TableCaption,
 } from './components/Table';
 
+export {
+  Modal,
+  ModalTitle,
+  ModalBody,
+  ModalFooter,
+  ModalCloseButton,
+} from './components/Modal';
+export type { ModalProps } from './components/Modal';
+
 // Utils
 export { cn } from './lib/utils';
