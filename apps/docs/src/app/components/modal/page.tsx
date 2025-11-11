@@ -1,0 +1,595 @@
+'use client';
+
+import { Modal, Button } from '@hanui/react';
+import Link from 'next/link';
+import { useState } from 'react';
+
+export default function ModalPage() {
+  const [isBasicOpen, setIsBasicOpen] = useState(false);
+  const [isSmallOpen, setIsSmallOpen] = useState(false);
+  const [isMediumOpen, setIsMediumOpen] = useState(false);
+  const [isLargeOpen, setIsLargeOpen] = useState(false);
+  const [isXlOpen, setIsXlOpen] = useState(false);
+  const [isFullOpen, setIsFullOpen] = useState(false);
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      {/* Header */}
+      <header className="border-b border-gray-20 dark:border-gray-80">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <Link href="/" className="flex items-center space-x-2">
+            <h1 className="text-2xl font-bold text-primary-60">HANUI</h1>
+          </Link>
+          <nav className="flex items-center space-x-6">
+            <Link
+              href="/"
+              className="text-gray-70 dark:text-gray-30 hover:text-primary-60 transition"
+            >
+              홈
+            </Link>
+            <Link href="/components" className="text-primary-60 font-semibold">
+              컴포넌트
+            </Link>
+            <Link
+              href="https://github.com/odada-o/hanui"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-70 dark:text-gray-30 hover:text-primary-60 transition"
+            >
+              GitHub
+            </Link>
+          </nav>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <main className="flex-1 container mx-auto px-4 py-12">
+        <div className="max-w-4xl">
+          {/* Breadcrumb */}
+          <div className="text-sm text-gray-60 dark:text-gray-40 mb-4">
+            <Link href="/components" className="hover:text-primary-60">
+              컴포넌트
+            </Link>
+            {' / '}
+            <span>Modal</span>
+          </div>
+
+          <h1 className="text-4xl font-bold mb-4">Modal</h1>
+          <p className="text-xl text-gray-60 dark:text-gray-40 mb-8">
+            Headless UI Dialog 기반의 접근성 높은 모달 컴포넌트
+          </p>
+
+          {/* Quick Start */}
+          <section className="mb-12">
+            <div className="p-6 bg-gray-5 dark:bg-gray-90 rounded-lg">
+              <Button onClick={() => setIsBasicOpen(true)}>모달 열기</Button>
+
+              <Modal open={isBasicOpen} onClose={() => setIsBasicOpen(false)}>
+                <Modal.Title>기본 모달</Modal.Title>
+                <Modal.Body>
+                  <p>모달 컨텐츠가 여기에 표시됩니다.</p>
+                </Modal.Body>
+                <Modal.Footer>
+                  <Button
+                    variant="outline"
+                    onClick={() => setIsBasicOpen(false)}
+                  >
+                    취소
+                  </Button>
+                  <Button onClick={() => setIsBasicOpen(false)}>확인</Button>
+                </Modal.Footer>
+              </Modal>
+            </div>
+            <pre className="mt-4 p-4 bg-white dark:bg-gray-95 rounded overflow-x-auto text-sm">
+              <code>{`import { Modal, Button } from '@hanui/react';
+import { useState } from 'react';
+
+export default () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setIsOpen(true)}>모달 열기</Button>
+
+      <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+        <Modal.Title>기본 모달</Modal.Title>
+        <Modal.Body>
+          <p>모달 컨텐츠가 여기에 표시됩니다.</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="outline" onClick={() => setIsOpen(false)}>
+            취소
+          </Button>
+          <Button onClick={() => setIsOpen(false)}>확인</Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+  );
+};`}</code>
+            </pre>
+          </section>
+
+          {/* Examples */}
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold mb-8">Examples</h2>
+
+            <div className="space-y-12">
+              {/* Sizes */}
+              <div>
+                <h3 className="text-xl font-semibold mb-4">Sizes</h3>
+                <p className="text-gray-60 dark:text-gray-40 mb-4">
+                  다섯 가지 크기를 지원합니다: sm, md, lg, xl, full
+                </p>
+                <div className="p-6 bg-gray-5 dark:bg-gray-90 rounded-lg">
+                  <div className="flex flex-wrap gap-4">
+                    <Button onClick={() => setIsSmallOpen(true)} size="small">
+                      Small
+                    </Button>
+                    <Button onClick={() => setIsMediumOpen(true)}>
+                      Medium (기본)
+                    </Button>
+                    <Button onClick={() => setIsLargeOpen(true)} size="large">
+                      Large
+                    </Button>
+                    <Button onClick={() => setIsXlOpen(true)} size="large">
+                      Extra Large
+                    </Button>
+                    <Button
+                      onClick={() => setIsFullOpen(true)}
+                      variant="secondary"
+                    >
+                      Full Screen
+                    </Button>
+                  </div>
+
+                  {/* Small Modal */}
+                  <Modal
+                    open={isSmallOpen}
+                    onClose={() => setIsSmallOpen(false)}
+                    size="sm"
+                  >
+                    <Modal.Title>Small 모달</Modal.Title>
+                    <Modal.Body>
+                      <p>작은 크기의 모달입니다.</p>
+                    </Modal.Body>
+                    <Modal.Footer>
+                      <Button onClick={() => setIsSmallOpen(false)}>
+                        닫기
+                      </Button>
+                    </Modal.Footer>
+                  </Modal>
+
+                  {/* Medium Modal */}
+                  <Modal
+                    open={isMediumOpen}
+                    onClose={() => setIsMediumOpen(false)}
+                    size="md"
+                  >
+                    <Modal.Title>Medium 모달</Modal.Title>
+                    <Modal.Body>
+                      <p>중간 크기의 모달입니다. 기본값입니다.</p>
+                    </Modal.Body>
+                    <Modal.Footer>
+                      <Button onClick={() => setIsMediumOpen(false)}>
+                        닫기
+                      </Button>
+                    </Modal.Footer>
+                  </Modal>
+
+                  {/* Large Modal */}
+                  <Modal
+                    open={isLargeOpen}
+                    onClose={() => setIsLargeOpen(false)}
+                    size="lg"
+                  >
+                    <Modal.Title>Large 모달</Modal.Title>
+                    <Modal.Body>
+                      <p>큰 크기의 모달입니다.</p>
+                      <p className="mt-2">더 많은 컨텐츠를 담을 수 있습니다.</p>
+                    </Modal.Body>
+                    <Modal.Footer>
+                      <Button onClick={() => setIsLargeOpen(false)}>
+                        닫기
+                      </Button>
+                    </Modal.Footer>
+                  </Modal>
+
+                  {/* XL Modal */}
+                  <Modal
+                    open={isXlOpen}
+                    onClose={() => setIsXlOpen(false)}
+                    size="xl"
+                  >
+                    <Modal.Title>Extra Large 모달</Modal.Title>
+                    <Modal.Body>
+                      <p>매우 큰 크기의 모달입니다.</p>
+                      <p className="mt-2">
+                        복잡한 컨텐츠나 폼을 담을 때 유용합니다.
+                      </p>
+                    </Modal.Body>
+                    <Modal.Footer>
+                      <Button onClick={() => setIsXlOpen(false)}>닫기</Button>
+                    </Modal.Footer>
+                  </Modal>
+
+                  {/* Full Modal */}
+                  <Modal
+                    open={isFullOpen}
+                    onClose={() => setIsFullOpen(false)}
+                    size="full"
+                  >
+                    <Modal.Title>Full Screen 모달</Modal.Title>
+                    <Modal.Body>
+                      <p>전체 화면을 차지하는 모달입니다.</p>
+                      <p className="mt-2">
+                        대량의 데이터나 복잡한 인터페이스를 표시할 때
+                        사용합니다.
+                      </p>
+                    </Modal.Body>
+                    <Modal.Footer>
+                      <Button onClick={() => setIsFullOpen(false)}>닫기</Button>
+                    </Modal.Footer>
+                  </Modal>
+                </div>
+                <pre className="mt-4 p-4 bg-white dark:bg-gray-95 rounded overflow-x-auto text-sm">
+                  <code>{`<Modal open={isOpen} onClose={onClose} size="sm">
+  <Modal.Title>Small 모달</Modal.Title>
+  <Modal.Body>작은 크기의 모달입니다.</Modal.Body>
+  <Modal.Footer>
+    <Button onClick={onClose}>닫기</Button>
+  </Modal.Footer>
+</Modal>
+
+<Modal open={isOpen} onClose={onClose} size="full">
+  <Modal.Title>Full Screen 모달</Modal.Title>
+  <Modal.Body>전체 화면을 차지하는 모달입니다.</Modal.Body>
+  <Modal.Footer>
+    <Button onClick={onClose}>닫기</Button>
+  </Modal.Footer>
+</Modal>`}</code>
+                </pre>
+              </div>
+
+              {/* With Close Button */}
+              <div>
+                <h3 className="text-xl font-semibold mb-4">
+                  With Close Button
+                </h3>
+                <p className="text-gray-60 dark:text-gray-40 mb-4">
+                  상단에 닫기 버튼을 추가할 수 있습니다.
+                </p>
+                <div className="p-6 bg-gray-5 dark:bg-gray-90 rounded-lg">
+                  <Button onClick={() => setIsBasicOpen(true)}>
+                    닫기 버튼 있는 모달
+                  </Button>
+
+                  <Modal
+                    open={isBasicOpen}
+                    onClose={() => setIsBasicOpen(false)}
+                  >
+                    <Modal.CloseButton />
+                    <Modal.Title>닫기 버튼이 있는 모달</Modal.Title>
+                    <Modal.Body>
+                      <p>
+                        오른쪽 상단의 X 버튼이나 Footer의 버튼으로 닫을 수
+                        있습니다.
+                      </p>
+                    </Modal.Body>
+                    <Modal.Footer>
+                      <Button onClick={() => setIsBasicOpen(false)}>
+                        확인
+                      </Button>
+                    </Modal.Footer>
+                  </Modal>
+                </div>
+                <pre className="mt-4 p-4 bg-white dark:bg-gray-95 rounded overflow-x-auto text-sm">
+                  <code>{`<Modal open={isOpen} onClose={onClose}>
+  <Modal.CloseButton />
+  <Modal.Title>닫기 버튼이 있는 모달</Modal.Title>
+  <Modal.Body>
+    <p>오른쪽 상단의 X 버튼으로 닫을 수 있습니다.</p>
+  </Modal.Body>
+  <Modal.Footer>
+    <Button onClick={onClose}>확인</Button>
+  </Modal.Footer>
+</Modal>`}</code>
+                </pre>
+              </div>
+
+              {/* Confirmation Modal */}
+              <div>
+                <h3 className="text-xl font-semibold mb-4">
+                  Confirmation Modal
+                </h3>
+                <p className="text-gray-60 dark:text-gray-40 mb-4">
+                  사용자의 확인이 필요한 작업에 사용하는 패턴입니다.
+                </p>
+                <div className="p-6 bg-gray-5 dark:bg-gray-90 rounded-lg">
+                  <Button variant="danger" onClick={() => setIsBasicOpen(true)}>
+                    계정 삭제
+                  </Button>
+
+                  <Modal
+                    open={isBasicOpen}
+                    onClose={() => setIsBasicOpen(false)}
+                    size="sm"
+                  >
+                    <Modal.Title>계정을 삭제하시겠습니까?</Modal.Title>
+                    <Modal.Body>
+                      <p className="text-gray-70 dark:text-gray-30">
+                        이 작업은 되돌릴 수 없습니다. 계정과 모든 데이터가
+                        영구적으로 삭제됩니다.
+                      </p>
+                    </Modal.Body>
+                    <Modal.Footer>
+                      <Button
+                        variant="outline"
+                        onClick={() => setIsBasicOpen(false)}
+                      >
+                        취소
+                      </Button>
+                      <Button
+                        variant="danger"
+                        onClick={() => {
+                          // 삭제 로직
+                          setIsBasicOpen(false);
+                        }}
+                      >
+                        삭제
+                      </Button>
+                    </Modal.Footer>
+                  </Modal>
+                </div>
+                <pre className="mt-4 p-4 bg-white dark:bg-gray-95 rounded overflow-x-auto text-sm">
+                  <code>{`<Modal open={isOpen} onClose={onClose} size="sm">
+  <Modal.Title>계정을 삭제하시겠습니까?</Modal.Title>
+  <Modal.Body>
+    <p>이 작업은 되돌릴 수 없습니다.</p>
+  </Modal.Body>
+  <Modal.Footer>
+    <Button variant="outline" onClick={onClose}>
+      취소
+    </Button>
+    <Button variant="danger" onClick={handleDelete}>
+      삭제
+    </Button>
+  </Modal.Footer>
+</Modal>`}</code>
+                </pre>
+              </div>
+
+              {/* Form Modal */}
+              <div>
+                <h3 className="text-xl font-semibold mb-4">Form Modal</h3>
+                <p className="text-gray-60 dark:text-gray-40 mb-4">
+                  폼을 포함하는 모달 예제입니다.
+                </p>
+                <div className="p-6 bg-gray-5 dark:bg-gray-90 rounded-lg">
+                  <Button onClick={() => setIsBasicOpen(true)}>
+                    새 프로젝트 만들기
+                  </Button>
+
+                  <Modal
+                    open={isBasicOpen}
+                    onClose={() => setIsBasicOpen(false)}
+                  >
+                    <Modal.Title>새 프로젝트 만들기</Modal.Title>
+                    <Modal.Body>
+                      <form className="space-y-4">
+                        <div>
+                          <label className="block text-sm font-medium mb-1">
+                            프로젝트 이름
+                          </label>
+                          <input
+                            type="text"
+                            className="w-full px-3 py-2 border border-gray-30 dark:border-gray-70 rounded focus:outline-none focus:ring-2 focus:ring-primary-60"
+                            placeholder="프로젝트 이름을 입력하세요"
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-sm font-medium mb-1">
+                            설명
+                          </label>
+                          <textarea
+                            rows={3}
+                            className="w-full px-3 py-2 border border-gray-30 dark:border-gray-70 rounded focus:outline-none focus:ring-2 focus:ring-primary-60"
+                            placeholder="프로젝트 설명을 입력하세요"
+                          />
+                        </div>
+                      </form>
+                    </Modal.Body>
+                    <Modal.Footer>
+                      <Button
+                        variant="outline"
+                        onClick={() => setIsBasicOpen(false)}
+                      >
+                        취소
+                      </Button>
+                      <Button onClick={() => setIsBasicOpen(false)}>
+                        만들기
+                      </Button>
+                    </Modal.Footer>
+                  </Modal>
+                </div>
+                <pre className="mt-4 p-4 bg-white dark:bg-gray-95 rounded overflow-x-auto text-sm">
+                  <code>{`<Modal open={isOpen} onClose={onClose}>
+  <Modal.Title>새 프로젝트 만들기</Modal.Title>
+  <Modal.Body>
+    <form className="space-y-4">
+      <div>
+        <label>프로젝트 이름</label>
+        <input type="text" placeholder="이름을 입력하세요" />
+      </div>
+      <div>
+        <label>설명</label>
+        <textarea placeholder="설명을 입력하세요" />
+      </div>
+    </form>
+  </Modal.Body>
+  <Modal.Footer>
+    <Button variant="outline" onClick={onClose}>취소</Button>
+    <Button onClick={handleSubmit}>만들기</Button>
+  </Modal.Footer>
+</Modal>`}</code>
+                </pre>
+              </div>
+            </div>
+          </section>
+
+          {/* API Reference */}
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold mb-8">API Reference</h2>
+
+            <div className="space-y-8">
+              {/* Modal */}
+              <div>
+                <h3 className="text-xl font-semibold mb-4">Modal</h3>
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse">
+                    <thead>
+                      <tr className="border-b border-gray-20 dark:border-gray-80">
+                        <th className="text-left py-3 px-4 font-semibold w-1/5">
+                          Prop
+                        </th>
+                        <th className="text-left py-3 px-4 font-semibold w-2/5">
+                          Type
+                        </th>
+                        <th className="text-left py-3 px-4 font-semibold w-1/6">
+                          Default
+                        </th>
+                        <th className="text-left py-3 px-4 font-semibold w-1/4">
+                          Description
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b border-gray-20 dark:border-gray-80">
+                        <td className="py-3 px-4 font-mono text-sm">open</td>
+                        <td className="py-3 px-4 font-mono text-sm text-gray-60 dark:text-gray-40">
+                          boolean
+                        </td>
+                        <td className="py-3 px-4 font-mono text-sm">-</td>
+                        <td className="py-3 px-4 text-gray-60 dark:text-gray-40">
+                          모달 표시 여부
+                        </td>
+                      </tr>
+                      <tr className="border-b border-gray-20 dark:border-gray-80">
+                        <td className="py-3 px-4 font-mono text-sm">onClose</td>
+                        <td className="py-3 px-4 font-mono text-sm text-gray-60 dark:text-gray-40">
+                          () =&gt; void
+                        </td>
+                        <td className="py-3 px-4 font-mono text-sm">-</td>
+                        <td className="py-3 px-4 text-gray-60 dark:text-gray-40">
+                          모달 닫기 핸들러
+                        </td>
+                      </tr>
+                      <tr className="border-b border-gray-20 dark:border-gray-80">
+                        <td className="py-3 px-4 font-mono text-sm">size</td>
+                        <td className="py-3 px-4 font-mono text-sm text-gray-60 dark:text-gray-40">
+                          &quot;sm&quot; | &quot;md&quot; | &quot;lg&quot; |
+                          &quot;xl&quot; | &quot;full&quot;
+                        </td>
+                        <td className="py-3 px-4 font-mono text-sm">
+                          &quot;md&quot;
+                        </td>
+                        <td className="py-3 px-4 text-gray-60 dark:text-gray-40">
+                          모달 크기
+                        </td>
+                      </tr>
+                      <tr className="border-b border-gray-20 dark:border-gray-80">
+                        <td className="py-3 px-4 font-mono text-sm">
+                          children
+                        </td>
+                        <td className="py-3 px-4 font-mono text-sm text-gray-60 dark:text-gray-40">
+                          React.ReactNode
+                        </td>
+                        <td className="py-3 px-4 font-mono text-sm">-</td>
+                        <td className="py-3 px-4 text-gray-60 dark:text-gray-40">
+                          모달 내용
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              {/* Sub-components */}
+              <div>
+                <h3 className="text-xl font-semibold mb-4">Sub-components</h3>
+                <div className="space-y-4">
+                  <div>
+                    <p className="font-mono text-sm mb-2">Modal.Title</p>
+                    <p className="text-gray-60 dark:text-gray-40 text-sm">
+                      모달의 제목을 표시합니다. children을 받습니다.
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-mono text-sm mb-2">Modal.Body</p>
+                    <p className="text-gray-60 dark:text-gray-40 text-sm">
+                      모달의 본문 내용을 표시합니다. children을 받습니다.
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-mono text-sm mb-2">Modal.Footer</p>
+                    <p className="text-gray-60 dark:text-gray-40 text-sm">
+                      모달의 하단 액션 버튼 영역입니다. children을 받습니다.
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-mono text-sm mb-2">Modal.CloseButton</p>
+                    <p className="text-gray-60 dark:text-gray-40 text-sm">
+                      오른쪽 상단에 표시되는 닫기 버튼입니다. props를 받지
+                      않습니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Accessibility */}
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold mb-6">Accessibility</h2>
+            <div className="space-y-4 text-gray-70 dark:text-gray-30">
+              <p>이 컴포넌트는 WCAG 2.1 AA 기준을 준수합니다:</p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>
+                  <strong>Headless UI Dialog:</strong> 접근성 기능이 내장된
+                  Dialog 컴포넌트 사용
+                </li>
+                <li>
+                  <strong>포커스 트랩:</strong> 모달 열릴 때 자동으로 포커스
+                  트랩 적용
+                </li>
+                <li>
+                  <strong>포커스 복원:</strong> 모달 닫힐 때 이전 포커스 위치로
+                  복원
+                </li>
+                <li>
+                  <strong>ESC 키:</strong> ESC 키로 모달 닫기
+                </li>
+                <li>
+                  <strong>백드롭 클릭:</strong> 모달 외부 클릭 시 닫기
+                </li>
+                <li>
+                  <strong>ARIA 속성:</strong> role=&quot;dialog&quot;,
+                  aria-modal=&quot;true&quot; 자동 설정
+                </li>
+                <li>
+                  <strong>스크롤 잠금:</strong> 모달 열릴 때 배경 스크롤 방지
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="border-t border-gray-20 dark:border-gray-80 py-8">
+        <div className="container mx-auto px-4 text-center text-gray-60 dark:text-gray-40">
+          <p>MIT License · KRDS 기반 공공 웹 UI 컴포넌트 라이브러리</p>
+        </div>
+      </footer>
+    </div>
+  );
+}
