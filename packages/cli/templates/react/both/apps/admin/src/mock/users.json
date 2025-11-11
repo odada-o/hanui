@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "김철수",
+    "email": "kim.cs@example.com",
+    "role": "admin",
+    "status": "active",
+    "department": "개발팀",
+    "joinedAt": "2023-01-15T09:00:00Z",
+    "lastLoginAt": "2025-11-10T14:30:00Z"
+  },
+  {
+    "id": 2,
+    "name": "이영희",
+    "email": "lee.yh@example.com",
+    "role": "manager",
+    "status": "active",
+    "department": "기획팀",
+    "joinedAt": "2023-03-20T09:00:00Z",
+    "lastLoginAt": "2025-11-10T10:15:00Z"
+  },
+  {
+    "id": 3,
+    "name": "박민수",
+    "email": "park.ms@example.com",
+    "role": "user",
+    "status": "active",
+    "department": "디자인팀",
+    "joinedAt": "2023-06-10T09:00:00Z",
+    "lastLoginAt": "2025-11-09T16:45:00Z"
+  },
+  {
+    "id": 4,
+    "name": "정지원",
+    "email": "jung.jw@example.com",
+    "role": "user",
+    "status": "inactive",
+    "department": "마케팅팀",
+    "joinedAt": "2023-08-05T09:00:00Z",
+    "lastLoginAt": "2025-10-20T11:20:00Z"
+  },
+  {
+    "id": 5,
+    "name": "최서연",
+    "email": "choi.sy@example.com",
+    "role": "manager",
+    "status": "active",
+    "department": "인사팀",
+    "joinedAt": "2023-09-12T09:00:00Z",
+    "lastLoginAt": "2025-11-10T13:00:00Z"
+  },
+  {
+    "id": 6,
+    "name": "강동혁",
+    "email": "kang.dh@example.com",
+    "role": "user",
+    "status": "active",
+    "department": "개발팀",
+    "joinedAt": "2024-01-08T09:00:00Z",
+    "lastLoginAt": "2025-11-10T15:22:00Z"
+  },
+  {
+    "id": 7,
+    "name": "윤지우",
+    "email": "yoon.jw@example.com",
+    "role": "user",
+    "status": "active",
+    "department": "고객지원팀",
+    "joinedAt": "2024-02-14T09:00:00Z",
+    "lastLoginAt": "2025-11-10T09:30:00Z"
+  },
+  {
+    "id": 8,
+    "name": "임수빈",
+    "email": "lim.sb@example.com",
+    "role": "user",
+    "status": "active",
+    "department": "데이터팀",
+    "joinedAt": "2024-03-22T09:00:00Z",
+    "lastLoginAt": "2025-11-09T17:10:00Z"
+  },
+  {
+    "id": 9,
+    "name": "송하은",
+    "email": "song.he@example.com",
+    "role": "manager",
+    "status": "active",
+    "department": "법무팀",
+    "joinedAt": "2024-04-18T09:00:00Z",
+    "lastLoginAt": "2025-11-10T11:45:00Z"
+  },
+  {
+    "id": 10,
+    "name": "한지훈",
+    "email": "han.jh@example.com",
+    "role": "user",
+    "status": "inactive",
+    "department": "개발팀",
+    "joinedAt": "2024-05-30T09:00:00Z",
+    "lastLoginAt": "2025-09-15T14:20:00Z"
+  },
+  {
+    "id": 11,
+    "name": "오승우",
+    "email": "oh.sw@example.com",
+    "role": "user",
+    "status": "active",
+    "department": "비즈니스팀",
+    "joinedAt": "2024-07-10T09:00:00Z",
+    "lastLoginAt": "2025-11-10T12:30:00Z"
+  },
+  {
+    "id": 12,
+    "name": "서예진",
+    "email": "seo.yj@example.com",
+    "role": "admin",
+    "status": "active",
+    "department": "인프라팀",
+    "joinedAt": "2024-08-25T09:00:00Z",
+    "lastLoginAt": "2025-11-10T16:00:00Z"
+  }
+]

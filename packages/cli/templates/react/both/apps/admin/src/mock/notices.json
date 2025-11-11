@@ -1,0 +1,252 @@
+[
+  {
+    "id": 1,
+    "title": "시스템 정기 점검 안내",
+    "content": "2025년 11월 15일 02:00 ~ 06:00 시스템 정기 점검이 예정되어 있습니다. 해당 시간 동안 서비스 이용이 일시 중단됩니다.",
+    "status": "published",
+    "author": "관리자",
+    "createdAt": "2025-11-01T09:00:00Z",
+    "updatedAt": "2025-11-01T09:00:00Z",
+    "views": 1245
+  },
+  {
+    "id": 2,
+    "title": "새로운 기능 업데이트 안내",
+    "content": "사용자 대시보드에 새로운 통계 기능이 추가되었습니다. 상세 내용은 업데이트 노트를 참고해 주세요.",
+    "status": "published",
+    "author": "개발팀",
+    "createdAt": "2025-10-28T14:30:00Z",
+    "updatedAt": "2025-10-28T14:30:00Z",
+    "views": 892
+  },
+  {
+    "id": 3,
+    "title": "개인정보 처리방침 변경 안내",
+    "content": "개인정보 처리방침이 2025년 11월 1일부로 변경되었습니다. 변경된 내용을 확인해 주시기 바랍니다.",
+    "status": "published",
+    "author": "법무팀",
+    "createdAt": "2025-10-25T10:00:00Z",
+    "updatedAt": "2025-10-25T10:00:00Z",
+    "views": 2341
+  },
+  {
+    "id": 4,
+    "title": "추석 연휴 고객센터 운영 안내",
+    "content": "추석 연휴 기간 동안 고객센터 운영 시간이 변경됩니다. 9월 28일~10월 1일 오전 9시~오후 5시 운영",
+    "status": "archived",
+    "author": "고객지원팀",
+    "createdAt": "2025-09-20T08:00:00Z",
+    "updatedAt": "2025-09-20T08:00:00Z",
+    "views": 1567
+  },
+  {
+    "id": 5,
+    "title": "보안 업데이트 필수 적용 안내",
+    "content": "중요 보안 패치가 배포되었습니다. 모든 사용자는 가능한 빨리 업데이트를 적용해 주시기 바랍니다.",
+    "status": "published",
+    "author": "보안팀",
+    "createdAt": "2025-10-15T16:45:00Z",
+    "updatedAt": "2025-10-15T16:45:00Z",
+    "views": 3421
+  },
+  {
+    "id": 6,
+    "title": "신규 결제 수단 추가",
+    "content": "카카오페이, 네이버페이 등 간편결제 수단이 추가되었습니다.",
+    "status": "published",
+    "author": "결제팀",
+    "createdAt": "2025-10-10T11:20:00Z",
+    "updatedAt": "2025-10-10T11:20:00Z",
+    "views": 1876
+  },
+  {
+    "id": 7,
+    "title": "모바일 앱 v2.0 출시",
+    "content": "새롭게 개선된 모바일 앱이 출시되었습니다. 앱스토어와 플레이스토어에서 업데이트 가능합니다.",
+    "status": "published",
+    "author": "모바일팀",
+    "createdAt": "2025-10-05T13:00:00Z",
+    "updatedAt": "2025-10-05T13:00:00Z",
+    "views": 4532
+  },
+  {
+    "id": 8,
+    "title": "서비스 약관 개정 안내",
+    "content": "서비스 이용약관이 2025년 10월 20일부로 개정됩니다.",
+    "status": "draft",
+    "author": "법무팀",
+    "createdAt": "2025-10-01T09:30:00Z",
+    "updatedAt": "2025-10-01T09:30:00Z",
+    "views": 0
+  },
+  {
+    "id": 9,
+    "title": "2025년 하반기 이벤트 안내",
+    "content": "감사 이벤트가 진행됩니다. 참여하시고 푸짐한 경품을 받아가세요!",
+    "status": "published",
+    "author": "마케팅팀",
+    "createdAt": "2025-09-25T10:00:00Z",
+    "updatedAt": "2025-09-25T10:00:00Z",
+    "views": 5678
+  },
+  {
+    "id": 10,
+    "title": "고객센터 상담 시간 변경",
+    "content": "11월부터 고객센터 상담 시간이 평일 09:00~18:00로 변경됩니다.",
+    "status": "published",
+    "author": "고객지원팀",
+    "createdAt": "2025-09-15T14:00:00Z",
+    "updatedAt": "2025-09-15T14:00:00Z",
+    "views": 987
+  },
+  {
+    "id": 11,
+    "title": "API 사용량 제한 정책 변경",
+    "content": "API 사용량 제한이 시간당 1000건에서 5000건으로 증가되었습니다.",
+    "status": "published",
+    "author": "개발팀",
+    "createdAt": "2025-09-10T11:00:00Z",
+    "updatedAt": "2025-09-10T11:00:00Z",
+    "views": 654
+  },
+  {
+    "id": 12,
+    "title": "데이터베이스 마이그레이션 완료",
+    "content": "데이터베이스 마이그레이션이 성공적으로 완료되었습니다. 서비스 성능이 개선되었습니다.",
+    "status": "published",
+    "author": "인프라팀",
+    "createdAt": "2025-09-05T16:30:00Z",
+    "updatedAt": "2025-09-05T16:30:00Z",
+    "views": 432
+  },
+  {
+    "id": 13,
+    "title": "여름 휴가 기간 지원 안내",
+    "content": "여름 휴가 기간(8/1~8/15) 동안 긴급 문의는 이메일로 접수 부탁드립니다.",
+    "status": "archived",
+    "author": "인사팀",
+    "createdAt": "2025-07-25T09:00:00Z",
+    "updatedAt": "2025-07-25T09:00:00Z",
+    "views": 876
+  },
+  {
+    "id": 14,
+    "title": "신규 파트너사 입점",
+    "content": "5개의 신규 파트너사가 입점하였습니다. 더욱 다양한 서비스를 이용하실 수 있습니다.",
+    "status": "published",
+    "author": "비즈니스팀",
+    "createdAt": "2025-08-20T10:30:00Z",
+    "updatedAt": "2025-08-20T10:30:00Z",
+    "views": 1234
+  },
+  {
+    "id": 15,
+    "title": "UI/UX 개선 업데이트",
+    "content": "사용자 피드백을 반영하여 UI/UX가 대폭 개선되었습니다.",
+    "status": "published",
+    "author": "디자인팀",
+    "createdAt": "2025-08-15T15:00:00Z",
+    "updatedAt": "2025-08-15T15:00:00Z",
+    "views": 2345
+  },
+  {
+    "id": 16,
+    "title": "월간 서비스 통계 리포트",
+    "content": "2025년 7월 서비스 이용 통계를 공유합니다. 전월 대비 사용자 수 15% 증가",
+    "status": "published",
+    "author": "데이터팀",
+    "createdAt": "2025-08-01T09:00:00Z",
+    "updatedAt": "2025-08-01T09:00:00Z",
+    "views": 765
+  },
+  {
+    "id": 17,
+    "title": "장애 복구 완료 안내",
+    "content": "7월 28일 발생한 네트워크 장애가 복구되었습니다. 불편을 드려 죄송합니다.",
+    "status": "published",
+    "author": "인프라팀",
+    "createdAt": "2025-07-28T20:00:00Z",
+    "updatedAt": "2025-07-28T20:00:00Z",
+    "views": 3456
+  },
+  {
+    "id": 18,
+    "title": "신규 채용 공고",
+    "content": "프론트엔드 개발자, 백엔드 개발자를 채용합니다. 많은 지원 바랍니다.",
+    "status": "published",
+    "author": "인사팀",
+    "createdAt": "2025-07-20T10:00:00Z",
+    "updatedAt": "2025-07-20T10:00:00Z",
+    "views": 4321
+  },
+  {
+    "id": 19,
+    "title": "서버 증설 작업 완료",
+    "content": "서비스 안정성 향상을 위한 서버 증설 작업이 완료되었습니다.",
+    "status": "published",
+    "author": "인프라팀",
+    "createdAt": "2025-07-15T14:00:00Z",
+    "updatedAt": "2025-07-15T14:00:00Z",
+    "views": 543
+  },
+  {
+    "id": 20,
+    "title": "분기별 사용자 만족도 조사",
+    "content": "2분기 사용자 만족도 조사를 실시합니다. 많은 참여 부탁드립니다.",
+    "status": "published",
+    "author": "기획팀",
+    "createdAt": "2025-07-01T09:00:00Z",
+    "updatedAt": "2025-07-01T09:00:00Z",
+    "views": 1987
+  },
+  {
+    "id": 21,
+    "title": "다크모드 기능 추가",
+    "content": "사용자 요청에 따라 다크모드 기능이 추가되었습니다. 설정에서 활성화할 수 있습니다.",
+    "status": "published",
+    "author": "개발팀",
+    "createdAt": "2025-06-25T16:00:00Z",
+    "updatedAt": "2025-06-25T16:00:00Z",
+    "views": 6789
+  },
+  {
+    "id": 22,
+    "title": "국제화 지원 시작",
+    "content": "영어, 중국어, 일본어 등 다국어 서비스가 시작됩니다.",
+    "status": "draft",
+    "author": "개발팀",
+    "createdAt": "2025-06-20T11:00:00Z",
+    "updatedAt": "2025-06-20T11:00:00Z",
+    "views": 0
+  },
+  {
+    "id": 23,
+    "title": "개인화 추천 알고리즘 도입",
+    "content": "AI 기반 개인화 추천 기능이 도입되어 더욱 맞춤화된 서비스를 제공합니다.",
+    "status": "published",
+    "author": "AI팀",
+    "createdAt": "2025-06-15T13:30:00Z",
+    "updatedAt": "2025-06-15T13:30:00Z",
+    "views": 2876
+  },
+  {
+    "id": 24,
+    "title": "쿠키 정책 업데이트",
+    "content": "유럽 GDPR 규정에 따라 쿠키 정책이 업데이트되었습니다.",
+    "status": "published",
+    "author": "법무팀",
+    "createdAt": "2025-06-10T10:00:00Z",
+    "updatedAt": "2025-06-10T10:00:00Z",
+    "views": 1234
+  },
+  {
+    "id": 25,
+    "title": "플랫폼 5주년 기념 이벤트",
+    "content": "플랫폼 출시 5주년을 기념하여 특별 이벤트를 진행합니다.",
+    "status": "published",
+    "author": "마케팅팀",
+    "createdAt": "2025-06-01T09:00:00Z",
+    "updatedAt": "2025-06-01T09:00:00Z",
+    "views": 8765
+  }
+]

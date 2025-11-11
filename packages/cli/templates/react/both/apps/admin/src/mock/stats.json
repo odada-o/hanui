@@ -1,0 +1,74 @@
+{
+  "summary": {
+    "totalNotices": 25,
+    "totalUsers": 12,
+    "todayInquiries": 47,
+    "activeUsers": 10
+  },
+  "monthlyStats": [
+    { "month": "5월", "users": 280, "notices": 12 },
+    { "month": "6월", "users": 320, "notices": 18 },
+    { "month": "7월", "users": 410, "notices": 22 },
+    { "month": "8월", "users": 380, "notices": 15 },
+    { "month": "9월", "users": 450, "notices": 20 },
+    { "month": "10월", "users": 520, "notices": 25 }
+  ],
+  "recentActivities": [
+    {
+      "id": 1,
+      "user": "김철수",
+      "action": "공지사항 생성",
+      "target": "시스템 정기 점검 안내",
+      "timestamp": "2025-11-10T15:30:00Z"
+    },
+    {
+      "id": 2,
+      "user": "이영희",
+      "action": "사용자 수정",
+      "target": "정지원",
+      "timestamp": "2025-11-10T14:20:00Z"
+    },
+    {
+      "id": 3,
+      "user": "최서연",
+      "action": "공지사항 수정",
+      "target": "새로운 기능 업데이트 안내",
+      "timestamp": "2025-11-10T13:15:00Z"
+    },
+    {
+      "id": 4,
+      "user": "서예진",
+      "action": "사용자 생성",
+      "target": "한지훈",
+      "timestamp": "2025-11-10T11:45:00Z"
+    },
+    {
+      "id": 5,
+      "user": "김철수",
+      "action": "공지사항 삭제",
+      "target": "임시 공지사항",
+      "timestamp": "2025-11-10T10:30:00Z"
+    },
+    {
+      "id": 6,
+      "user": "송하은",
+      "action": "사용자 상태 변경",
+      "target": "한지훈",
+      "timestamp": "2025-11-09T16:20:00Z"
+    },
+    {
+      "id": 7,
+      "user": "이영희",
+      "action": "공지사항 발행",
+      "target": "개인정보 처리방침 변경 안내",
+      "timestamp": "2025-11-09T15:10:00Z"
+    },
+    {
+      "id": 8,
+      "user": "김철수",
+      "action": "사용자 삭제",
+      "target": "이전 사용자",
+      "timestamp": "2025-11-09T14:00:00Z"
+    }
+  ]
+}

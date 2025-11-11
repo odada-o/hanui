@@ -1,0 +1,295 @@
+.notice-list-page {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 0.5rem 0;
+}
+
+.page-description {
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Search Card */
+.search-card {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+}
+
+.search-form-inline {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.search-input-full {
+  flex: 1;
+}
+
+.search-result-info {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* Table Card */
+.table-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.notice-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.notice-table thead {
+  background: #f9fafb;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.notice-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.notice-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.875rem;
+}
+
+.notice-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.notice-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+/* Table Columns */
+.th-number,
+.td-number {
+  width: 80px;
+  text-align: center;
+}
+
+.th-title,
+.td-title {
+  min-width: 300px;
+}
+
+.th-date,
+.td-date {
+  width: 120px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.th-views,
+.td-views {
+  width: 100px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.notice-link {
+  color: #1f2937;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: block;
+}
+
+.notice-link:hover {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+.td-empty {
+  text-align: center;
+  color: #9ca3af;
+  padding: 3rem 1rem;
+}
+
+/* Pagination */
+.pagination-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.page-numbers {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.page-number {
+  min-width: 36px;
+  height: 36px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e5e7eb;
+  background: white;
+  color: #4b5563;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.page-number:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.page-number.active {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.page-number:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .page-title {
+    font-size: 1.75rem;
+  }
+
+  .th-number,
+  .td-number,
+  .th-views,
+  .td-views {
+    display: none;
+  }
+
+  .th-date,
+  .td-date {
+    width: 100px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .notice-list-page {
+    padding: 1.5rem 0;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .search-card {
+    padding: 1rem;
+  }
+
+  .search-form-inline {
+    flex-direction: column;
+  }
+
+  /* Mobile table layout */
+  .notice-table thead {
+    display: none;
+  }
+
+  .notice-table,
+  .notice-table tbody,
+  .notice-table tr,
+  .notice-table td {
+    display: block;
+  }
+
+  .notice-table tr {
+    margin-bottom: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .notice-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left !important;
+    position: relative;
+    padding-left: 120px;
+  }
+
+  .notice-table td:last-child {
+    border-bottom: none;
+  }
+
+  .notice-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    font-weight: 600;
+    color: #4b5563;
+  }
+
+  .td-title::before {
+    content: '제목';
+  }
+
+  .td-date::before {
+    content: '등록일';
+  }
+
+  .td-number,
+  .td-views {
+    display: none;
+  }
+
+  .page-numbers {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .search-card,
+  .pagination-container {
+    display: none;
+  }
+
+  .notice-table {
+    font-size: 12px;
+  }
+
+  .notice-table td,
+  .notice-table th {
+    padding: 0.5rem;
+  }
+
+  .notice-link {
+    color: #000;
+    text-decoration: none;
+  }
+}
