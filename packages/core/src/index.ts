@@ -47,6 +47,60 @@ export type {
   TypeScale,
 } from './tokens/typography';
 
+// Spacing tokens
+export {
+  spacingTokens,
+  spacing,
+  space,
+  gap,
+  padding,
+  layoutGapPC,
+  layoutGapMobile,
+  radius,
+  height,
+} from './tokens/spacing';
+
+export type {
+  SpacingTokens,
+  Spacing,
+  Space,
+  Gap,
+  Padding,
+  LayoutGapPC,
+  LayoutGapMobile,
+  Radius,
+  Height,
+} from './tokens/spacing';
+
+// Layout tokens
+export {
+  layoutTokens,
+  breakpoints,
+  breakpointValues,
+  container,
+  containerPadding,
+  grid,
+  zIndex,
+  maxWidth,
+  aspectRatio,
+  getBreakpointValue,
+  isAboveBreakpoint,
+  isBelowBreakpoint,
+  getResponsiveValue,
+} from './tokens/layout';
+
+export type {
+  LayoutTokens,
+  Breakpoints,
+  BreakpointValues,
+  Container,
+  ContainerPadding,
+  Grid,
+  ZIndex,
+  MaxWidth,
+  AspectRatio,
+} from './tokens/layout';
+
 // CSS utilities
 export {
   flattenObject,
