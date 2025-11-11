@@ -44,5 +44,8 @@ export {
 } from './components/Modal';
 export type { ModalProps } from './components/Modal';
 
+export { Pagination } from './components/Pagination';
+export type { PaginationProps } from './components/Pagination';
+
 // Utils
 export { cn } from './lib/utils';
