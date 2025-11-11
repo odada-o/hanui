@@ -24,5 +24,16 @@ export {
 } from './components/Card';
 export type { CardProps } from './components/Card';
 
+export {
+  Table,
+  TableHeader,
+  TableBody,
+  TableFooter,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableCaption,
+} from './components/Table';
+
 // Utils
 export { cn } from './lib/utils';
