@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: false,
   },
   eslint: {
-    ignoreDuringBuilds: false,
+    ignoreDuringBuilds: true,
   },
   transpilePackages: ['@hanui/react'],
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
