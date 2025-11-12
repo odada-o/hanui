@@ -4,19 +4,20 @@ import { Button, Input } from '@hanui/react';
 import { useState } from 'react';
 
 const examples = [
-  { id: 'dashboard', label: '대시보드' },
-  { id: 'forms', label: '폼' },
-  { id: 'auth', label: '인증' },
-  { id: 'tables', label: '테이블' },
+  { id: 'examples', label: 'Examples' },
+  { id: 'dashboard', label: 'Dashboard' },
+  { id: 'tasks', label: 'Tasks' },
+  { id: 'playground', label: 'Playground' },
+  { id: 'auth', label: 'Authentication' },
 ];
 
 export function ExampleShowcase() {
-  const [activeTab, setActiveTab] = useState('dashboard');
+  const [activeTab, setActiveTab] = useState('examples');
 
   return (
     <div className="w-full">
-      {/* Tab Navigation */}
-      <div className="flex items-center justify-between border-b border-gray-200 dark:border-gray-800 mb-8">
+      {/* Tab Navigation - shadcn/ui style */}
+      <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-6">
           {examples.map((example) => (
             <button
@@ -25,7 +26,7 @@ export function ExampleShowcase() {
               className={`pb-3 px-1 text-sm font-medium transition-colors relative ${
                 activeTab === example.id
                   ? 'text-gray-900 dark:text-gray-100'
-                  : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
+                  : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100'
               }`}
             >
               {example.label}
@@ -35,11 +36,26 @@ export function ExampleShowcase() {
             </button>
           ))}
         </div>
-        <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-          <span>테마:</span>
-          <select className="border border-gray-200 dark:border-gray-800 rounded-md px-2 py-1 bg-transparent">
-            <option>뉴트럴</option>
+        <div className="flex items-center gap-2">
+          <span className="text-xs text-gray-600 dark:text-gray-400">
+            Theme:
+          </span>
+          <select className="h-8 px-2 text-xs border border-gray-200 dark:border-gray-800 rounded-md bg-transparent">
+            <option>Neutral</option>
           </select>
+          <button className="flex items-center justify-center h-8 w-8 border border-gray-200 dark:border-gray-800 rounded-md hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+            </svg>
+          </button>
         </div>
       </div>
 
