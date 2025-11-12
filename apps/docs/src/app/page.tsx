@@ -4,6 +4,7 @@ import { Button } from '@hanui/react';
 import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { ExampleShowcase } from '@/components/ExampleShowcase';
 
 const components = [
   {
@@ -227,6 +228,21 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Example Showcase Section */}
+        <section className="container mx-auto px-4 py-16 md:py-24">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                실제 사용 예제
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400">
+                HANUI 컴포넌트로 만든 실제 화면 예제를 확인하세요
+              </p>
+            </div>
+            <ExampleShowcase />
           </div>
         </section>
 
