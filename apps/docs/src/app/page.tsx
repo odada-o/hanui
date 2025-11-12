@@ -66,19 +66,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Installation Section */}
-        <section className="container mx-auto px-4 py-12 md:py-16 bg-gray-50 dark:bg-gray-900/50">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-3">설치</h2>
-              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
-                원하는 패키지 매니저로 HANUI를 설치하세요
-              </p>
-            </div>
-            <PackageManagerTabs />
-          </div>
-        </section>
-
         {/* Example Showcase Section */}
         <section className="container mx-auto px-4 py-12 md:py-16">
           <div className="max-w-7xl mx-auto">
