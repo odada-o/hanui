@@ -22,14 +22,27 @@ const navigation = [
     ],
   },
   {
+    title: 'Typography',
+    items: [
+      { title: 'Display', href: '/typography/display' },
+      { title: 'Heading', href: '/typography/heading' },
+      { title: 'Body', href: '/typography/body' },
+      { title: 'NavText', href: '/typography/navtext' },
+    ],
+  },
+  {
     title: 'Layout',
-    items: [{ title: 'Container', href: '/layout/container' }],
+    items: [
+      { title: 'Container', href: '/layout/container' },
+      { title: 'Box', href: '/layout/box' },
+    ],
   },
   {
     title: 'Components',
     items: [
       { title: 'Button', href: '/components/button' },
       { title: 'Input', href: '/components/input' },
+      { title: 'Label', href: '/components/label' },
       { title: 'Select', href: '/components/select' },
       { title: 'Card', href: '/components/card' },
       { title: 'Table', href: '/components/table' },
@@ -113,7 +126,7 @@ function SidebarSection({ section }: { section: (typeof navigation)[0] }) {
 export function Sidebar() {
   return (
     <aside className="hidden md:block w-64 flex-shrink-0 relative">
-      <nav className="sticky top-20 h-[calc(100vh-3.5rem)] overflow-y-auto p-6 scrollbar-hide">
+      <nav className="sticky top-16 h-[calc(100vh-3.5rem)] overflow-y-auto p-6 pb-20 scrollbar-hide">
         <div className="space-y-8">
           {navigation.map((section) => (
             <SidebarSection key={section.title} section={section} />

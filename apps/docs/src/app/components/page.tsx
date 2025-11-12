@@ -56,6 +56,39 @@ const layoutComponents = [
   },
 ];
 
+const typographyComponents = [
+  {
+    name: 'Display',
+    href: '/typography/display',
+    updated: true,
+  },
+  {
+    name: 'Heading',
+    href: '/typography/heading',
+    updated: true,
+  },
+  {
+    name: 'Body',
+    href: '/typography/body',
+    updated: true,
+  },
+  {
+    name: 'Label',
+    href: '/typography/label',
+    updated: true,
+  },
+  {
+    name: 'NavText',
+    href: '/typography/navtext',
+    updated: true,
+  },
+  {
+    name: 'Box',
+    href: '/typography/box',
+    updated: true,
+  },
+];
+
 export default function ComponentsPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12 pb-32 relative">
@@ -65,6 +98,29 @@ export default function ComponentsPage() {
           HANUI 라이브러리에서 제공하는 모든 컴포넌트를 확인할 수 있습니다. 더
           많은 컴포넌트를 추가하고 있습니다.
         </p>
+      </div>
+
+      {/* Typography Section */}
+      <div className="mb-12">
+        <h2 className="text-2xl font-semibold mb-6">타이포그래피</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {typographyComponents.map((component) => (
+            <Link
+              key={component.name}
+              href={component.href}
+              className="relative block rounded-lg transition-all group"
+            >
+              <div className="flex items-center gap-2">
+                <span className="text-base font-medium text-gray-900 dark:text-gray-100 group-hover:underline transition-all">
+                  {component.name}
+                </span>
+                {component.updated && (
+                  <span className="w-2 h-2 rounded-full bg-blue-500" />
+                )}
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
 
       {/* Layout Section */}

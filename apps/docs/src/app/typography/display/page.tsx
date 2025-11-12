@@ -1,0 +1,266 @@
+'use client';
+
+import { Display } from '@hanui/react';
+import { ComponentPreview } from '@/components/docs/ComponentPreview';
+import { CodeBlock } from '@/components/docs/CodeBlock';
+
+export default function DisplayPage() {
+  return (
+    <>
+      <div className="mb-8">
+        <h1 className="text-4xl font-bold mb-4">Display</h1>
+        <p className="text-lg text-gray-600 dark:text-gray-400">
+          배너와 마케팅용 대형 텍스트 컴포넌트
+        </p>
+      </div>
+
+      <div className="mb-12">
+        <ComponentPreview>
+          <div className="flex flex-col gap-6">
+            <Display size="large">환영합니다</Display>
+            <Display size="medium">공공서비스 플랫폼</Display>
+            <Display size="small">HANUI 디자인 시스템</Display>
+          </div>
+        </ComponentPreview>
+      </div>
+
+      {/* Overview */}
+      <div className="mb-12">
+        <h2 id="overview" className="text-2xl font-bold mb-4">
+          개요
+        </h2>
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+          Display는 <strong>KRDS 타이포그래피 시스템</strong>에서 가장 큰 크기의
+          텍스트 스타일입니다. 배너, 히어로 섹션, 마케팅 메시지 등 사용자의
+          주목을 끌어야 하는 곳에 사용됩니다.
+        </p>
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+          모든 크기는 반응형으로 설계되어 PC와 모바일에서 최적의 가독성을
+          제공합니다.
+        </p>
+      </div>
+
+      {/* Sizes */}
+      <div className="mb-12">
+        <h2 id="sizes" className="text-2xl font-bold mb-6">
+          크기
+        </h2>
+        <div className="space-y-6">
+          <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-6">
+            <div className="mb-4">
+              <Display size="large">Large Display</Display>
+            </div>
+            <div className="text-sm text-gray-600 dark:text-gray-400">
+              60px (PC) / 44px (Mobile) · 700 (Bold) · 150% 줄 간격
+            </div>
+            <div className="mt-4">
+              <CodeBlock
+                code={`<Display size="large">최대 강조 텍스트</Display>`}
+                language="tsx"
+                showLineNumbers={false}
+              />
+            </div>
+          </div>
+
+          <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-6">
+            <div className="mb-4">
+              <Display size="medium">Medium Display</Display>
+            </div>
+            <div className="text-sm text-gray-600 dark:text-gray-400">
+              44px (PC) / 32px (Mobile) · 700 (Bold) · 150% 줄 간격
+            </div>
+            <div className="mt-4">
+              <CodeBlock
+                code={`<Display size="medium">주요 제목</Display>`}
+                language="tsx"
+                showLineNumbers={false}
+              />
+            </div>
+          </div>
+
+          <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-6">
+            <div className="mb-4">
+              <Display size="small">Small Display</Display>
+            </div>
+            <div className="text-sm text-gray-600 dark:text-gray-400">
+              36px (PC) / 28px (Mobile) · 700 (Bold) · 150% 줄 간격
+            </div>
+            <div className="mt-4">
+              <CodeBlock
+                code={`<Display size="small">보조 제목</Display>`}
+                language="tsx"
+                showLineNumbers={false}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Usage */}
+      <div className="mb-12">
+        <h2 id="usage" className="text-2xl font-bold mb-6">
+          사용 예시
+        </h2>
+
+        <div className="space-y-8">
+          {/* Polymorphic */}
+          <div>
+            <h3 className="text-xl font-semibold mb-4">다양한 HTML 태그</h3>
+            <ComponentPreview>
+              <div className="flex flex-col gap-4">
+                <Display as="h1" size="large">
+                  h1 태그로 렌더링
+                </Display>
+                <Display as="h2" size="medium">
+                  h2 태그로 렌더링
+                </Display>
+                <Display as="div" size="small">
+                  div 태그로 렌더링
+                </Display>
+              </div>
+            </ComponentPreview>
+            <div className="mt-4">
+              <CodeBlock
+                code={`<Display as="h1" size="large">h1 태그로 렌더링</Display>
+<Display as="h2" size="medium">h2 태그로 렌더링</Display>
+<Display as="div" size="small">div 태그로 렌더링</Display>`}
+                language="tsx"
+              />
+            </div>
+          </div>
+
+          {/* Custom Styling */}
+          <div>
+            <h3 className="text-xl font-semibold mb-4">커스텀 스타일</h3>
+            <ComponentPreview>
+              <Display size="medium" className="text-primary-60">
+                브랜드 컬러 적용
+              </Display>
+            </ComponentPreview>
+            <div className="mt-4">
+              <CodeBlock
+                code={`<Display size="medium" className="text-primary-60">
+  브랜드 컬러 적용
+</Display>`}
+                language="tsx"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Guidelines */}
+      <div className="mb-12">
+        <h2 id="guidelines" className="text-2xl font-bold mb-6">
+          사용 가이드라인
+        </h2>
+
+        <div className="space-y-6">
+          <div className="rounded-lg border border-green-200 dark:border-green-900 bg-green-50 dark:bg-green-950/30 p-6">
+            <h3 className="font-semibold text-green-900 dark:text-green-100 mb-3">
+              ✓ Display를 사용하기 적합한 경우
+            </h3>
+            <ul className="list-disc list-inside space-y-2 text-green-800 dark:text-green-200">
+              <li>랜딩 페이지의 히어로 섹션</li>
+              <li>프로모션 배너의 핵심 메시지</li>
+              <li>서비스 소개 페이지의 대제목</li>
+              <li>강력한 시각적 임팩트가 필요한 곳</li>
+            </ul>
+          </div>
+
+          <div className="rounded-lg border border-red-200 dark:border-red-900 bg-red-50 dark:bg-red-950/30 p-6">
+            <h3 className="font-semibold text-red-900 dark:text-red-100 mb-3">
+              ✗ Display를 사용하지 말아야 하는 경우
+            </h3>
+            <ul className="list-disc list-inside space-y-2 text-red-800 dark:text-red-200">
+              <li>일반 페이지 제목 (Heading 사용 권장)</li>
+              <li>본문 내용 (Body 사용 권장)</li>
+              <li>폼 라벨 (Label 사용 권장)</li>
+              <li>텍스트가 많은 콘텐츠 영역</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* API */}
+      <div className="mb-12">
+        <h2 id="api" className="text-2xl font-bold mb-6">
+          API
+        </h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-gray-200 dark:border-gray-800">
+                <th className="text-left py-3 px-4">Prop</th>
+                <th className="text-left py-3 px-4">Type</th>
+                <th className="text-left py-3 px-4">Default</th>
+                <th className="text-left py-3 px-4">Description</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700 dark:text-gray-300">
+              <tr className="border-b border-gray-200 dark:border-gray-800">
+                <td className="py-3 px-4">
+                  <code>size</code>
+                </td>
+                <td className="py-3 px-4">
+                  <code>"large" | "medium" | "small"</code>
+                </td>
+                <td className="py-3 px-4">
+                  <code>"medium"</code>
+                </td>
+                <td className="py-3 px-4">Display 크기</td>
+              </tr>
+              <tr className="border-b border-gray-200 dark:border-gray-800">
+                <td className="py-3 px-4">
+                  <code>as</code>
+                </td>
+                <td className="py-3 px-4">
+                  <code>"h1" | "h2" | "h3" | "div" | "p"</code>
+                </td>
+                <td className="py-3 px-4">
+                  <code>"h1"</code>
+                </td>
+                <td className="py-3 px-4">렌더링할 HTML 태그</td>
+              </tr>
+              <tr className="border-b border-gray-200 dark:border-gray-800">
+                <td className="py-3 px-4">
+                  <code>className</code>
+                </td>
+                <td className="py-3 px-4">
+                  <code>string</code>
+                </td>
+                <td className="py-3 px-4">-</td>
+                <td className="py-3 px-4">추가 CSS 클래스</td>
+              </tr>
+              <tr>
+                <td className="py-3 px-4">
+                  <code>children</code>
+                </td>
+                <td className="py-3 px-4">
+                  <code>ReactNode</code>
+                </td>
+                <td className="py-3 px-4">-</td>
+                <td className="py-3 px-4">텍스트 내용</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* KRDS Compliance */}
+      <div className="mb-12">
+        <h2 id="krds" className="text-2xl font-bold mb-6">
+          KRDS 준수사항
+        </h2>
+        <div className="rounded-lg border border-blue-200 dark:border-blue-900 bg-blue-50 dark:bg-blue-950/30 p-6">
+          <ul className="space-y-2 text-blue-900 dark:text-blue-100">
+            <li>✓ 모든 Display는 Bold (700) 폰트 굵기 사용</li>
+            <li>✓ 150% 줄 간격으로 가독성 확보</li>
+            <li>✓ 반응형 크기 (PC/모바일 최적화)</li>
+            <li>✓ Pretendard GOV 폰트 적용</li>
+          </ul>
+        </div>
+      </div>
+    </>
+  );
+}
