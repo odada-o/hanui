@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
+import { Logo } from './Logo';
 
 const SearchIcon = () => (
   <svg
@@ -33,6 +34,46 @@ const GitHubIcon = () => (
   </svg>
 );
 
+const SunIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <circle cx="12" cy="12" r="4" />
+    <path d="M12 2v2" />
+    <path d="M12 20v2" />
+    <path d="m4.93 4.93 1.41 1.41" />
+    <path d="m17.66 17.66 1.41 1.41" />
+    <path d="M2 12h2" />
+    <path d="M20 12h2" />
+    <path d="m6.34 17.66-1.41 1.41" />
+    <path d="m19.07 4.93-1.41 1.41" />
+  </svg>
+);
+
+const MoonIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+  </svg>
+);
+
 export function Header() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -44,33 +85,36 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200/40 dark:border-gray-800/40 bg-white/95 dark:bg-gray-950/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-gray-950/60">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-4">
-        {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2 flex-shrink-0">
-          <div className="w-6 h-6 bg-primary-60 rounded-md" />
-          <span className="text-lg font-bold">HANUI</span>
-        </Link>
-
-        {/* Navigation */}
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-          <Link
-            href="/components"
-            className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
-          >
-            Components
+      <div className="container mx-auto px-4 h-14 flex items-center gap-4">
+        {/* Left: Logo + Navigation */}
+        <div className="flex items-center gap-6">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2 flex-shrink-0">
+            <Logo />
+            <span className="text-lg font-bold font-krona">HANUI</span>
           </Link>
-          <Link
-            href="/components"
-            className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
-          >
-            Examples
-          </Link>
-        </nav>
 
-        {/* Right side */}
-        <div className="flex items-center gap-2">
+          {/* Navigation */}
+          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+            <Link
+              href="/components"
+              className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+            >
+              Components
+            </Link>
+            <Link
+              href="/components"
+              className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+            >
+              Examples
+            </Link>
+          </nav>
+        </div>
+
+        {/* Right: Search + GitHub + Theme */}
+        <div className="flex items-center gap-2 ml-auto">
           {/* Search */}
-          <button className="hidden sm:flex items-center gap-2 h-9 px-3 text-sm text-gray-500 dark:text-gray-400 border border-gray-200 dark:border-gray-800 rounded-md hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
+          <button className="hidden sm:flex items-center gap-2 h-9 w-full max-w-sm px-3 text-sm text-gray-500 dark:text-gray-400 border border-gray-200 dark:border-gray-800 rounded-md hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
             <SearchIcon />
             <span className="hidden lg:inline">Search documentation...</span>
             <kbd className="hidden lg:inline-flex h-5 select-none items-center gap-1 rounded border border-gray-200 dark:border-gray-800 bg-gray-100 dark:bg-gray-900 px-1.5 font-mono text-xs font-medium text-gray-600 dark:text-gray-400 ml-auto">
@@ -83,20 +127,20 @@ export function Header() {
             href="https://github.com/odada-o/hanui"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 h-9 px-3 text-sm font-medium border border-gray-200 dark:border-gray-800 rounded-md hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors"
+            className="flex items-center gap-2 h-9 px-3 text-sm font-medium rounded-md hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors"
           >
             <GitHubIcon />
-            <span className="hidden sm:inline">GitHub</span>
+            <span className="hidden">GitHub</span>
           </Link>
 
           {/* Theme Toggle */}
           {mounted && (
             <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="flex items-center justify-center h-9 w-9 rounded-md border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors"
+              className="flex items-center justify-center text-lg h-9 w-9 rounded-md hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors"
               aria-label="Toggle theme"
             >
-              {theme === 'dark' ? '☀️' : '🌙'}
+              {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
             </button>
           )}
         </div>

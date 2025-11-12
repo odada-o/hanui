@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Logo } from './Logo';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,8 +11,8 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-3">
             <div className="flex items-center space-x-2">
-              <div className="w-6 h-6 bg-primary-60 rounded-md" />
-              <span className="font-bold text-lg">HANUI</span>
+              <Logo />
+              <span className="font-bold text-lg font-krona">HANUI</span>
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-400 max-w-xs">
               KRDS 기반 공공 웹 UI 컴포넌트 라이브러리
