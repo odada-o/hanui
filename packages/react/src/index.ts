@@ -61,5 +61,8 @@ export type { FileUploadProps, UploadedFile } from './components/FileUpload';
 export { Select } from './components/Select';
 export type { SelectProps, SelectOption } from './components/Select';
 
+export { Container } from './components/Container';
+export type { ContainerProps } from './components/Container';
+
 // Utils
 export { cn } from './lib/utils';

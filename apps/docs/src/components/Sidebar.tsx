@@ -13,6 +13,10 @@ const navigation = [
     ],
   },
   {
+    title: 'Layout',
+    items: [{ title: 'Container', href: '/layout/container' }],
+  },
+  {
     title: 'Components',
     items: [
       { title: 'Button', href: '/components/button' },

@@ -3,90 +3,114 @@ import Link from 'next/link';
 const components = [
   {
     name: 'Button',
-    description: '다양한 스타일과 크기를 지원하는 버튼 컴포넌트',
     href: '/components/button',
-    icon: '🔘',
+    updated: true,
   },
   {
     name: 'Input',
-    description: '폼 입력 필드와 유효성 검사',
     href: '/components/input',
-    icon: '📝',
-  },
-  {
-    name: 'Card',
-    description: '콘텐츠 카드 컨테이너',
-    href: '/components/card',
-    icon: '🗂️',
-  },
-  {
-    name: 'Table',
-    description: '정렬과 페이징을 지원하는 데이터 테이블',
-    href: '/components/table',
-    icon: '📊',
-  },
-  {
-    name: 'Pagination',
-    description: '페이지 네비게이션 컴포넌트',
-    href: '/components/pagination',
-    icon: '📄',
-  },
-  {
-    name: 'Breadcrumb',
-    description: '네비게이션 경로 표시',
-    href: '/components/breadcrumb',
-    icon: '🔗',
-  },
-  {
-    name: 'Modal',
-    description: '모달 다이얼로그',
-    href: '/components/modal',
-    icon: '🪟',
+    updated: true,
   },
   {
     name: 'Select',
-    description: '드롭다운 선택 컴포넌트',
     href: '/components/select',
-    icon: '▼',
+    updated: true,
   },
   {
-    name: 'FileUpload',
-    description: '드래그 앤 드롭 파일 업로드',
-    href: '/components/fileupload',
-    icon: '📎',
+    name: 'Card',
+    href: '/components/card',
+    updated: false,
+  },
+  {
+    name: 'Table',
+    href: '/components/table',
+    updated: false,
+  },
+  {
+    name: 'Modal',
+    href: '/components/modal',
+    updated: false,
+  },
+  {
+    name: 'Breadcrumb',
+    href: '/components/breadcrumb',
+    updated: false,
+  },
+  {
+    name: 'Pagination',
+    href: '/components/pagination',
+    updated: false,
+  },
+  {
+    name: 'File Upload',
+    href: '/components/file-upload',
+    updated: false,
+  },
+];
+
+const layoutComponents = [
+  {
+    name: 'Container',
+    href: '/layout/container',
+    updated: true,
   },
 ];
 
 export default function ComponentsPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
-      <div className="mb-12">
+      <div className="mb-8">
         <h1 className="text-4xl font-bold mb-4">Components</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400">
-          KRDS를 준수하는 재사용 가능한 컴포넌트 라이브러리
+          Here you can find all the components available in the library. We are
+          working on adding more components.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {components.map((component) => (
-          <Link
-            key={component.name}
-            href={component.href}
-            className="group block p-6 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-md transition-all"
-          >
-            <div className="flex items-start gap-4">
-              <span className="text-3xl">{component.icon}</span>
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold mb-2 group-hover:text-[#256ef4] transition-colors">
+      {/* Layout Section */}
+      <div className="mb-12">
+        <h2 className="text-2xl font-semibold mb-6">Layout</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {layoutComponents.map((component) => (
+            <Link
+              key={component.name}
+              href={component.href}
+              className="relative block rounded-lg transition-all group"
+            >
+              <div className="flex items-center gap-2">
+                <span className="text-base font-medium text-gray-900 dark:text-gray-100 group-hover:underline transition-all">
                   {component.name}
-                </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  {component.description}
-                </p>
+                </span>
+                {component.updated && (
+                  <span className="w-2 h-2 rounded-full bg-blue-500" />
+                )}
               </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* Components Section */}
+      <div>
+        <h2 className="text-2xl font-semibold mb-6">Components</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {components.map((component) => (
+            <Link
+              key={component.name}
+              href={component.href}
+              className="relative block rounded-lg transition-all group"
+            >
+              <div className="flex items-center gap-2">
+                <span className="text-base font-medium text-gray-900 dark:text-gray-100 group-hover:underline transition-all">
+                  {component.name}
+                </span>
+                {component.updated && (
+                  <span className="w-2 h-2 rounded-full bg-blue-500" />
+                )}
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );
