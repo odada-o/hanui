@@ -62,12 +62,18 @@ export function CodeBlock({
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </div>
+      {/* eslint-disable-next-line react/no-unknown-property */}
       <style jsx global>{`
         .code-with-line-numbers pre {
           padding-left: 3.5rem;
+          padding-top: 1.25rem;
+          padding-bottom: 1.25rem;
         }
         .code-with-line-numbers code {
           counter-reset: line;
+        }
+        .code-with-line-numbers code .line {
+          line-height: 1.75;
         }
         .code-with-line-numbers code .line::before {
           counter-increment: line;
@@ -78,6 +84,12 @@ export function CodeBlock({
           margin-left: -3.5rem;
           text-align: right;
           color: #6b7280;
+        }
+        pre {
+          padding: 1.25rem 1rem;
+        }
+        code .line {
+          line-height: 1.75;
         }
       `}</style>
     </div>

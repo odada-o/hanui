@@ -11,7 +11,10 @@ interface InstallationProps {
   manualCode?: string;
 }
 
-export function Installation({ componentName, manualCode }: InstallationProps) {
+export function Installation({
+  componentName: _componentName,
+  manualCode,
+}: InstallationProps) {
   const [method, setMethod] = useState<InstallMethod>('cli');
   const [packageManager, setPackageManager] = useState<PackageManager>('pnpm');
 
