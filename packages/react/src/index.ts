@@ -64,5 +64,11 @@ export type { SelectProps, SelectOption } from './components/Select';
 export { Container } from './components/Container';
 export type { ContainerProps } from './components/Container';
 
+export { Stack, stackVariants } from './components/Stack';
+export type { StackProps } from './components/Stack';
+
+export { Section, sectionVariants } from './components/Section';
+export type { SectionProps } from './components/Section';
+
 // Utils
 export { cn } from './lib/utils';
