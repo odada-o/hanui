@@ -114,33 +114,81 @@ export default function ContainerPage() {
 
           {/* Semantic HTML */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">시맨틱 HTML</h3>
-            <GuidelineSection type="do" title="적절한 HTML 요소 사용 (as prop)">
-              <p className="mb-3">
-                콘텐츠의 의미에 맞는 시맨틱 요소를 선택하여 접근성을
-                향상시킵니다.
+            <h3 className="text-xl font-semibold mb-4">
+              시맨틱 HTML (선택사항)
+            </h3>
+            <div className="mb-4 p-4 bg-gray-50 dark:bg-gray-800/50 rounded-lg border border-gray-200 dark:border-gray-700">
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                <strong>as</strong> prop을 사용하면 접근성을 향상시킬 수 있지만,
+                필수는 아닙니다. 두 가지 패턴 모두 권장됩니다.
               </p>
-              <ul className="list-disc list-inside space-y-2">
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <GuidelineSection type="do" title="방법 1: as prop 사용">
+                <p className="mb-3 text-sm">
+                  Container에 직접 시맨틱 요소를 지정합니다.
+                </p>
+                <ComponentPreview>
+                  <div className="text-sm">
+                    <CodeBlock
+                      code={`<Container as="main" maxWidth="xl">
+  <h1>페이지 제목</h1>
+  <p>주요 콘텐츠</p>
+</Container>`}
+                      language="tsx"
+                      showLineNumbers={false}
+                    />
+                  </div>
+                </ComponentPreview>
+              </GuidelineSection>
+
+              <GuidelineSection type="do" title="방법 2: 시맨틱 요소로 감싸기">
+                <p className="mb-3 text-sm">
+                  Container를 시맨틱 요소로 감쌉니다. (일반적인 패턴)
+                </p>
+                <ComponentPreview>
+                  <div className="text-sm">
+                    <CodeBlock
+                      code={`<main>
+  <Container maxWidth="xl">
+    <h1>페이지 제목</h1>
+    <p>주요 콘텐츠</p>
+  </Container>
+</main>`}
+                      language="tsx"
+                      showLineNumbers={false}
+                    />
+                  </div>
+                </ComponentPreview>
+              </GuidelineSection>
+            </div>
+
+            <div className="mt-4">
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                <strong>시맨틱 요소 참고:</strong>
+              </p>
+              <ul className="list-disc list-inside space-y-1 text-sm text-gray-600 dark:text-gray-400">
                 <li>
-                  <code className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
-                    as=&quot;main&quot;
+                  <code className="bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-xs">
+                    main
                   </code>
                   : 페이지의 주요 콘텐츠
                 </li>
                 <li>
-                  <code className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
-                    as=&quot;section&quot;
+                  <code className="bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-xs">
+                    section
                   </code>
-                  : 섹션 그룹
+                  : 관련된 콘텐츠 그룹
                 </li>
                 <li>
-                  <code className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
-                    as=&quot;article&quot;
+                  <code className="bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-xs">
+                    article
                   </code>
-                  : 독립적인 콘텐츠
+                  : 독립적인 콘텐츠 (블로그 글, 뉴스 기사 등)
                 </li>
               </ul>
-            </GuidelineSection>
+            </div>
           </div>
 
           {/* KRDS Layout System */}
