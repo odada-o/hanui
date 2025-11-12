@@ -344,12 +344,10 @@ export default function NavTextPage() {
                   <code>size</code>
                 </td>
                 <td className="py-3 px-4">
-                  <code>
-                    &quot;large&quot; | &quot;small&quot; | &quot;medium&quot;
-                  </code>
+                  <code>&quot;lg&quot; | &quot;sm&quot; | &quot;md&quot;</code>
                 </td>
                 <td className="py-3 px-4">
-                  <code>&quot;large&quot;</code>
+                  <code>&quot;lg&quot;</code>
                 </td>
                 <td className="py-3 px-4">
                   텍스트 크기 (title: large/small, depth: medium/small)

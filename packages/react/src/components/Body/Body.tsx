@@ -19,10 +19,10 @@ const bodyVariants = cva(
   {
     variants: {
       size: {
-        large: 'text-[19px]',
-        medium: 'text-[17px]',
-        small: 'text-[15px]',
-        xsmall: 'text-[13px]',
+        lg: 'text-[19px]',
+        md: 'text-[17px]',
+        sm: 'text-[15px]',
+        xs: 'text-[13px]',
       },
       weight: {
         regular: 'font-normal', // 400
@@ -30,7 +30,7 @@ const bodyVariants = cva(
       },
     },
     defaultVariants: {
-      size: 'medium',
+      size: 'md',
       weight: 'regular',
     },
   }
@@ -44,9 +44,9 @@ export interface BodyProps
     VariantProps<typeof bodyVariants> {
   /**
    * 텍스트 크기
-   * @default "medium"
+   * @default "md"
    */
-  size?: 'large' | 'medium' | 'small' | 'xsmall';
+  size?: 'lg' | 'md' | 'sm' | 'xs';
 
   /**
    * 글자 굵기
@@ -76,16 +76,16 @@ export interface BodyProps
  * @example
  * ```tsx
  * <Body>기본 본문 텍스트입니다.</Body>
- * <Body size="large">큰 본문 텍스트</Body>
+ * <Body size="lg">큰 본문 텍스트</Body>
  * <Body weight="bold">강조된 텍스트</Body>
- * <Body size="small" as="span">작은 텍스트</Body>
+ * <Body size="sm" as="span">작은 텍스트</Body>
  * ```
  */
 export const Body = React.forwardRef<HTMLElement, BodyProps>(
   (
     {
       className,
-      size = 'medium',
+      size = 'md',
       weight = 'regular',
       as: Component = 'p',
       children,

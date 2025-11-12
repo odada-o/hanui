@@ -18,7 +18,7 @@ export default function LabelPage() {
         <ComponentPreview>
           <div className="flex flex-col gap-4">
             <div>
-              <Label size="large" htmlFor="input-large">
+              <Label size="lg" htmlFor="input-large">
                 Large Label
               </Label>
               <input
@@ -28,7 +28,7 @@ export default function LabelPage() {
               />
             </div>
             <div>
-              <Label size="medium" htmlFor="input-medium">
+              <Label size="md" htmlFor="input-medium">
                 Medium Label
               </Label>
               <input
@@ -38,7 +38,7 @@ export default function LabelPage() {
               />
             </div>
             <div>
-              <Label size="small" htmlFor="input-small">
+              <Label size="sm" htmlFor="input-small">
                 Small Label
               </Label>
               <input
@@ -75,7 +75,7 @@ export default function LabelPage() {
         <div className="space-y-6">
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-6">
             <div className="mb-4">
-              <Label size="large" htmlFor="demo-large">
+              <Label size="lg" htmlFor="demo-large">
                 Large Label - 중요한 폼 필드
               </Label>
               <input
@@ -90,7 +90,7 @@ export default function LabelPage() {
             </div>
             <div className="mt-4">
               <CodeBlock
-                code={`<Label size="large" htmlFor="input-id">라벨 텍스트</Label>
+                code={`<Label size="lg" htmlFor="input-id">라벨 텍스트</Label>
 <input id="input-id" type="text" />`}
                 language="tsx"
                 showLineNumbers={false}
@@ -100,7 +100,7 @@ export default function LabelPage() {
 
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-6">
             <div className="mb-4">
-              <Label size="medium" htmlFor="demo-medium">
+              <Label size="md" htmlFor="demo-medium">
                 Medium Label - 일반 폼 필드
               </Label>
               <input
@@ -115,7 +115,7 @@ export default function LabelPage() {
             </div>
             <div className="mt-4">
               <CodeBlock
-                code={`<Label size="medium" htmlFor="input-id">라벨 텍스트</Label>
+                code={`<Label size="md" htmlFor="input-id">라벨 텍스트</Label>
 <input id="input-id" type="text" />`}
                 language="tsx"
                 showLineNumbers={false}
@@ -125,7 +125,7 @@ export default function LabelPage() {
 
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-6">
             <div className="mb-4">
-              <Label size="small" htmlFor="demo-small">
+              <Label size="sm" htmlFor="demo-small">
                 Small Label - 보조 필드
               </Label>
               <input
@@ -140,7 +140,7 @@ export default function LabelPage() {
             </div>
             <div className="mt-4">
               <CodeBlock
-                code={`<Label size="small" htmlFor="input-id">라벨 텍스트</Label>
+                code={`<Label size="sm" htmlFor="input-id">라벨 텍스트</Label>
 <input id="input-id" type="text" />`}
                 language="tsx"
                 showLineNumbers={false}
@@ -150,7 +150,7 @@ export default function LabelPage() {
 
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-6">
             <div className="mb-4">
-              <Label size="xsmall" htmlFor="demo-xsmall">
+              <Label size="xs" htmlFor="demo-xsmall">
                 XSmall Label - 인라인 옵션
               </Label>
               <input
@@ -165,7 +165,7 @@ export default function LabelPage() {
             </div>
             <div className="mt-4">
               <CodeBlock
-                code={`<Label size="xsmall" htmlFor="input-id">라벨 텍스트</Label>
+                code={`<Label size="xs" htmlFor="input-id">라벨 텍스트</Label>
 <input id="input-id" type="text" />`}
                 language="tsx"
                 showLineNumbers={false}
@@ -188,7 +188,7 @@ export default function LabelPage() {
             <ComponentPreview>
               <div className="space-y-4 max-w-md">
                 <div>
-                  <Label size="medium" htmlFor="name">
+                  <Label size="md" htmlFor="name">
                     이름 *
                   </Label>
                   <input
@@ -199,7 +199,7 @@ export default function LabelPage() {
                   />
                 </div>
                 <div>
-                  <Label size="medium" htmlFor="email">
+                  <Label size="md" htmlFor="email">
                     이메일
                   </Label>
                   <input
@@ -212,10 +212,10 @@ export default function LabelPage() {
             </ComponentPreview>
             <div className="mt-4">
               <CodeBlock
-                code={`<Label size="medium" htmlFor="name">이름 *</Label>
+                code={`<Label size="md" htmlFor="name">이름 *</Label>
 <input id="name" type="text" required />
 
-<Label size="medium" htmlFor="email">이메일</Label>
+<Label size="md" htmlFor="email">이메일</Label>
 <input id="email" type="email" />`}
                 language="tsx"
               />
@@ -229,20 +229,20 @@ export default function LabelPage() {
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
                   <input id="agree" type="checkbox" />
-                  <Label size="medium" htmlFor="agree" className="mb-0">
+                  <Label size="md" htmlFor="agree" className="mb-0">
                     이용약관에 동의합니다
                   </Label>
                 </div>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
                     <input id="option1" type="radio" name="option" />
-                    <Label size="small" htmlFor="option1" className="mb-0">
+                    <Label size="sm" htmlFor="option1" className="mb-0">
                       옵션 1
                     </Label>
                   </div>
                   <div className="flex items-center gap-2">
                     <input id="option2" type="radio" name="option" />
-                    <Label size="small" htmlFor="option2" className="mb-0">
+                    <Label size="sm" htmlFor="option2" className="mb-0">
                       옵션 2
                     </Label>
                   </div>
@@ -252,10 +252,10 @@ export default function LabelPage() {
             <div className="mt-4">
               <CodeBlock
                 code={`<input id="agree" type="checkbox" />
-<Label size="medium" htmlFor="agree">이용약관에 동의합니다</Label>
+<Label size="md" htmlFor="agree">이용약관에 동의합니다</Label>
 
 <input id="option1" type="radio" name="option" />
-<Label size="small" htmlFor="option1">옵션 1</Label>`}
+<Label size="sm" htmlFor="option1">옵션 1</Label>`}
                 language="tsx"
               />
             </div>
@@ -266,7 +266,7 @@ export default function LabelPage() {
             <h3 className="text-xl font-semibold mb-4">필수 필드 표시</h3>
             <ComponentPreview>
               <div className="max-w-md">
-                <Label size="medium" htmlFor="required-field">
+                <Label size="md" htmlFor="required-field">
                   필수 입력 항목 <span className="text-red-500">*</span>
                 </Label>
                 <input
@@ -279,7 +279,7 @@ export default function LabelPage() {
             </ComponentPreview>
             <div className="mt-4">
               <CodeBlock
-                code={`<Label size="medium" htmlFor="required-field">
+                code={`<Label size="md" htmlFor="required-field">
   필수 입력 항목 <span className="text-red-500">*</span>
 </Label>
 <input id="required-field" type="text" required />`}
@@ -292,7 +292,7 @@ export default function LabelPage() {
           <div>
             <h3 className="text-xl font-semibold mb-4">커스텀 스타일</h3>
             <ComponentPreview>
-              <Label size="medium" htmlFor="custom" className="text-primary-60">
+              <Label size="md" htmlFor="custom" className="text-primary-60">
                 브랜드 컬러 라벨
               </Label>
               <input
@@ -303,7 +303,7 @@ export default function LabelPage() {
             </ComponentPreview>
             <div className="mt-4">
               <CodeBlock
-                code={`<Label size="medium" htmlFor="custom" className="text-primary-60">
+                code={`<Label size="md" htmlFor="custom" className="text-primary-60">
   브랜드 컬러 라벨
 </Label>`}
                 language="tsx"
@@ -379,12 +379,12 @@ export default function LabelPage() {
                 </td>
                 <td className="py-3 px-4">
                   <code>
-                    &quot;large&quot; | &quot;medium&quot; | &quot;small&quot; |
-                    &quot;xsmall&quot;
+                    &quot;lg&quot; | &quot;md&quot; | &quot;sm&quot; |
+                    &quot;xs&quot;
                   </code>
                 </td>
                 <td className="py-3 px-4">
-                  <code>&quot;medium&quot;</code>
+                  <code>&quot;md&quot;</code>
                 </td>
                 <td className="py-3 px-4">라벨 크기</td>
               </tr>

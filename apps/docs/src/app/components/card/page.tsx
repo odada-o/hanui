@@ -162,11 +162,11 @@ export default function CardPage() {
                   <tr className="border-b border-gray-20 dark:border-gray-80">
                     <td className="py-3 px-4 font-mono text-sm">padding</td>
                     <td className="py-3 px-4 font-mono text-sm">
-                      &quot;none&quot; | &quot;small&quot; | &quot;medium&quot;
-                      | &quot;large&quot;
+                      &quot;none&quot; | &quot;sm&quot; | &quot;md&quot; |
+                      &quot;lg&quot;
                     </td>
                     <td className="py-3 px-4 font-mono text-sm">
-                      &quot;medium&quot;
+                      &quot;md&quot;
                     </td>
                     <td className="py-3 px-4">패딩 크기</td>
                   </tr>

@@ -19,14 +19,14 @@ const labelVariants = cva(
   {
     variants: {
       size: {
-        large: 'text-[19px]',
-        medium: 'text-[17px]',
-        small: 'text-[15px]',
-        xsmall: 'text-[13px]',
+        lg: 'text-[19px]',
+        md: 'text-[17px]',
+        sm: 'text-[15px]',
+        xs: 'text-[13px]',
       },
     },
     defaultVariants: {
-      size: 'medium',
+      size: 'md',
     },
   }
 );
@@ -39,9 +39,9 @@ export interface LabelProps
     VariantProps<typeof labelVariants> {
   /**
    * 라벨 크기
-   * @default "medium"
+   * @default "md"
    */
-  size?: 'large' | 'medium' | 'small' | 'xsmall';
+  size?: 'lg' | 'md' | 'sm' | 'xs';
 
   /**
    * 연결할 input의 id
@@ -66,13 +66,13 @@ export interface LabelProps
  * <Label htmlFor="email">이메일</Label>
  * <input id="email" type="email" />
  *
- * <Label size="small" htmlFor="agree">
+ * <Label size="sm" htmlFor="agree">
  *   약관에 동의합니다
  * </Label>
  * ```
  */
 export const Label = React.forwardRef<HTMLLabelElement, LabelProps>(
-  ({ className, size = 'medium', children, ...props }, ref) => {
+  ({ className, size = 'md', children, ...props }, ref) => {
     return (
       <label
         ref={ref}

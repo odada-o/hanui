@@ -17,13 +17,13 @@ const displayVariants = cva(
   {
     variants: {
       size: {
-        large: ['text-[44px]', 'md:text-[60px]'].join(' '),
-        medium: ['text-[32px]', 'md:text-[44px]'].join(' '),
-        small: ['text-[28px]', 'md:text-[36px]'].join(' '),
+        lg: ['text-[44px]', 'md:text-[60px]'].join(' '),
+        md: ['text-[32px]', 'md:text-[44px]'].join(' '),
+        sm: ['text-[28px]', 'md:text-[36px]'].join(' '),
       },
     },
     defaultVariants: {
-      size: 'medium',
+      size: 'md',
     },
   }
 );
@@ -36,9 +36,9 @@ export interface DisplayProps
     VariantProps<typeof displayVariants> {
   /**
    * Display 크기
-   * @default "medium"
+   * @default "md"
    */
-  size?: 'large' | 'medium' | 'small';
+  size?: 'lg' | 'md' | 'sm';
 
   /**
    * HTML 태그 (기본값: h1)
@@ -60,14 +60,14 @@ export interface DisplayProps
  *
  * @example
  * ```tsx
- * <Display size="large">환영합니다</Display>
- * <Display size="medium">공공서비스 플랫폼</Display>
- * <Display size="small" as="h2">부제목</Display>
+ * <Display size="lg">환영합니다</Display>
+ * <Display size="md">공공서비스 플랫폼</Display>
+ * <Display size="sm" as="h2">부제목</Display>
  * ```
  */
 export const Display = React.forwardRef<HTMLHeadingElement, DisplayProps>(
   (
-    { className, size = 'medium', as: Component = 'h1', children, ...props },
+    { className, size = 'md', as: Component = 'h1', children, ...props },
     ref
   ) => {
     return (

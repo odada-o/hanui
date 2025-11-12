@@ -206,7 +206,7 @@ export default function BoxPage() {
             <div className="space-y-4">
               <div>
                 <Body
-                  size="small"
+                  size="sm"
                   className="mb-2 text-gray-600 dark:text-gray-400"
                 >
                   align=&quot;start&quot;
@@ -228,7 +228,7 @@ export default function BoxPage() {
 
               <div>
                 <Body
-                  size="small"
+                  size="sm"
                   className="mb-2 text-gray-600 dark:text-gray-400"
                 >
                   align=&quot;center&quot;
@@ -250,7 +250,7 @@ export default function BoxPage() {
 
               <div>
                 <Body
-                  size="small"
+                  size="sm"
                   className="mb-2 text-gray-600 dark:text-gray-400"
                 >
                   align=&quot;end&quot;
@@ -277,7 +277,7 @@ export default function BoxPage() {
             <div className="space-y-4">
               <div>
                 <Body
-                  size="small"
+                  size="sm"
                   className="mb-2 text-gray-600 dark:text-gray-400"
                 >
                   justify=&quot;start&quot;
@@ -292,7 +292,7 @@ export default function BoxPage() {
 
               <div>
                 <Body
-                  size="small"
+                  size="sm"
                   className="mb-2 text-gray-600 dark:text-gray-400"
                 >
                   justify=&quot;center&quot;
@@ -307,7 +307,7 @@ export default function BoxPage() {
 
               <div>
                 <Body
-                  size="small"
+                  size="sm"
                   className="mb-2 text-gray-600 dark:text-gray-400"
                 >
                   justify=&quot;between&quot;
@@ -380,10 +380,10 @@ export default function BoxPage() {
                   gap={3}
                   className="flex-1 p-4 border border-gray-200 dark:border-gray-800 rounded"
                 >
-                  <Body size="medium" weight="bold">
+                  <Body size="md" weight="bold">
                     카드 제목
                   </Body>
-                  <Body size="small">카드 내용입니다.</Body>
+                  <Body size="sm">카드 내용입니다.</Body>
                 </Box>
                 <Box
                   display="flex"
@@ -391,10 +391,10 @@ export default function BoxPage() {
                   gap={3}
                   className="flex-1 p-4 border border-gray-200 dark:border-gray-800 rounded"
                 >
-                  <Body size="medium" weight="bold">
+                  <Body size="md" weight="bold">
                     카드 제목
                   </Body>
-                  <Body size="small">카드 내용입니다.</Body>
+                  <Body size="sm">카드 내용입니다.</Body>
                 </Box>
               </Box>
             </ComponentPreview>
@@ -402,12 +402,12 @@ export default function BoxPage() {
               <CodeBlock
                 code={`<Box display="flex" direction="row" gap={4}>
   <Box display="flex" direction="column" gap={3} className="flex-1 p-4 border rounded">
-    <Body size="medium" weight="bold">카드 제목</Body>
-    <Body size="small">카드 내용입니다.</Body>
+    <Body size="md" weight="bold">카드 제목</Body>
+    <Body size="sm">카드 내용입니다.</Body>
   </Box>
   <Box display="flex" direction="column" gap={3} className="flex-1 p-4 border rounded">
-    <Body size="medium" weight="bold">카드 제목</Body>
-    <Body size="small">카드 내용입니다.</Body>
+    <Body size="md" weight="bold">카드 제목</Body>
+    <Body size="sm">카드 내용입니다.</Body>
   </Box>
 </Box>`}
                 language="tsx"
@@ -426,10 +426,10 @@ export default function BoxPage() {
                 justify="center"
                 className="h-48 border border-gray-200 dark:border-gray-800 rounded"
               >
-                <Body size="large" weight="bold">
+                <Body size="lg" weight="bold">
                   중앙 정렬
                 </Body>
-                <Body size="small">가로, 세로 모두 중앙에 위치</Body>
+                <Body size="sm">가로, 세로 모두 중앙에 위치</Body>
               </Box>
             </ComponentPreview>
             <div className="mt-4">
@@ -441,8 +441,8 @@ export default function BoxPage() {
   justify="center"
   className="h-48"
 >
-  <Body size="large" weight="bold">중앙 정렬</Body>
-  <Body size="small">가로, 세로 모두 중앙에 위치</Body>
+  <Body size="lg" weight="bold">중앙 정렬</Body>
+  <Body size="sm">가로, 세로 모두 중앙에 위치</Body>
 </Box>`}
                 language="tsx"
               />
@@ -455,10 +455,10 @@ export default function BoxPage() {
             <ComponentPreview>
               <div className="space-y-4">
                 <Box as="section" display="flex" direction="column" gap={3}>
-                  <Body size="small">section 태그로 렌더링</Body>
+                  <Body size="sm">section 태그로 렌더링</Body>
                 </Box>
                 <Box as="article" display="flex" direction="column" gap={3}>
-                  <Body size="small">article 태그로 렌더링</Body>
+                  <Body size="sm">article 태그로 렌더링</Body>
                 </Box>
               </div>
             </ComponentPreview>

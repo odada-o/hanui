@@ -17,9 +17,9 @@ export default function DisplayPage() {
       <div className="mb-12">
         <ComponentPreview>
           <div className="flex flex-col gap-6">
-            <Display size="large">환영합니다</Display>
-            <Display size="medium">공공서비스 플랫폼</Display>
-            <Display size="small">HANUI 디자인 시스템</Display>
+            <Display size="lg">환영합니다</Display>
+            <Display size="md">공공서비스 플랫폼</Display>
+            <Display size="sm">HANUI 디자인 시스템</Display>
           </div>
         </ComponentPreview>
       </div>
@@ -48,14 +48,14 @@ export default function DisplayPage() {
         <div className="space-y-6">
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-6">
             <div className="mb-4">
-              <Display size="large">Large Display</Display>
+              <Display size="lg">Large Display</Display>
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-400">
               60px (PC) / 44px (Mobile) · 700 (Bold) · 150% 줄 간격
             </div>
             <div className="mt-4">
               <CodeBlock
-                code={`<Display size="large">최대 강조 텍스트</Display>`}
+                code={`<Display size="lg">최대 강조 텍스트</Display>`}
                 language="tsx"
                 showLineNumbers={false}
               />
@@ -64,14 +64,14 @@ export default function DisplayPage() {
 
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-6">
             <div className="mb-4">
-              <Display size="medium">Medium Display</Display>
+              <Display size="md">Medium Display</Display>
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-400">
               44px (PC) / 32px (Mobile) · 700 (Bold) · 150% 줄 간격
             </div>
             <div className="mt-4">
               <CodeBlock
-                code={`<Display size="medium">주요 제목</Display>`}
+                code={`<Display size="md">주요 제목</Display>`}
                 language="tsx"
                 showLineNumbers={false}
               />
@@ -80,14 +80,14 @@ export default function DisplayPage() {
 
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-6">
             <div className="mb-4">
-              <Display size="small">Small Display</Display>
+              <Display size="sm">Small Display</Display>
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-400">
               36px (PC) / 28px (Mobile) · 700 (Bold) · 150% 줄 간격
             </div>
             <div className="mt-4">
               <CodeBlock
-                code={`<Display size="small">보조 제목</Display>`}
+                code={`<Display size="sm">보조 제목</Display>`}
                 language="tsx"
                 showLineNumbers={false}
               />
@@ -108,22 +108,22 @@ export default function DisplayPage() {
             <h3 className="text-xl font-semibold mb-4">다양한 HTML 태그</h3>
             <ComponentPreview>
               <div className="flex flex-col gap-4">
-                <Display as="h1" size="large">
+                <Display as="h1" size="lg">
                   h1 태그로 렌더링
                 </Display>
-                <Display as="h2" size="medium">
+                <Display as="h2" size="md">
                   h2 태그로 렌더링
                 </Display>
-                <Display as="div" size="small">
+                <Display as="div" size="sm">
                   div 태그로 렌더링
                 </Display>
               </div>
             </ComponentPreview>
             <div className="mt-4">
               <CodeBlock
-                code={`<Display as="h1" size="large">h1 태그로 렌더링</Display>
-<Display as="h2" size="medium">h2 태그로 렌더링</Display>
-<Display as="div" size="small">div 태그로 렌더링</Display>`}
+                code={`<Display as="h1" size="lg">h1 태그로 렌더링</Display>
+<Display as="h2" size="md">h2 태그로 렌더링</Display>
+<Display as="div" size="sm">div 태그로 렌더링</Display>`}
                 language="tsx"
               />
             </div>
@@ -133,13 +133,13 @@ export default function DisplayPage() {
           <div>
             <h3 className="text-xl font-semibold mb-4">커스텀 스타일</h3>
             <ComponentPreview>
-              <Display size="medium" className="text-primary-60">
+              <Display size="md" className="text-primary-60">
                 브랜드 컬러 적용
               </Display>
             </ComponentPreview>
             <div className="mt-4">
               <CodeBlock
-                code={`<Display size="medium" className="text-primary-60">
+                code={`<Display size="md" className="text-primary-60">
   브랜드 컬러 적용
 </Display>`}
                 language="tsx"

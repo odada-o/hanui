@@ -17,10 +17,10 @@ export default function BodyPage() {
       <div className="mb-12">
         <ComponentPreview>
           <div className="flex flex-col gap-4">
-            <Body size="large">Large - 본문 텍스트입니다</Body>
-            <Body size="medium">Medium - 본문 텍스트입니다</Body>
-            <Body size="small">Small - 본문 텍스트입니다</Body>
-            <Body size="xsmall">XSmall - 본문 텍스트입니다</Body>
+            <Body size="lg">Large - 본문 텍스트입니다</Body>
+            <Body size="md">Medium - 본문 텍스트입니다</Body>
+            <Body size="sm">Small - 본문 텍스트입니다</Body>
+            <Body size="xs">XSmall - 본문 텍스트입니다</Body>
           </div>
         </ComponentPreview>
       </div>
@@ -49,7 +49,7 @@ export default function BodyPage() {
         <div className="space-y-6">
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-6">
             <div className="mb-4">
-              <Body size="large">
+              <Body size="lg">
                 Large - 주요 본문이나 중요한 설명에 사용하는 텍스트입니다.
                 가독성이 높아 중요한 정보 전달에 적합합니다.
               </Body>
@@ -59,7 +59,7 @@ export default function BodyPage() {
             </div>
             <div className="mt-4">
               <CodeBlock
-                code={`<Body size="large">주요 본문 텍스트</Body>`}
+                code={`<Body size="lg">주요 본문 텍스트</Body>`}
                 language="tsx"
                 showLineNumbers={false}
               />
@@ -68,7 +68,7 @@ export default function BodyPage() {
 
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-6">
             <div className="mb-4">
-              <Body size="medium">
+              <Body size="md">
                 Medium - 일반적인 본문 텍스트에 사용합니다. 가장 기본이 되는
                 크기로 대부분의 콘텐츠에 적용됩니다.
               </Body>
@@ -78,7 +78,7 @@ export default function BodyPage() {
             </div>
             <div className="mt-4">
               <CodeBlock
-                code={`<Body size="medium">일반 본문 텍스트</Body>`}
+                code={`<Body size="md">일반 본문 텍스트</Body>`}
                 language="tsx"
                 showLineNumbers={false}
               />
@@ -87,7 +87,7 @@ export default function BodyPage() {
 
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-6">
             <div className="mb-4">
-              <Body size="small">
+              <Body size="sm">
                 Small - 보조 설명이나 부가 정보에 사용합니다. 작지만 여전히 읽기
                 편한 크기입니다.
               </Body>
@@ -97,7 +97,7 @@ export default function BodyPage() {
             </div>
             <div className="mt-4">
               <CodeBlock
-                code={`<Body size="small">보조 설명 텍스트</Body>`}
+                code={`<Body size="sm">보조 설명 텍스트</Body>`}
                 language="tsx"
                 showLineNumbers={false}
               />
@@ -106,7 +106,7 @@ export default function BodyPage() {
 
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-6">
             <div className="mb-4">
-              <Body size="xsmall">
+              <Body size="xs">
                 XSmall - 캡션, 각주, 메타 정보 등에 사용합니다. 가장 작은
                 크기입니다.
               </Body>
@@ -116,7 +116,7 @@ export default function BodyPage() {
             </div>
             <div className="mt-4">
               <CodeBlock
-                code={`<Body size="xsmall">캡션 텍스트</Body>`}
+                code={`<Body size="xs">캡션 텍스트</Body>`}
                 language="tsx"
                 showLineNumbers={false}
               />
@@ -133,13 +133,13 @@ export default function BodyPage() {
         <div className="space-y-6">
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-6">
             <div className="mb-4">
-              <Body size="medium" weight="regular">
+              <Body size="md" weight="regular">
                 Regular (400) - 일반적인 본문 텍스트에 사용하는 기본 굵기입니다.
               </Body>
             </div>
             <div className="mt-4">
               <CodeBlock
-                code={`<Body size="medium" weight="regular">일반 텍스트</Body>`}
+                code={`<Body size="md" weight="regular">일반 텍스트</Body>`}
                 language="tsx"
                 showLineNumbers={false}
               />
@@ -148,13 +148,13 @@ export default function BodyPage() {
 
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-6">
             <div className="mb-4">
-              <Body size="medium" weight="bold">
+              <Body size="md" weight="bold">
                 Bold (700) - 강조가 필요한 본문 텍스트에 사용합니다.
               </Body>
             </div>
             <div className="mt-4">
               <CodeBlock
-                code={`<Body size="medium" weight="bold">강조 텍스트</Body>`}
+                code={`<Body size="md" weight="bold">강조 텍스트</Body>`}
                 language="tsx"
                 showLineNumbers={false}
               />
@@ -175,27 +175,27 @@ export default function BodyPage() {
             <h3 className="text-xl font-semibold mb-4">문서 콘텐츠</h3>
             <ComponentPreview>
               <div className="space-y-4">
-                <Body size="large" weight="bold">
+                <Body size="lg" weight="bold">
                   공공서비스의 디지털 전환
                 </Body>
-                <Body size="medium">
+                <Body size="md">
                   공공 분야의 디지털 전환은 시민들에게 더 나은 서비스를 제공하기
                   위한 중요한 과제입니다. KRDS는 이러한 디지털 전환을 지원하는
                   디자인 시스템입니다.
                 </Body>
-                <Body size="small">
+                <Body size="sm">
                   * 본 내용은 예시이며 실제 서비스와 다를 수 있습니다.
                 </Body>
               </div>
             </ComponentPreview>
             <div className="mt-4">
               <CodeBlock
-                code={`<Body size="large" weight="bold">공공서비스의 디지털 전환</Body>
-<Body size="medium">
+                code={`<Body size="lg" weight="bold">공공서비스의 디지털 전환</Body>
+<Body size="md">
   공공 분야의 디지털 전환은 시민들에게 더 나은 서비스를 제공하기 위한
   중요한 과제입니다.
 </Body>
-<Body size="small">
+<Body size="sm">
   * 본 내용은 예시이며 실제 서비스와 다를 수 있습니다.
 </Body>`}
                 language="tsx"
@@ -208,22 +208,22 @@ export default function BodyPage() {
             <h3 className="text-xl font-semibold mb-4">다양한 HTML 태그</h3>
             <ComponentPreview>
               <div className="space-y-2">
-                <Body as="p" size="medium">
+                <Body as="p" size="md">
                   p 태그로 렌더링된 문단
                 </Body>
-                <Body as="span" size="small">
+                <Body as="span" size="sm">
                   span 태그로 렌더링된 인라인 텍스트
                 </Body>
-                <Body as="div" size="medium">
+                <Body as="div" size="md">
                   div 태그로 렌더링된 블록
                 </Body>
               </div>
             </ComponentPreview>
             <div className="mt-4">
               <CodeBlock
-                code={`<Body as="p" size="medium">p 태그로 렌더링</Body>
-<Body as="span" size="small">span 태그로 렌더링</Body>
-<Body as="div" size="medium">div 태그로 렌더링</Body>`}
+                code={`<Body as="p" size="md">p 태그로 렌더링</Body>
+<Body as="span" size="sm">span 태그로 렌더링</Body>
+<Body as="div" size="md">div 태그로 렌더링</Body>`}
                 language="tsx"
               />
             </div>
@@ -233,13 +233,13 @@ export default function BodyPage() {
           <div>
             <h3 className="text-xl font-semibold mb-4">커스텀 스타일</h3>
             <ComponentPreview>
-              <Body size="medium" className="text-primary-60">
+              <Body size="md" className="text-primary-60">
                 브랜드 컬러가 적용된 텍스트
               </Body>
             </ComponentPreview>
             <div className="mt-4">
               <CodeBlock
-                code={`<Body size="medium" className="text-primary-60">
+                code={`<Body size="md" className="text-primary-60">
   브랜드 컬러가 적용된 텍스트
 </Body>`}
                 language="tsx"
@@ -305,12 +305,12 @@ export default function BodyPage() {
                 </td>
                 <td className="py-3 px-4">
                   <code>
-                    &quot;large&quot; | &quot;medium&quot; | &quot;small&quot; |
-                    &quot;xsmall&quot;
+                    &quot;lg&quot; | &quot;md&quot; | &quot;sm&quot; |
+                    &quot;xs&quot;
                   </code>
                 </td>
                 <td className="py-3 px-4">
-                  <code>&quot;medium&quot;</code>
+                  <code>&quot;md&quot;</code>
                 </td>
                 <td className="py-3 px-4">텍스트 크기</td>
               </tr>
