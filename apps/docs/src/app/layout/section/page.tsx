@@ -3,9 +3,9 @@
 import { Heading, Body } from '@hanui/react';
 
 import { Section } from '@hanui/react';
-import { ComponentPreview } from '@/components/docs/ComponentPreview';
-import { CodeBlock } from '@/components/docs/CodeBlock';
-import { Installation } from '@/components/docs/Installation';
+import { ComponentPreview } from '@/components/content/ComponentPreview';
+import { CodeBlock } from '@/components/content/CodeBlock';
+import { Installation } from '@/components/content/Installation';
 
 export default function SectionPage() {
   return (

@@ -1,19 +1,18 @@
 'use client';
 
 import { Button, Input, Card } from '@hanui/react';
-import { ComponentPreview } from '@/components/docs/ComponentPreview';
-import { CodeBlock } from '@/components/docs/CodeBlock';
-import { GuidelineSection } from '@/components/docs/GuidelineSection';
+import { ComponentPreview } from '@/components/content/ComponentPreview';
+import { CodeBlock } from '@/components/content/CodeBlock';
+import { GuidelineSection } from '@/components/content/GuidelineSection';
+import { PageHeader } from '@/components/content/PageHeader';
 
 export default function DesignTokensPage() {
   return (
     <>
-      <div>
-        <h1 className="text-4xl font-bold mb-4">Design Tokens</h1>
-        <p className="text-lg text-gray-600 dark:text-gray-400">
-          KRDS 기반 디자인 토큰을 Tailwind CSS로 사용하는 방법
-        </p>
-      </div>
+      <PageHeader
+        title="Design Tokens"
+        description="KRDS 기반 디자인 토큰을 Tailwind CSS로 사용하는 방법"
+      />
 
       {/* Overview */}
       <div>

@@ -1,16 +1,15 @@
 'use client';
 
-import { CodeBlock } from '@/components/docs/CodeBlock';
+import { CodeBlock } from '@/components/content/CodeBlock';
+import { PageHeader } from '@/components/content/PageHeader';
 
 export default function InstallationPage() {
   return (
     <>
-      <div>
-        <h1 className="text-4xl font-bold mb-4">Installation</h1>
-        <p className="text-lg text-gray-600 dark:text-gray-400">
-          HANUI를 프로젝트에 설치하고 설정하는 방법을 안내합니다.
-        </p>
-      </div>
+      <PageHeader
+        title="Installation"
+        description="HANUI를 프로젝트에 설치하고 설정하는 방법을 안내합니다."
+      />
 
       {/* Prerequisites */}
       <section className="mb-12">

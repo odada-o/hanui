@@ -1,10 +1,11 @@
 'use client';
 
 import { Input } from '@hanui/react';
-import { ComponentPreview } from '@/components/docs/ComponentPreview';
-import { CodeBlock } from '@/components/docs/CodeBlock';
-import { Installation } from '@/components/docs/Installation';
-import { GuidelineSection } from '@/components/docs/GuidelineSection';
+import { ComponentPreview } from '@/components/content/ComponentPreview';
+import { CodeBlock } from '@/components/content/CodeBlock';
+import { Installation } from '@/components/content/Installation';
+import { GuidelineSection } from '@/components/content/GuidelineSection';
+import { PageHeader } from '@/components/content/PageHeader';
 
 // Example icons using SVG
 const SearchIcon = () => (
@@ -55,12 +56,10 @@ const CheckIcon = () => (
 export default function InputPage() {
   return (
     <>
-      <div>
-        <h1 className="text-4xl font-bold mb-4">Input</h1>
-        <p className="text-lg text-gray-600 dark:text-gray-400">
-          다양한 스타일과 크기를 지원하는 입력 필드 컴포넌트
-        </p>
-      </div>
+      <PageHeader
+        title="Input"
+        description="다양한 스타일과 크기를 지원하는 입력 필드 컴포넌트"
+      />
 
       <div>
         <ComponentPreview>

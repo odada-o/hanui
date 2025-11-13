@@ -1,20 +1,19 @@
 'use client';
 
 import { Button } from '@hanui/react';
-import { ComponentPreview } from '@/components/docs/ComponentPreview';
-import { CodeBlock } from '@/components/docs/CodeBlock';
-import { Installation } from '@/components/docs/Installation';
-import { GuidelineSection } from '@/components/docs/GuidelineSection';
+import { ComponentPreview } from '@/components/content/ComponentPreview';
+import { CodeBlock } from '@/components/content/CodeBlock';
+import { Installation } from '@/components/content/Installation';
+import { GuidelineSection } from '@/components/content/GuidelineSection';
+import { PageHeader } from '@/components/content/PageHeader';
 
 export default function ButtonPage() {
   return (
     <>
-      <div>
-        <h1 className="text-4xl font-bold mb-4">Button</h1>
-        <p className="text-lg text-gray-600 dark:text-gray-400">
-          다양한 스타일과 크기를 지원하는 버튼 컴포넌트
-        </p>
-      </div>
+      <PageHeader
+        title="Button"
+        description="다양한 스타일과 크기를 지원하는 버튼 컴포넌트"
+      />
 
       <div>
         <ComponentPreview>

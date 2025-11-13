@@ -1,16 +1,15 @@
 'use client';
 
-import { CodeBlock } from '@/components/docs/CodeBlock';
+import { CodeBlock } from '@/components/content/CodeBlock';
+import { PageHeader } from '@/components/content/PageHeader';
 
 export default function QuickStartPage() {
   return (
     <>
-      <div>
-        <h1 className="text-4xl font-bold mb-4">Quick Start</h1>
-        <p className="text-lg text-gray-600 dark:text-gray-400">
-          HANUI의 기본 사용법을 빠르게 익혀보세요. 5분이면 충분합니다!
-        </p>
-      </div>
+      <PageHeader
+        title="Quick Start"
+        description="HANUI의 기본 사용법을 빠르게 익혀보세요. 5분이면 충분합니다!"
+      />
 
       {/* First Component */}
       <section className="mb-12">

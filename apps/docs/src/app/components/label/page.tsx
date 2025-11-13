@@ -1,18 +1,14 @@
 'use client';
 
 import { Label } from '@hanui/react';
-import { ComponentPreview } from '@/components/docs/ComponentPreview';
-import { CodeBlock } from '@/components/docs/CodeBlock';
+import { ComponentPreview } from '@/components/content/ComponentPreview';
+import { CodeBlock } from '@/components/content/CodeBlock';
+import { PageHeader } from '@/components/content/PageHeader';
 
 export default function LabelPage() {
   return (
     <>
-      <div>
-        <h1 className="text-4xl font-bold mb-4">Label</h1>
-        <p className="text-lg text-gray-600 dark:text-gray-400">
-          폼 요소를 위한 라벨 컴포넌트
-        </p>
-      </div>
+      <PageHeader title="Label" description="폼 요소를 위한 라벨 컴포넌트" />
 
       <div>
         <ComponentPreview>

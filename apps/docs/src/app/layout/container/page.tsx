@@ -1,20 +1,19 @@
 'use client';
 
 import { Container } from '@hanui/react';
-import { ComponentPreview } from '@/components/docs/ComponentPreview';
-import { CodeBlock } from '@/components/docs/CodeBlock';
-import { Installation } from '@/components/docs/Installation';
-import { GuidelineSection } from '@/components/docs/GuidelineSection';
+import { ComponentPreview } from '@/components/content/ComponentPreview';
+import { CodeBlock } from '@/components/content/CodeBlock';
+import { Installation } from '@/components/content/Installation';
+import { GuidelineSection } from '@/components/content/GuidelineSection';
+import { PageHeader } from '@/components/content/PageHeader';
 
 export default function ContainerPage() {
   return (
     <>
-      <div>
-        <h1 className="text-4xl font-bold mb-4">Container</h1>
-        <p className="text-lg text-gray-600 dark:text-gray-400">
-          KRDS 레이아웃 시스템을 기반으로 한 반응형 컨테이너
-        </p>
-      </div>
+      <PageHeader
+        title="Container"
+        description="KRDS 레이아웃 시스템을 기반으로 한 반응형 컨테이너"
+      />
 
       <div>
         <ComponentPreview>

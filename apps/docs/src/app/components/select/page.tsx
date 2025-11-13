@@ -1,10 +1,11 @@
 'use client';
 
 import { Select } from '@hanui/react';
-import { ComponentPreview } from '@/components/docs/ComponentPreview';
-import { CodeBlock } from '@/components/docs/CodeBlock';
-import { Installation } from '@/components/docs/Installation';
-import { GuidelineSection } from '@/components/docs/GuidelineSection';
+import { ComponentPreview } from '@/components/content/ComponentPreview';
+import { CodeBlock } from '@/components/content/CodeBlock';
+import { Installation } from '@/components/content/Installation';
+import { GuidelineSection } from '@/components/content/GuidelineSection';
+import { PageHeader } from '@/components/content/PageHeader';
 import { useState } from 'react';
 
 export default function SelectPage() {
@@ -29,12 +30,10 @@ export default function SelectPage() {
 
   return (
     <>
-      <div>
-        <h1 className="text-4xl font-bold mb-4">Select</h1>
-        <p className="text-lg text-gray-600 dark:text-gray-400">
-          접근성을 고려한 선택 목록 컴포넌트
-        </p>
-      </div>
+      <PageHeader
+        title="Select"
+        description="접근성을 고려한 선택 목록 컴포넌트"
+      />
 
       <div>
         <ComponentPreview>

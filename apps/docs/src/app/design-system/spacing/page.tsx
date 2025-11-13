@@ -1,26 +1,19 @@
 'use client';
 
 import { Stack, Section, Button, Input } from '@hanui/react';
-import { ComponentPreview } from '@/components/docs/ComponentPreview';
-import { CodeBlock } from '@/components/docs/CodeBlock';
+import { ComponentPreview } from '@/components/content/ComponentPreview';
+import { CodeBlock } from '@/components/content/CodeBlock';
+import { PageHeader } from '@/components/content/PageHeader';
 
 export default function SpacingPage() {
   return (
     <>
+      <PageHeader
+        title="Spacing"
+        description="HANUI는 KRDS의 8포인트 그리드 시스템을 따르는 시맨틱 스페이싱 시스템을 제공합니다. Stack과 Section 컴포넌트를 사용하면 gap-layout과 padding-layout 토큰을 외우지 않고도 일관된 간격을 적용할 수 있습니다."
+      />
+
       <Stack spacing="h1-h2">
-        <h1 className="text-heading-xl font-bold">Spacing</h1>
-
-        <Stack spacing="h2-h3">
-          <h2 className="text-heading-lg font-bold">개요</h2>
-          <p className="text-body-md text-gray-70">
-            HANUI는 KRDS의 8포인트 그리드 시스템을 따르는 시맨틱 스페이싱
-            시스템을 제공합니다.
-            <strong>Stack</strong>과 <strong>Section</strong> 컴포넌트를
-            사용하면 gap-layout과 padding-layout 토큰을 외우지 않고도 일관된
-            간격을 적용할 수 있습니다.
-          </p>
-        </Stack>
-
         <Stack spacing="h2-h3">
           <h2 className="text-heading-lg font-bold">왜 시맨틱 스페이싱인가?</h2>
 

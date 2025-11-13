@@ -1,14 +1,12 @@
+import { PageHeader } from '@/components/content/PageHeader';
+
 export default function IntroductionPage() {
   return (
     <>
-      {/* Hero Section */}
-      <div>
-        <h1 className="text-4xl font-bold mb-4">Introduction</h1>
-        <p className="text-lg text-gray-600 dark:text-gray-400">
-          HANUI는 KRDS(Korea Republic Design System)를 기반으로 한 React
-          컴포넌트 라이브러리입니다.
-        </p>
-      </div>
+      <PageHeader
+        title="Introduction"
+        description="HANUI는 KRDS(Korea Republic Design System)를 기반으로 한 React 컴포넌트 라이브러리입니다."
+      />
 
       {/* What is HANUI */}
       <section className="mb-12">

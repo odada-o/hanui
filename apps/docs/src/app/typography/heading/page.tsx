@@ -1,18 +1,17 @@
 'use client';
 
 import { Heading } from '@hanui/react';
-import { ComponentPreview } from '@/components/docs/ComponentPreview';
-import { CodeBlock } from '@/components/docs/CodeBlock';
+import { ComponentPreview } from '@/components/content/ComponentPreview';
+import { CodeBlock } from '@/components/content/CodeBlock';
+import { PageHeader } from '@/components/content/PageHeader';
 
 export default function HeadingPage() {
   return (
     <>
-      <div>
-        <h1 className="text-4xl font-bold mb-4">Heading</h1>
-        <p className="text-lg text-gray-600 dark:text-gray-400">
-          시맨틱한 페이지 및 섹션 제목 컴포넌트
-        </p>
-      </div>
+      <PageHeader
+        title="Heading"
+        description="시맨틱한 페이지 및 섹션 제목 컴포넌트"
+      />
 
       <div>
         <ComponentPreview>
