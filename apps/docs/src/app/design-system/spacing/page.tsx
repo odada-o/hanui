@@ -1025,11 +1025,11 @@ export default function SpacingPage() {
           <Stack spacing="h3-content">
             <h3 className="text-heading-md font-bold">이미지 갤러리</h3>
             <ComponentPreview>
-              <Stack spacing="image-text-medium">
+              <Stack spacing="content">
                 <div className="bg-gray-20 h-48 rounded-lg flex items-center justify-center">
                   <span className="text-gray-60">이미지</span>
                 </div>
-                <Stack spacing="text-text-small">
+                <Stack spacing="compact">
                   <h4 className="text-heading-sm font-semibold">서울 야경</h4>
                   <p className="text-body-sm text-gray-70">
                     서울 남산에서 바라본 아름다운 야경입니다.
@@ -1038,9 +1038,9 @@ export default function SpacingPage() {
               </Stack>
             </ComponentPreview>
             <CodeBlock
-              code={`<Stack spacing="image-text-medium">
+              code={`<Stack spacing="content">
   <img src="..." alt="서울 야경" />
-  <Stack spacing="text-text-small">
+  <Stack spacing="compact">
     <h4>서울 야경</h4>
     <p>서울 남산에서 바라본 아름다운 야경입니다.</p>
   </Stack>
@@ -1109,7 +1109,7 @@ export default function SpacingPage() {
           <Stack spacing="h3-content">
             <h3 className="text-heading-md font-bold">텍스트 목록</h3>
             <ComponentPreview>
-              <Stack spacing="text-text-medium">
+              <Stack spacing="heading-content">
                 <p className="text-body-md">
                   첫 번째 문단입니다. 이것은 중간 크기의 텍스트 간격을
                   사용합니다.
@@ -1124,7 +1124,7 @@ export default function SpacingPage() {
               </Stack>
             </ComponentPreview>
             <CodeBlock
-              code={`<Stack spacing="text-text-medium">
+              code={`<Stack spacing="heading-content">
   <p>첫 번째 문단입니다...</p>
   <p>두 번째 문단입니다...</p>
   <p>세 번째 문단입니다...</p>
@@ -1138,7 +1138,7 @@ export default function SpacingPage() {
             <ComponentPreview>
               <Stack
                 direction="horizontal"
-                spacing="left-contents"
+                spacing="lg"
                 align="start"
                 className="w-full"
               >
@@ -1157,7 +1157,7 @@ export default function SpacingPage() {
               </Stack>
             </ComponentPreview>
             <CodeBlock
-              code={`<Stack direction="horizontal" spacing="left-contents">
+              code={`<Stack direction="horizontal" spacing="lg">
   <aside className="hidden md:block w-48">
     사이드바 내용
   </aside>
