@@ -54,6 +54,21 @@ const layoutComponents = [
     href: '/layout/container',
     updated: true,
   },
+  {
+    name: 'Box',
+    href: '/layout/box',
+    updated: true,
+  },
+  {
+    name: 'Stack',
+    href: '/layout/stack',
+    updated: true,
+  },
+  {
+    name: 'Section',
+    href: '/layout/section',
+    updated: true,
+  },
 ];
 
 const typographyComponents = [
@@ -80,11 +95,6 @@ const typographyComponents = [
   {
     name: 'NavText',
     href: '/typography/navtext',
-    updated: true,
-  },
-  {
-    name: 'Box',
-    href: '/typography/box',
     updated: true,
   },
 ];

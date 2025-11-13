@@ -35,6 +35,8 @@ const navigation = [
     items: [
       { title: 'Container', href: '/layout/container' },
       { title: 'Box', href: '/layout/box' },
+      { title: 'Stack', href: '/layout/stack' },
+      { title: 'Section', href: '/layout/section' },
     ],
   },
   {
