@@ -980,7 +980,7 @@ export default function SpacingPage() {
                 background="white"
                 className="rounded-lg border max-w-2xl"
               >
-                <Stack spacing="breadcrumb-h1">
+                <Stack spacing="breadcrumb">
                   <div className="text-sm text-primary-70">
                     홈 &gt; 블로그 &gt; 개발
                   </div>
