@@ -7,18 +7,18 @@ interface PageSectionProps {
 /**
  * PageSection - 문서 페이지의 섹션 래퍼
  *
- * KRDS heading 간격을 자동으로 적용:
- * - h2-h2: 40px/80px (section 간 간격) - mb-10 md:mb-20
+ * KRDS section 간격을 자동으로 적용:
+ * - section 간 간격: 40px/80px (mb-10 md:mb-20)
  *
  * 내부 간격은 Stack 컴포넌트 사용 권장:
- * - h2-본문: Stack spacing="title-body-medium" (12px/20px)
- * - h2-h3: Stack spacing="h2-h3" (24px/40px)
- * - h3-h3: Stack spacing="h3-h3" (32px/64px)
+ * - 제목→본문: Stack spacing="heading-content" (12px/20px)
+ * - 제목→가까운 내용: Stack spacing="heading-tight" (8px/16px)
+ * - 콘텐츠 블록: Stack spacing="content-loose" (24px/40px)
  *
  * @example
  * ```tsx
  * <PageSection>
- *   <Stack spacing="title-body-medium">
+ *   <Stack spacing="heading-content">
  *     <Heading level="h2">개요</Heading>
  *     <Body>...</Body>
  *   </Stack>
