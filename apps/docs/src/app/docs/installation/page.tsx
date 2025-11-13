@@ -4,8 +4,8 @@ import { CodeBlock } from '@/components/docs/CodeBlock';
 
 export default function InstallationPage() {
   return (
-    <div className="max-w-4xl">
-      <div className="mb-12">
+    <>
+      <div>
         <h1 className="text-4xl font-bold mb-4">Installation</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400">
           HANUI를 프로젝트에 설치하고 설정하는 방법을 안내합니다.
@@ -314,6 +314,6 @@ export default App;`}
           </a>
         </div>
       </section>
-    </div>
+    </>
   );
 }

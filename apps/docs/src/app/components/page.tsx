@@ -111,7 +111,7 @@ export default function ComponentsPage() {
       </div>
 
       {/* Typography Section */}
-      <div className="mb-12">
+      <div>
         <h2 className="text-2xl font-semibold mb-6">타이포그래피</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {typographyComponents.map((component) => (
@@ -134,7 +134,7 @@ export default function ComponentsPage() {
       </div>
 
       {/* Layout Section */}
-      <div className="mb-12">
+      <div>
         <h2 className="text-2xl font-semibold mb-6">레이아웃</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {layoutComponents.map((component) => (

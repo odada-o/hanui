@@ -8,15 +8,15 @@ import { GuidelineSection } from '@/components/docs/GuidelineSection';
 
 export default function ContainerPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <div className="mb-8">
+    <>
+      <div>
         <h1 className="text-4xl font-bold mb-4">Container</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400">
           KRDS 레이아웃 시스템을 기반으로 한 반응형 컨테이너
         </p>
       </div>
 
-      <div className="mb-12">
+      <div>
         <ComponentPreview>
           <div className="w-full border-2 border-dashed border-gray-300 dark:border-gray-700">
             <Container className="bg-blue-50 dark:bg-blue-950/30 py-8">
@@ -32,7 +32,7 @@ export default function ContainerPage() {
       </div>
 
       {/* Overview */}
-      <div className="mb-12">
+      <div>
         <h2 id="overview" className="text-2xl font-bold mb-4">
           개요
         </h2>
@@ -45,7 +45,7 @@ export default function ContainerPage() {
       </div>
 
       {/* Usage Guidelines */}
-      <div className="mb-12">
+      <div>
         <h2 id="guidelines" className="text-2xl font-bold mb-6">
           사용 가이드라인
         </h2>
@@ -217,12 +217,12 @@ export default function ContainerPage() {
         </div>
       </div>
 
-      <div className="mb-12">
+      <div>
         <Installation componentName="container" />
       </div>
 
       {/* Usage */}
-      <div className="mb-12">
+      <div>
         <h2 id="usage" className="text-2xl font-bold mb-4">
           Usage
         </h2>
@@ -239,7 +239,7 @@ export default function ContainerPage() {
       </div>
 
       {/* Examples */}
-      <div className="mb-12">
+      <div>
         <h2 id="examples" className="text-2xl font-bold mb-6">
           Examples
         </h2>
@@ -552,7 +552,7 @@ export default function ContainerPage() {
       </div>
 
       {/* API Reference */}
-      <div className="mb-12">
+      <div>
         <h2 id="api" className="text-2xl font-bold mb-6">
           API Reference
         </h2>
@@ -785,6 +785,6 @@ export default function ContainerPage() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

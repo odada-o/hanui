@@ -7,14 +7,14 @@ import { CodeBlock } from '@/components/docs/CodeBlock';
 export default function DisplayPage() {
   return (
     <>
-      <div className="mb-8">
+      <div>
         <h1 className="text-4xl font-bold mb-4">Display</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400">
           배너와 마케팅용 대형 텍스트 컴포넌트
         </p>
       </div>
 
-      <div className="mb-12">
+      <div>
         <ComponentPreview>
           <div className="flex flex-col gap-6">
             <Display size="lg">환영합니다</Display>
@@ -25,7 +25,7 @@ export default function DisplayPage() {
       </div>
 
       {/* Overview */}
-      <div className="mb-12">
+      <div>
         <h2 id="overview" className="text-2xl font-bold mb-4">
           개요
         </h2>
@@ -41,7 +41,7 @@ export default function DisplayPage() {
       </div>
 
       {/* Sizes */}
-      <div className="mb-12">
+      <div>
         <h2 id="sizes" className="text-2xl font-bold mb-6">
           크기
         </h2>
@@ -97,7 +97,7 @@ export default function DisplayPage() {
       </div>
 
       {/* Usage */}
-      <div className="mb-12">
+      <div>
         <h2 id="usage" className="text-2xl font-bold mb-6">
           사용 예시
         </h2>
@@ -150,7 +150,7 @@ export default function DisplayPage() {
       </div>
 
       {/* Guidelines */}
-      <div className="mb-12">
+      <div>
         <h2 id="guidelines" className="text-2xl font-bold mb-6">
           사용 가이드라인
         </h2>
@@ -183,7 +183,7 @@ export default function DisplayPage() {
       </div>
 
       {/* API */}
-      <div className="mb-12">
+      <div>
         <h2 id="api" className="text-2xl font-bold mb-6">
           API
         </h2>
@@ -248,7 +248,7 @@ export default function DisplayPage() {
       </div>
 
       {/* KRDS Compliance */}
-      <div className="mb-12">
+      <div>
         <h2 id="krds" className="text-2xl font-bold mb-6">
           KRDS 준수사항
         </h2>

@@ -9,18 +9,18 @@ import { Installation } from '@/components/docs/Installation';
 
 export default function StackPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <div className="mb-8">
+    <>
+      <div>
         <Heading level="h1" className="mb-4">
           Stack, VStack, HStack
         </Heading>
-        <Body className="text-lg text-gray-600 dark:text-gray-400">
+        <Body className="text-gray-600 dark:text-gray-400">
           KRDS 간격 시스템을 준수하는 유연한 레이아웃 컴포넌트. 수직(VStack),
           수평(HStack) 스택을 제공합니다.
         </Body>
       </div>
 
-      <div className="mb-12">
+      <div>
         <ComponentPreview>
           <Stack spacing="md">
             <div className="bg-blue-100 dark:bg-blue-900/30 p-4 rounded">
@@ -37,7 +37,7 @@ export default function StackPage() {
       </div>
 
       {/* Overview */}
-      <div className="mb-12">
+      <div>
         <Heading level="h2" className="mb-4">
           개요
         </Heading>
@@ -60,12 +60,11 @@ export default function StackPage() {
         </ul>
       </div>
 
-      <div className="mb-12">
-        <Installation componentName="stack" />
-      </div>
+      {/* Installation */}
+      <Installation componentName="stack" />
 
       {/* Usage */}
-      <div className="mb-12">
+      <div>
         <Heading level="h2" className="mb-4">
           Usage
         </Heading>
@@ -125,7 +124,7 @@ export default function StackPage() {
       </div>
 
       {/* Examples */}
-      <div className="mb-12">
+      <div>
         <Heading level="h2" className="mb-6">
           Examples
         </Heading>
@@ -318,7 +317,7 @@ export default function StackPage() {
       </div>
 
       {/* API Reference */}
-      <div className="mb-12">
+      <div>
         <Heading level="h2" className="mb-6">
           API Reference
         </Heading>
@@ -869,6 +868,6 @@ export default function StackPage() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

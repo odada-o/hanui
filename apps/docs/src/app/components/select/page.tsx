@@ -28,15 +28,15 @@ export default function SelectPage() {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <div className="mb-8">
+    <>
+      <div>
         <h1 className="text-4xl font-bold mb-4">Select</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400">
           접근성을 고려한 선택 목록 컴포넌트
         </p>
       </div>
 
-      <div className="mb-12">
+      <div>
         <ComponentPreview>
           <div className="max-w-md">
             <Select
@@ -52,7 +52,7 @@ export default function SelectPage() {
       </div>
 
       {/* Overview */}
-      <div className="mb-12">
+      <div>
         <h2 id="overview" className="text-2xl font-bold mb-4">
           개요
         </h2>
@@ -65,7 +65,7 @@ export default function SelectPage() {
       </div>
 
       {/* Usage Guidelines */}
-      <div className="mb-12">
+      <div>
         <h2 id="guidelines" className="text-2xl font-bold mb-6">
           사용 가이드라인
         </h2>
@@ -160,12 +160,12 @@ export default function SelectPage() {
         </div>
       </div>
 
-      <div className="mb-12">
+      <div>
         <Installation componentName="select" />
       </div>
 
       {/* Usage */}
-      <div className="mb-12">
+      <div>
         <h2 id="usage" className="text-2xl font-bold mb-4">
           Usage
         </h2>
@@ -189,7 +189,7 @@ const options = [
       </div>
 
       {/* Examples */}
-      <div className="mb-12">
+      <div>
         <h2 id="examples" className="text-2xl font-bold mb-6">
           Examples
         </h2>
@@ -386,6 +386,6 @@ const options = [
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

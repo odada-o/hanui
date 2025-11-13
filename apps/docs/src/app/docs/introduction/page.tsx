@@ -1,8 +1,8 @@
 export default function IntroductionPage() {
   return (
-    <div className="max-w-4xl">
+    <>
       {/* Hero Section */}
-      <div className="mb-12">
+      <div>
         <h1 className="text-4xl font-bold mb-4">Introduction</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400">
           HANUI는 KRDS(Korea Republic Design System)를 기반으로 한 React
@@ -184,6 +184,6 @@ export default function IntroductionPage() {
           </svg>
         </a>
       </section>
-    </div>
+    </>
   );
 }

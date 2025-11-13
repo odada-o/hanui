@@ -7,14 +7,14 @@ import { CodeBlock } from '@/components/docs/CodeBlock';
 export default function BoxPage() {
   return (
     <>
-      <div className="mb-8">
+      <div>
         <h1 className="text-4xl font-bold mb-4">Box</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400">
           유연한 레이아웃을 위한 컨테이너 컴포넌트
         </p>
       </div>
 
-      <div className="mb-12">
+      <div>
         <ComponentPreview>
           <Box display="flex" direction="row" gap={4} align="center">
             <div className="w-20 h-20 bg-primary-60 rounded" />
@@ -25,7 +25,7 @@ export default function BoxPage() {
       </div>
 
       {/* Overview */}
-      <div className="mb-12">
+      <div>
         <h2 id="overview" className="text-2xl font-bold mb-4">
           개요
         </h2>
@@ -41,7 +41,7 @@ export default function BoxPage() {
       </div>
 
       {/* Display Types */}
-      <div className="mb-12">
+      <div>
         <h2 id="display" className="text-2xl font-bold mb-6">
           Display
         </h2>
@@ -130,7 +130,7 @@ export default function BoxPage() {
       </div>
 
       {/* Flex Direction */}
-      <div className="mb-12">
+      <div>
         <h2 id="direction" className="text-2xl font-bold mb-6">
           방향 (Direction)
         </h2>
@@ -195,7 +195,7 @@ export default function BoxPage() {
       </div>
 
       {/* Alignment */}
-      <div className="mb-12">
+      <div>
         <h2 id="alignment" className="text-2xl font-bold mb-6">
           정렬
         </h2>
@@ -325,7 +325,7 @@ export default function BoxPage() {
       </div>
 
       {/* Gap */}
-      <div className="mb-12">
+      <div>
         <h2 id="gap" className="text-2xl font-bold mb-6">
           간격 (Gap)
         </h2>
@@ -363,7 +363,7 @@ export default function BoxPage() {
       </div>
 
       {/* Usage */}
-      <div className="mb-12">
+      <div>
         <h2 id="usage" className="text-2xl font-bold mb-6">
           사용 예시
         </h2>
@@ -478,7 +478,7 @@ export default function BoxPage() {
       </div>
 
       {/* API */}
-      <div className="mb-12">
+      <div>
         <h2 id="api" className="text-2xl font-bold mb-6">
           API
         </h2>
@@ -601,7 +601,7 @@ export default function BoxPage() {
       </div>
 
       {/* Guidelines */}
-      <div className="mb-12">
+      <div>
         <h2 id="guidelines" className="text-2xl font-bold mb-6">
           사용 가이드라인
         </h2>
@@ -633,7 +633,7 @@ export default function BoxPage() {
       </div>
 
       {/* KRDS Compliance */}
-      <div className="mb-12">
+      <div>
         <h2 id="krds" className="text-2xl font-bold mb-6">
           KRDS 준수사항
         </h2>

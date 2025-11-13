@@ -109,7 +109,10 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/95 dark:bg-gray-950/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-gray-950/60">
+    <header
+      id="header"
+      className="sticky top-0 z-50 w-full bg-white/95 dark:bg-gray-950/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-gray-950/60"
+    >
       <Container maxWidth="full" className="h-16 flex items-center gap-4">
         {/* Left: Logo + Navigation */}
         <div className="flex items-center gap-6">

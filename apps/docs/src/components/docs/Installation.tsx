@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { CodeBlock } from './CodeBlock';
+import { Heading } from '@hanui/react';
 
 type InstallMethod = 'cli' | 'manual';
 type PackageManager = 'pnpm' | 'npm' | 'yarn' | 'bun';
@@ -30,9 +31,9 @@ export function Installation({
 
   return (
     <div className="space-y-4">
-      <h2 id="installation" className="text-2xl font-bold mb-4">
+      <Heading level="h2" id="installation" className="text-2xl font-bold mb-4">
         Installation
-      </h2>
+      </Heading>
 
       {/* Tabs */}
       <div className="flex items-center gap-1 border-b border-gray-200 dark:border-gray-800">

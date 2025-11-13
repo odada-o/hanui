@@ -9,8 +9,8 @@ import { Installation } from '@/components/docs/Installation';
 
 export default function SectionPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <div className="mb-8">
+    <>
+      <div>
         <Heading level="h1" className="mb-4">
           Section
         </Heading>
@@ -19,7 +19,7 @@ export default function SectionPage() {
         </Body>
       </div>
 
-      <div className="mb-12">
+      <div>
         <ComponentPreview>
           <Section padding="page-section" background="gray">
             <h2 className="text-xl font-semibold mb-4">섹션 제목</h2>
@@ -31,7 +31,7 @@ export default function SectionPage() {
       </div>
 
       {/* Overview */}
-      <div className="mb-12">
+      <div>
         <Heading level="h2" className="mb-4">
           개요
         </Heading>
@@ -42,12 +42,12 @@ export default function SectionPage() {
         </Body>
       </div>
 
-      <div className="mb-12">
+      <div>
         <Installation componentName="section" />
       </div>
 
       {/* Usage */}
-      <div className="mb-12">
+      <div>
         <Heading level="h2" className="mb-4">
           Usage
         </Heading>
@@ -64,7 +64,7 @@ export default function SectionPage() {
       </div>
 
       {/* Examples */}
-      <div className="mb-12">
+      <div>
         <Heading level="h2" className="mb-6">
           Examples
         </Heading>
@@ -255,7 +255,7 @@ export default function SectionPage() {
       </div>
 
       {/* API Reference */}
-      <div className="mb-12">
+      <div>
         <Heading level="h2" className="mb-6">
           API Reference
         </Heading>
@@ -407,6 +407,6 @@ export default function SectionPage() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

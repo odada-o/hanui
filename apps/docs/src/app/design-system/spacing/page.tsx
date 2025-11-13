@@ -6,7 +6,7 @@ import { CodeBlock } from '@/components/docs/CodeBlock';
 
 export default function SpacingPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
+    <>
       <Stack spacing="h1-h2">
         <h1 className="text-heading-xl font-bold">Spacing</h1>
 
@@ -1704,6 +1704,6 @@ export default function SpacingPage() {
           </Stack>
         </Stack>
       </Stack>
-    </div>
+    </>
   );
 }

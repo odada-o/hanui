@@ -4,8 +4,8 @@ import { CodeBlock } from '@/components/docs/CodeBlock';
 
 export default function QuickStartPage() {
   return (
-    <div className="max-w-4xl">
-      <div className="mb-12">
+    <>
+      <div>
         <h1 className="text-4xl font-bold mb-4">Quick Start</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400">
           HANUI의 기본 사용법을 빠르게 익혀보세요. 5분이면 충분합니다!
@@ -410,6 +410,6 @@ function CustomButton(props: ButtonProps) {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }

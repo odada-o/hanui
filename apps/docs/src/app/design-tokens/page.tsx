@@ -7,8 +7,8 @@ import { GuidelineSection } from '@/components/docs/GuidelineSection';
 
 export default function DesignTokensPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <div className="mb-8">
+    <>
+      <div>
         <h1 className="text-4xl font-bold mb-4">Design Tokens</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400">
           KRDS 기반 디자인 토큰을 Tailwind CSS로 사용하는 방법
@@ -16,7 +16,7 @@ export default function DesignTokensPage() {
       </div>
 
       {/* Overview */}
-      <div className="mb-12">
+      <div>
         <h2 id="overview" className="text-2xl font-bold mb-4">
           개요
         </h2>
@@ -39,7 +39,7 @@ export default function DesignTokensPage() {
       </div>
 
       {/* Spacing */}
-      <div className="mb-12">
+      <div>
         <h2 id="spacing" className="text-2xl font-bold mb-6">
           Spacing (간격)
         </h2>
@@ -49,7 +49,7 @@ export default function DesignTokensPage() {
         </p>
 
         {/* Spacing Scale */}
-        <div className="mb-8">
+        <div>
           <h3 className="text-xl font-semibold mb-4">간격 스케일</h3>
           <div className="space-y-3">
             <div className="flex items-center gap-4 p-3 bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-lg">
@@ -116,7 +116,7 @@ export default function DesignTokensPage() {
         </div>
 
         {/* Form Layout Example */}
-        <div className="mb-8">
+        <div>
           <h3 className="text-xl font-semibold mb-4">폼 레이아웃 예시</h3>
           <GuidelineSection type="do" title="세로 폼 - gap-5 (16px)">
             <ComponentPreview>
@@ -157,7 +157,7 @@ export default function DesignTokensPage() {
         </div>
 
         {/* Card Grid Example */}
-        <div className="mb-8">
+        <div>
           <h3 className="text-xl font-semibold mb-4">카드 그리드 예시</h3>
           <GuidelineSection type="do" title="카드 리스트 - gap-7 (24px)">
             <ComponentPreview>
@@ -192,7 +192,7 @@ export default function DesignTokensPage() {
         </div>
 
         {/* Padding */}
-        <div className="mb-8">
+        <div>
           <h3 className="text-xl font-semibold mb-4">Padding (내부 여백)</h3>
           <p className="text-gray-700 dark:text-gray-300 mb-4">
             컴포넌트 내부 여백은{' '}
@@ -235,7 +235,7 @@ export default function DesignTokensPage() {
       </div>
 
       {/* Typography */}
-      <div className="mb-12">
+      <div>
         <h2 id="typography" className="text-2xl font-bold mb-6">
           Typography (타이포그래피)
         </h2>
@@ -245,7 +245,7 @@ export default function DesignTokensPage() {
         </p>
 
         {/* Heading Scale */}
-        <div className="mb-8">
+        <div>
           <h3 className="text-xl font-semibold mb-4">Heading Scale</h3>
           <div className="space-y-4">
             <div className="p-4 bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-lg">
@@ -282,7 +282,7 @@ export default function DesignTokensPage() {
         </div>
 
         {/* Body Text */}
-        <div className="mb-8">
+        <div>
           <h3 className="text-xl font-semibold mb-4">Body Text</h3>
           <div className="space-y-4">
             <div className="p-4 bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-lg">
@@ -321,7 +321,7 @@ export default function DesignTokensPage() {
         </div>
 
         {/* Typography Example */}
-        <div className="mb-8">
+        <div>
           <h3 className="text-xl font-semibold mb-4">실제 사용 예시</h3>
           <ComponentPreview>
             <article className="space-y-4">
@@ -354,7 +354,7 @@ export default function DesignTokensPage() {
       </div>
 
       {/* Colors */}
-      <div className="mb-12">
+      <div>
         <h2 id="colors" className="text-2xl font-bold mb-6">
           Colors (색상)
         </h2>
@@ -364,7 +364,7 @@ export default function DesignTokensPage() {
         </p>
 
         {/* Primary Colors */}
-        <div className="mb-8">
+        <div>
           <h3 className="text-xl font-semibold mb-4">Primary Colors</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div className="p-4 bg-[#256ef4] text-white rounded-lg">
@@ -388,7 +388,7 @@ export default function DesignTokensPage() {
         </div>
 
         {/* Gray Scale */}
-        <div className="mb-8">
+        <div>
           <h3 className="text-xl font-semibold mb-4">Gray Scale</h3>
           <div className="space-y-2 mb-4">
             <div className="flex items-center gap-4 p-3 bg-white rounded-lg">
@@ -437,7 +437,7 @@ export default function DesignTokensPage() {
         </div>
 
         {/* System Colors */}
-        <div className="mb-8">
+        <div>
           <h3 className="text-xl font-semibold mb-4">System Colors</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
@@ -469,7 +469,7 @@ export default function DesignTokensPage() {
       </div>
 
       {/* Border Radius */}
-      <div className="mb-12">
+      <div>
         <h2 id="border-radius" className="text-2xl font-bold mb-6">
           Border Radius (모서리 둥글기)
         </h2>
@@ -526,7 +526,7 @@ export default function DesignTokensPage() {
       </div>
 
       {/* Breakpoints */}
-      <div className="mb-12">
+      <div>
         <h2 id="breakpoints" className="text-2xl font-bold mb-6">
           Breakpoints (반응형)
         </h2>
@@ -596,7 +596,7 @@ export default function DesignTokensPage() {
       </div>
 
       {/* Best Practices */}
-      <div className="mb-12">
+      <div>
         <h2 id="best-practices" className="text-2xl font-bold mb-6">
           Best Practices
         </h2>
@@ -668,7 +668,7 @@ export default function DesignTokensPage() {
       </div>
 
       {/* Reference */}
-      <div className="mb-12">
+      <div>
         <h2 id="reference" className="text-2xl font-bold mb-6">
           참고 자료
         </h2>
@@ -708,6 +708,6 @@ export default function DesignTokensPage() {
           </a>
         </div>
       </div>
-    </div>
+    </>
   );
 }

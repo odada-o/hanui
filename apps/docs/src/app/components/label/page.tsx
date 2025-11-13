@@ -7,14 +7,14 @@ import { CodeBlock } from '@/components/docs/CodeBlock';
 export default function LabelPage() {
   return (
     <>
-      <div className="mb-8">
+      <div>
         <h1 className="text-4xl font-bold mb-4">Label</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400">
           폼 요소를 위한 라벨 컴포넌트
         </p>
       </div>
 
-      <div className="mb-12">
+      <div>
         <ComponentPreview>
           <div className="flex flex-col gap-4">
             <div>
@@ -52,7 +52,7 @@ export default function LabelPage() {
       </div>
 
       {/* Overview */}
-      <div className="mb-12">
+      <div>
         <h2 id="overview" className="text-2xl font-bold mb-4">
           개요
         </h2>
@@ -68,7 +68,7 @@ export default function LabelPage() {
       </div>
 
       {/* Sizes */}
-      <div className="mb-12">
+      <div>
         <h2 id="sizes" className="text-2xl font-bold mb-6">
           크기
         </h2>
@@ -176,7 +176,7 @@ export default function LabelPage() {
       </div>
 
       {/* Usage */}
-      <div className="mb-12">
+      <div>
         <h2 id="usage" className="text-2xl font-bold mb-6">
           사용 예시
         </h2>
@@ -314,7 +314,7 @@ export default function LabelPage() {
       </div>
 
       {/* Guidelines */}
-      <div className="mb-12">
+      <div>
         <h2 id="guidelines" className="text-2xl font-bold mb-6">
           사용 가이드라인
         </h2>
@@ -358,7 +358,7 @@ export default function LabelPage() {
       </div>
 
       {/* API */}
-      <div className="mb-12">
+      <div>
         <h2 id="api" className="text-2xl font-bold mb-6">
           API
         </h2>
@@ -424,7 +424,7 @@ export default function LabelPage() {
       </div>
 
       {/* Accessibility */}
-      <div className="mb-12">
+      <div>
         <h2 id="accessibility" className="text-2xl font-bold mb-6">
           접근성
         </h2>
@@ -439,7 +439,7 @@ export default function LabelPage() {
       </div>
 
       {/* KRDS Compliance */}
-      <div className="mb-12">
+      <div>
         <h2 id="krds" className="text-2xl font-bold mb-6">
           KRDS 준수사항
         </h2>

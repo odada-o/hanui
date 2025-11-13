@@ -7,14 +7,14 @@ import { CodeBlock } from '@/components/docs/CodeBlock';
 export default function NavTextPage() {
   return (
     <>
-      <div className="mb-8">
+      <div>
         <h1 className="text-4xl font-bold mb-4">NavText</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400">
           네비게이션 메뉴를 위한 텍스트 컴포넌트
         </p>
       </div>
 
-      <div className="mb-12">
+      <div>
         <ComponentPreview>
           <div className="flex flex-col gap-4 bg-gray-50 dark:bg-gray-900 p-6 rounded">
             <NavText variant="tit-lg">Title Large</NavText>
@@ -26,7 +26,7 @@ export default function NavTextPage() {
       </div>
 
       {/* Overview */}
-      <div className="mb-12">
+      <div>
         <h2 id="overview" className="text-2xl font-bold mb-4">
           개요
         </h2>
@@ -41,7 +41,7 @@ export default function NavTextPage() {
       </div>
 
       {/* Variants */}
-      <div className="mb-12">
+      <div>
         <h2 id="variants" className="text-2xl font-bold mb-6">
           변형
         </h2>
@@ -162,7 +162,7 @@ export default function NavTextPage() {
       </div>
 
       {/* Usage */}
-      <div className="mb-12">
+      <div>
         <h2 id="usage" className="text-2xl font-bold mb-6">
           사용 예시
         </h2>
@@ -421,7 +421,7 @@ export default function NavTextPage() {
       </div>
 
       {/* Guidelines */}
-      <div className="mb-12">
+      <div>
         <h2 id="guidelines" className="text-2xl font-bold mb-6">
           사용 가이드라인
         </h2>
@@ -467,7 +467,7 @@ export default function NavTextPage() {
       </div>
 
       {/* API */}
-      <div className="mb-12">
+      <div>
         <h2 id="api" className="text-2xl font-bold mb-6">
           API
         </h2>
@@ -544,7 +544,7 @@ export default function NavTextPage() {
       </div>
 
       {/* Accessibility */}
-      <div className="mb-12">
+      <div>
         <h2 id="accessibility" className="text-2xl font-bold mb-6">
           접근성
         </h2>
@@ -562,7 +562,7 @@ export default function NavTextPage() {
       </div>
 
       {/* KRDS Compliance */}
-      <div className="mb-12">
+      <div>
         <h2 id="krds" className="text-2xl font-bold mb-6">
           KRDS 준수사항
         </h2>

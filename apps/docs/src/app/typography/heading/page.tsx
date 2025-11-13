@@ -7,14 +7,14 @@ import { CodeBlock } from '@/components/docs/CodeBlock';
 export default function HeadingPage() {
   return (
     <>
-      <div className="mb-8">
+      <div>
         <h1 className="text-4xl font-bold mb-4">Heading</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400">
           시맨틱한 페이지 및 섹션 제목 컴포넌트
         </p>
       </div>
 
-      <div className="mb-12">
+      <div>
         <ComponentPreview>
           <div className="flex flex-col gap-4">
             <Heading level="h1">h1 - 페이지 최상위 제목</Heading>
@@ -28,7 +28,7 @@ export default function HeadingPage() {
       </div>
 
       {/* Overview */}
-      <div className="mb-12">
+      <div>
         <h2 id="overview" className="text-2xl font-bold mb-4">
           개요
         </h2>
@@ -44,7 +44,7 @@ export default function HeadingPage() {
       </div>
 
       {/* Levels */}
-      <div className="mb-12">
+      <div>
         <h2 id="levels" className="text-2xl font-bold mb-6">
           레벨
         </h2>
@@ -148,7 +148,7 @@ export default function HeadingPage() {
       </div>
 
       {/* Usage */}
-      <div className="mb-12">
+      <div>
         <h2 id="usage" className="text-2xl font-bold mb-6">
           사용 예시
         </h2>
@@ -197,7 +197,7 @@ export default function HeadingPage() {
       </div>
 
       {/* Guidelines */}
-      <div className="mb-12">
+      <div>
         <h2 id="guidelines" className="text-2xl font-bold mb-6">
           사용 가이드라인
         </h2>
@@ -241,7 +241,7 @@ export default function HeadingPage() {
       </div>
 
       {/* API */}
-      <div className="mb-12">
+      <div>
         <h2 id="api" className="text-2xl font-bold mb-6">
           API
         </h2>
@@ -297,7 +297,7 @@ export default function HeadingPage() {
       </div>
 
       {/* Accessibility */}
-      <div className="mb-12">
+      <div>
         <h2 id="accessibility" className="text-2xl font-bold mb-6">
           접근성
         </h2>
@@ -312,7 +312,7 @@ export default function HeadingPage() {
       </div>
 
       {/* KRDS Compliance */}
-      <div className="mb-12">
+      <div>
         <h2 id="krds" className="text-2xl font-bold mb-6">
           KRDS 준수사항
         </h2>

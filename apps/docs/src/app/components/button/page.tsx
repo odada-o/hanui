@@ -8,15 +8,15 @@ import { GuidelineSection } from '@/components/docs/GuidelineSection';
 
 export default function ButtonPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <div className="mb-8">
+    <>
+      <div>
         <h1 className="text-4xl font-bold mb-4">Button</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400">
           다양한 스타일과 크기를 지원하는 버튼 컴포넌트
         </p>
       </div>
 
-      <div className="mb-12">
+      <div>
         <ComponentPreview>
           <div className="flex items-center gap-4">
             <Button variant="primary">Primary Button</Button>
@@ -26,7 +26,7 @@ export default function ButtonPage() {
       </div>
 
       {/* Overview */}
-      <div className="mb-12">
+      <div>
         <h2 id="overview" className="text-2xl font-bold mb-4">
           개요
         </h2>
@@ -39,7 +39,7 @@ export default function ButtonPage() {
       </div>
 
       {/* Usage Guidelines */}
-      <div className="mb-12">
+      <div>
         <h2 id="guidelines" className="text-2xl font-bold mb-6">
           사용 가이드라인
         </h2>
@@ -182,12 +182,12 @@ export default function ButtonPage() {
         </div>
       </div>
 
-      <div className="mb-12">
+      <div>
         <Installation componentName="button" />
       </div>
 
       {/* Usage */}
-      <div className="mb-12">
+      <div>
         <h2 id="usage" className="text-2xl font-bold mb-4">
           Usage
         </h2>
@@ -201,7 +201,7 @@ export default function ButtonPage() {
       </div>
 
       {/* Examples */}
-      <div className="mb-12">
+      <div>
         <h2 id="examples" className="text-2xl font-bold mb-6">
           Examples
         </h2>
@@ -474,6 +474,6 @@ export default function ButtonPage() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
