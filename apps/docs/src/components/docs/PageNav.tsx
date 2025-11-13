@@ -13,12 +13,12 @@ export function PageNav() {
   const [activeId, setActiveId] = useState<string>('');
 
   useEffect(() => {
-    // Extract h2 headings from the page
-    const elements = document.querySelectorAll('h2[id]');
+    // Extract h2 and h3 headings from the page
+    const elements = document.querySelectorAll('h2[id], h3[id]');
     const items: NavItem[] = Array.from(elements).map((element) => ({
       id: element.id,
       title: element.textContent || '',
-      level: 2,
+      level: parseInt(element.tagName.substring(1)),
     }));
     setHeadings(items);
 
@@ -53,14 +53,17 @@ export function PageNav() {
         <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-4">
           On This Page
         </h4>
-        <ul className="space-y-2 text-sm">
+        <ul className="space-y-1.5 text-sm">
           {headings.map((heading) => {
             const isActive = activeId === heading.id;
+            const isH3 = heading.level === 3;
             return (
               <li key={heading.id}>
                 <a
                   href={`#${heading.id}`}
-                  className={`block py-1 transition-colors border-l-2 pl-3 ${
+                  className={`block py-1 transition-colors border-l-2 ${
+                    isH3 ? 'pl-6' : 'pl-3'
+                  } ${
                     isActive
                       ? 'border-blue-600 text-blue-600 dark:text-blue-400 font-medium'
                       : 'border-gray-200 dark:border-gray-800 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:border-gray-400 dark:hover:border-gray-600'
