@@ -35,26 +35,26 @@ export default function StackPage() {
 
       {/* Overview */}
       <PageSection>
-        <Heading level="h2" className="mb-4">
-          개요
-        </Heading>
-        <Body className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Stack 계열 컴포넌트는 요소들을 수직 또는 수평으로 정렬하고{' '}
-          <strong>KRDS(한국형 웹 콘텐츠 접근성 지침)</strong>의 간격 기준을
-          준수하는 레이아웃 컴포넌트입니다.
-        </Body>
-        <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
-          <li>
-            <strong>Stack</strong>: 기본 수직 레이아웃 (direction prop으로 제어
-            가능)
-          </li>
-          <li>
-            <strong>VStack</strong>: 명시적 수직 레이아웃
-          </li>
-          <li>
-            <strong>HStack</strong>: 명시적 수평 레이아웃
-          </li>
-        </ul>
+        <Stack spacing="title-body-medium">
+          <Heading level="h2">개요</Heading>
+          <Body className="text-gray-700 dark:text-gray-300 leading-relaxed">
+            Stack 계열 컴포넌트는 요소들을 수직 또는 수평으로 정렬하고{' '}
+            <strong>KRDS(한국형 웹 콘텐츠 접근성 지침)</strong>의 간격 기준을
+            준수하는 레이아웃 컴포넌트입니다.
+          </Body>
+          <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+            <li>
+              <strong>Stack</strong>: 기본 수직 레이아웃 (direction prop으로
+              제어 가능)
+            </li>
+            <li>
+              <strong>VStack</strong>: 명시적 수직 레이아웃
+            </li>
+            <li>
+              <strong>HStack</strong>: 명시적 수평 레이아웃
+            </li>
+          </ul>
+        </Stack>
       </PageSection>
 
       {/* Installation */}
@@ -64,18 +64,14 @@ export default function StackPage() {
 
       {/* Usage */}
       <PageSection>
-        <Heading level="h2" className="mb-4">
-          Usage
-        </Heading>
-        <Body className="mb-4">
-          Stack, VStack, HStack 세 가지 컴포넌트를 제공합니다:
-        </Body>
+        <Stack spacing="title-body-medium">
+          <Heading level="h2">Usage</Heading>
+          <Body>Stack, VStack, HStack 세 가지 컴포넌트를 제공합니다:</Body>
+        </Stack>
 
-        <div className="space-y-6">
-          <div>
-            <Heading level="h3" className="text-base mb-2">
-              Stack - 기본 수직 레이아웃
-            </Heading>
+        <Stack spacing="h3-h3" className="mt-2 md:mt-4">
+          <Stack spacing="h3-content">
+            <Heading level="h3">Stack - 기본 수직 레이아웃</Heading>
             <CodeBlock
               code={`import { Stack } from '@hanui/react'
 
@@ -86,12 +82,10 @@ export default function StackPage() {
               language="tsx"
               showLineNumbers={false}
             />
-          </div>
+          </Stack>
 
-          <div>
-            <Heading level="h3" className="text-base mb-2">
-              VStack - 명시적 수직 레이아웃
-            </Heading>
+          <Stack spacing="h3-content">
+            <Heading level="h3">VStack - 명시적 수직 레이아웃</Heading>
             <CodeBlock
               code={`import { VStack } from '@hanui/react'
 
@@ -102,12 +96,10 @@ export default function StackPage() {
               language="tsx"
               showLineNumbers={false}
             />
-          </div>
+          </Stack>
 
-          <div>
-            <Heading level="h3" className="text-base mb-2">
-              HStack - 수평 레이아웃
-            </Heading>
+          <Stack spacing="h3-content">
+            <Heading level="h3">HStack - 수평 레이아웃</Heading>
             <CodeBlock
               code={`import { HStack } from '@hanui/react'
 
@@ -118,127 +110,129 @@ export default function StackPage() {
               language="tsx"
               showLineNumbers={false}
             />
-          </div>
-        </div>
+          </Stack>
+        </Stack>
       </PageSection>
 
       {/* Examples */}
       <PageSection>
-        <Heading level="h2" className="mb-6">
-          Examples
-        </Heading>
+        <Heading level="h2">Examples</Heading>
 
-        {/* VStack */}
-        <div className="mb-10">
-          <Heading level="h3" className="mb-4">
-            VStack - 수직 스택
-          </Heading>
-          <ComponentPreview>
-            <VStack spacing="md">
-              <div className="bg-green-100 dark:bg-green-900/30 p-4 rounded w-full">
-                첫 번째 아이템
-              </div>
-              <div className="bg-green-100 dark:bg-green-900/30 p-4 rounded w-full">
-                두 번째 아이템
-              </div>
-              <div className="bg-green-100 dark:bg-green-900/30 p-4 rounded w-full">
-                세 번째 아이템
-              </div>
-            </VStack>
-          </ComponentPreview>
-          <div className="mt-4">
-            <CodeBlock
-              code={`<VStack spacing="md">
+        <Stack spacing="h3-h3" className="mt-2 md:mt-4">
+          {/* VStack */}
+          <Stack spacing="h3-content">
+            <Heading level="h3">VStack - 수직 스택</Heading>
+            <div>
+              <ComponentPreview>
+                <VStack spacing="md">
+                  <div className="bg-green-100 dark:bg-green-900/30 p-4 rounded w-full">
+                    첫 번째 아이템
+                  </div>
+                  <div className="bg-green-100 dark:bg-green-900/30 p-4 rounded w-full">
+                    두 번째 아이템
+                  </div>
+                  <div className="bg-green-100 dark:bg-green-900/30 p-4 rounded w-full">
+                    세 번째 아이템
+                  </div>
+                </VStack>
+              </ComponentPreview>
+              <div className="mt-4">
+                <CodeBlock
+                  code={`<VStack spacing="md">
   <div>첫 번째 아이템</div>
   <div>두 번째 아이템</div>
   <div>세 번째 아이템</div>
 </VStack>`}
-              language="tsx"
-              showLineNumbers={false}
-            />
-          </div>
-        </div>
+                  language="tsx"
+                  showLineNumbers={false}
+                />
+              </div>
+            </div>
+          </Stack>
 
-        {/* HStack */}
-        <div className="mb-10">
-          <Heading level="h3" className="mb-4">
-            HStack - 수평 스택
-          </Heading>
-          <ComponentPreview>
-            <HStack spacing="md">
-              <div className="bg-blue-100 dark:bg-blue-900/30 px-4 py-2 rounded">
-                왼쪽
-              </div>
-              <div className="bg-blue-100 dark:bg-blue-900/30 px-4 py-2 rounded">
-                중앙
-              </div>
-              <div className="bg-blue-100 dark:bg-blue-900/30 px-4 py-2 rounded">
-                오른쪽
-              </div>
-            </HStack>
-          </ComponentPreview>
-          <div className="mt-4">
-            <CodeBlock
-              code={`<HStack spacing="md">
+          {/* HStack */}
+          <Stack spacing="h3-content">
+            <Heading level="h3">HStack - 수평 스택</Heading>
+            <div>
+              <ComponentPreview>
+                <HStack spacing="md">
+                  <div className="bg-blue-100 dark:bg-blue-900/30 px-4 py-2 rounded">
+                    왼쪽
+                  </div>
+                  <div className="bg-blue-100 dark:bg-blue-900/30 px-4 py-2 rounded">
+                    중앙
+                  </div>
+                  <div className="bg-blue-100 dark:bg-blue-900/30 px-4 py-2 rounded">
+                    오른쪽
+                  </div>
+                </HStack>
+              </ComponentPreview>
+              <div className="mt-4">
+                <CodeBlock
+                  code={`<HStack spacing="md">
   <div>왼쪽</div>
   <div>중앙</div>
   <div>오른쪽</div>
 </HStack>`}
-              language="tsx"
-              showLineNumbers={false}
-            />
-          </div>
-        </div>
+                  language="tsx"
+                  showLineNumbers={false}
+                />
+              </div>
+            </div>
+          </Stack>
 
-        {/* Heading Spacing */}
-        <div className="mb-10">
-          <Heading level="h3" className="mb-4">
-            Heading Spacing (h1-h2)
-          </Heading>
-          <ComponentPreview>
-            <Stack spacing="h1-h2">
-              <h1 className="text-3xl font-bold">메인 제목</h1>
-              <h2 className="text-2xl font-semibold text-gray-600 dark:text-gray-400">
-                부제목
-              </h2>
-            </Stack>
-          </ComponentPreview>
-          <div className="mt-4">
-            <CodeBlock
-              code={`<Stack spacing="h1-h2">
+          {/* Heading Spacing */}
+          <Stack spacing="h3-content">
+            <Heading level="h3">Heading Spacing (h1-h2)</Heading>
+            <div>
+              <ComponentPreview>
+                <Stack spacing="h1-h2">
+                  <h1 className="text-3xl font-bold">메인 제목</h1>
+                  <h2 className="text-2xl font-semibold text-gray-600 dark:text-gray-400">
+                    부제목
+                  </h2>
+                </Stack>
+              </ComponentPreview>
+              <div className="mt-4">
+                <CodeBlock
+                  code={`<Stack spacing="h1-h2">
   <h1>메인 제목</h1>
   <h2>부제목</h2>
 </Stack>`}
-              language="tsx"
-              showLineNumbers={false}
-            />
-          </div>
-        </div>
+                  language="tsx"
+                  showLineNumbers={false}
+                />
+              </div>
+            </div>
+          </Stack>
 
-        {/* Form */}
-        <div className="mb-10">
-          <Heading level="h3" className="mb-4">
-            Form
-          </Heading>
-          <ComponentPreview>
-            <Stack spacing="form">
-              <HStack>
-                <label className="block text-sm font-medium mb-1">이름</label>
-                <div className="border border-gray-300 dark:border-gray-700 rounded px-3 py-2">
-                  Input
-                </div>
-              </HStack>
-              <HStack>
-                <label className="block text-sm font-medium mb-1">이메일</label>
-                <div className="border border-gray-300 dark:border-gray-700 rounded px-3 py-2">
-                  Input
-                </div>
-              </HStack>
-            </Stack>
-          </ComponentPreview>
-          <div className="mt-4">
-            <CodeBlock
-              code={`<Stack spacing="form">
+          {/* Form */}
+          <Stack spacing="h3-content">
+            <Heading level="h3">Form</Heading>
+            <div>
+              <ComponentPreview>
+                <Stack spacing="form">
+                  <HStack>
+                    <label className="block text-sm font-medium mb-1">
+                      이름
+                    </label>
+                    <div className="border border-gray-300 dark:border-gray-700 rounded px-3 py-2">
+                      Input
+                    </div>
+                  </HStack>
+                  <HStack>
+                    <label className="block text-sm font-medium mb-1">
+                      이메일
+                    </label>
+                    <div className="border border-gray-300 dark:border-gray-700 rounded px-3 py-2">
+                      Input
+                    </div>
+                  </HStack>
+                </Stack>
+              </ComponentPreview>
+              <div className="mt-4">
+                <CodeBlock
+                  code={`<Stack spacing="form">
   <div>
     <label>이름</label>
     <input type="text" />
@@ -248,56 +242,58 @@ export default function StackPage() {
     <input type="email" />
   </div>
 </Stack>`}
-              language="tsx"
-              showLineNumbers={false}
-            />
-          </div>
-        </div>
-
-        {/* Alignment */}
-        <div className="mb-10">
-          <Heading level="h3" className="mb-4">
-            Alignment
-          </Heading>
-          <ComponentPreview>
-            <div className="space-y-6">
-              <div>
-                <p className="text-sm font-semibold mb-2">Center Alignment</p>
-                <Stack
-                  spacing="sm"
-                  align="center"
-                  className="border border-gray-300 dark:border-gray-700 rounded p-4"
-                >
-                  <div className="bg-purple-100 dark:bg-purple-900/30 px-4 py-2 rounded">
-                    중앙 정렬
-                  </div>
-                  <div className="bg-purple-100 dark:bg-purple-900/30 px-4 py-2 rounded">
-                    아이템
-                  </div>
-                </Stack>
-              </div>
-
-              <div>
-                <p className="text-sm font-semibold mb-2">
-                  Space Between (HStack)
-                </p>
-                <HStack
-                  justify="between"
-                  className="border border-gray-300 dark:border-gray-700 rounded p-4"
-                >
-                  <div className="bg-orange-100 dark:bg-orange-900/30 px-4 py-2 rounded">
-                    왼쪽
-                  </div>
-                  <div className="bg-orange-100 dark:bg-orange-900/30 px-4 py-2 rounded">
-                    오른쪽
-                  </div>
-                </HStack>
+                  language="tsx"
+                  showLineNumbers={false}
+                />
               </div>
             </div>
-          </ComponentPreview>
-          <div className="mt-4">
-            <CodeBlock
-              code={`// 중앙 정렬
+          </Stack>
+
+          {/* Alignment */}
+          <Stack spacing="h3-content">
+            <Heading level="h3">Alignment</Heading>
+            <div>
+              <ComponentPreview>
+                <div className="space-y-6">
+                  <div>
+                    <p className="text-sm font-semibold mb-2">
+                      Center Alignment
+                    </p>
+                    <Stack
+                      spacing="sm"
+                      align="center"
+                      className="border border-gray-300 dark:border-gray-700 rounded p-4"
+                    >
+                      <div className="bg-purple-100 dark:bg-purple-900/30 px-4 py-2 rounded">
+                        중앙 정렬
+                      </div>
+                      <div className="bg-purple-100 dark:bg-purple-900/30 px-4 py-2 rounded">
+                        아이템
+                      </div>
+                    </Stack>
+                  </div>
+
+                  <div>
+                    <p className="text-sm font-semibold mb-2">
+                      Space Between (HStack)
+                    </p>
+                    <HStack
+                      justify="between"
+                      className="border border-gray-300 dark:border-gray-700 rounded p-4"
+                    >
+                      <div className="bg-orange-100 dark:bg-orange-900/30 px-4 py-2 rounded">
+                        왼쪽
+                      </div>
+                      <div className="bg-orange-100 dark:bg-orange-900/30 px-4 py-2 rounded">
+                        오른쪽
+                      </div>
+                    </HStack>
+                  </div>
+                </div>
+              </ComponentPreview>
+              <div className="mt-4">
+                <CodeBlock
+                  code={`// 중앙 정렬
 <VStack align="center">
   <div>중앙 정렬</div>
   <div>아이템</div>
@@ -308,26 +304,28 @@ export default function StackPage() {
   <div>왼쪽</div>
   <div>오른쪽</div>
 </HStack>`}
-              language="tsx"
-              showLineNumbers={false}
-            />
-          </div>
-        </div>
+                  language="tsx"
+                  showLineNumbers={false}
+                />
+              </div>
+            </div>
+          </Stack>
+        </Stack>
       </PageSection>
 
       {/* API Reference */}
       <PageSection>
-        <Heading level="h2" className="mb-6">
-          API Reference
-        </Heading>
+        <Stack spacing="title-body-medium">
+          <Heading level="h2">API Reference</Heading>
 
-        <Body className="mb-6">
-          <strong>Stack</strong>, <strong>VStack</strong>,{' '}
-          <strong>HStack</strong> 모두 동일한 props를 지원합니다. VStack과
-          HStack은 direction prop이 고정되어 있습니다.
-        </Body>
+          <Body>
+            <strong>Stack</strong>, <strong>VStack</strong>,{' '}
+            <strong>HStack</strong> 모두 동일한 props를 지원합니다. VStack과
+            HStack은 direction prop이 고정되어 있습니다.
+          </Body>
+        </Stack>
 
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto mt-2 md:mt-4">
           <table className="min-w-full border border-gray-300 dark:border-gray-700">
             <thead className="bg-gray-100 dark:bg-gray-800">
               <tr>
@@ -423,13 +421,13 @@ export default function StackPage() {
           </table>
         </div>
 
-        <div className="mt-8">
-          <Heading level="h3" className="mb-4">
-            Spacing Options
-          </Heading>
-          <Body className="mb-4 text-gray-700 dark:text-gray-300">
-            KRDS 기준에 따른 의미론적 간격 프리셋
-          </Body>
+        <div className="mt-8 md:mt-16">
+          <Stack spacing="title-body-medium">
+            <Heading level="h3">Spacing Options</Heading>
+            <Body className="text-gray-700 dark:text-gray-300">
+              KRDS 기준에 따른 의미론적 간격 프리셋
+            </Body>
+          </Stack>
           <div className="overflow-x-auto">
             <table className="min-w-full border border-gray-300 dark:border-gray-700">
               <thead className="bg-gray-100 dark:bg-gray-800">
