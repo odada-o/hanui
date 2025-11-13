@@ -20,10 +20,10 @@ const navTextVariants = cva(
   {
     variants: {
       variant: {
-        'title-large': ['text-[22px]', 'md:text-[24px]', 'font-bold'].join(' '),
-        'title-small': ['text-[17px]', 'md:text-[19px]', 'font-bold'].join(' '),
-        'depth-medium': 'text-[17px]',
-        'depth-small': 'text-[15px]',
+        'tit-lg': ['text-[22px]', 'md:text-[24px]', 'font-bold'].join(' '),
+        'tit-sm': ['text-[17px]', 'md:text-[19px]', 'font-bold'].join(' '),
+        'depth-md': 'text-[17px]',
+        'depth-sm': 'text-[15px]',
       },
       weight: {
         regular: 'font-normal', // 400
@@ -31,7 +31,7 @@ const navTextVariants = cva(
       },
     },
     defaultVariants: {
-      variant: 'depth-medium',
+      variant: 'depth-md',
       weight: 'regular',
     },
   }
@@ -45,12 +45,12 @@ export interface NavTextProps
     VariantProps<typeof navTextVariants> {
   /**
    * 네비게이션 텍스트 스타일
-   * @default "depth-medium"
+   * @default "depth-md"
    */
-  variant?: 'title-large' | 'title-small' | 'depth-medium' | 'depth-small';
+  variant?: 'tit-lg' | 'tit-sm' | 'depth-md' | 'depth-sm';
 
   /**
-   * 글자 굵기 (title-* 에는 자동 적용)
+   * 글자 굵기 (tit-* 에는 자동 적용)
    * @default "regular"
    */
   weight?: 'regular' | 'bold';
@@ -76,21 +76,21 @@ export interface NavTextProps
  * @example
  * ```tsx
  * // 메인 타이틀
- * <NavText variant="title-large">주 메뉴</NavText>
+ * <NavText variant="tit-lg">주 메뉴</NavText>
  *
  * // 서브 타이틀
- * <NavText variant="title-small">카테고리</NavText>
+ * <NavText variant="tit-sm">카테고리</NavText>
  *
  * // 뎁스 메뉴
- * <NavText variant="depth-medium">메뉴 항목</NavText>
- * <NavText variant="depth-medium" weight="bold">현재 페이지</NavText>
+ * <NavText variant="depth-md">메뉴 항목</NavText>
+ * <NavText variant="depth-md" weight="bold">현재 페이지</NavText>
  * ```
  */
 export const NavText = React.forwardRef<HTMLElement, NavTextProps>(
   (
     {
       className,
-      variant = 'depth-medium',
+      variant = 'depth-md',
       weight = 'regular',
       as: Component = 'span',
       children,
@@ -98,8 +98,8 @@ export const NavText = React.forwardRef<HTMLElement, NavTextProps>(
     },
     ref
   ) => {
-    // title-* variants는 bold가 강제됨
-    const finalWeight = variant?.startsWith('title-') ? 'bold' : weight;
+    // tit-* variants는 bold가 강제됨
+    const finalWeight = variant?.startsWith('tit-') ? 'bold' : weight;
 
     return (
       <Component

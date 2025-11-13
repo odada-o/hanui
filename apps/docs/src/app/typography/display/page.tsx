@@ -203,10 +203,10 @@ export default function DisplayPage() {
                   <code>size</code>
                 </td>
                 <td className="py-3 px-4">
-                  <code>"large" | "medium" | "small"</code>
+                  <code>"lg" | "md" | "sm"</code>
                 </td>
                 <td className="py-3 px-4">
-                  <code>"medium"</code>
+                  <code>"md"</code>
                 </td>
                 <td className="py-3 px-4">Display 크기</td>
               </tr>

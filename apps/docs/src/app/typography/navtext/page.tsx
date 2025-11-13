@@ -17,10 +17,10 @@ export default function NavTextPage() {
       <div className="mb-12">
         <ComponentPreview>
           <div className="flex flex-col gap-4 bg-gray-50 dark:bg-gray-900 p-6 rounded">
-            <NavText variant="title-large">Title Large</NavText>
-            <NavText variant="title-small">Title Small</NavText>
-            <NavText variant="depth-medium">Depth Medium</NavText>
-            <NavText variant="depth-small">Depth Small</NavText>
+            <NavText variant="tit-lg">Title Large</NavText>
+            <NavText variant="tit-sm">Title Small</NavText>
+            <NavText variant="depth-md">Depth Medium</NavText>
+            <NavText variant="depth-sm">Depth Small</NavText>
           </div>
         </ComponentPreview>
       </div>
@@ -36,7 +36,7 @@ export default function NavTextPage() {
           네비게이션 구조를 명확히 표현합니다.
         </p>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-          title 변형은 메뉴 제목에, depth 변형은 하위 메뉴 항목에 사용됩니다.
+          tit 변형은 메뉴 제목에, depth 변형은 하위 메뉴 항목에 사용됩니다.
         </p>
       </div>
 
@@ -53,14 +53,14 @@ export default function NavTextPage() {
             <div className="space-y-6">
               <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-6">
                 <div className="mb-4">
-                  <NavText variant="title-large">Title Large</NavText>
+                  <NavText variant="tit-lg">Title Large</NavText>
                 </div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">
                   24px (PC) / 22px (Mobile) · 700 (Bold) · 150% 줄 간격
                 </div>
                 <div className="mt-4">
                   <CodeBlock
-                    code={`<NavText variant="title-large">메인 메뉴</NavText>`}
+                    code={`<NavText variant="tit-lg">메인 메뉴</NavText>`}
                     language="tsx"
                     showLineNumbers={false}
                   />
@@ -69,14 +69,14 @@ export default function NavTextPage() {
 
               <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-6">
                 <div className="mb-4">
-                  <NavText variant="title-small">Title Small</NavText>
+                  <NavText variant="tit-sm">Title Small</NavText>
                 </div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">
                   19px (PC) / 17px (Mobile) · 700 (Bold) · 150% 줄 간격
                 </div>
                 <div className="mt-4">
                   <CodeBlock
-                    code={`<NavText variant="title-small">서브 메뉴</NavText>`}
+                    code={`<NavText variant="tit-sm">서브 메뉴</NavText>`}
                     language="tsx"
                     showLineNumbers={false}
                   />
@@ -91,14 +91,14 @@ export default function NavTextPage() {
             <div className="space-y-6">
               <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-6">
                 <div className="mb-4">
-                  <NavText variant="depth-medium">Depth Medium</NavText>
+                  <NavText variant="depth-md">Depth Medium</NavText>
                 </div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">
                   17px · 400 (Regular) · 150% 줄 간격
                 </div>
                 <div className="mt-4">
                   <CodeBlock
-                    code={`<NavText variant="depth-medium">메뉴 항목</NavText>`}
+                    code={`<NavText variant="depth-md">메뉴 항목</NavText>`}
                     language="tsx"
                     showLineNumbers={false}
                   />
@@ -107,14 +107,14 @@ export default function NavTextPage() {
 
               <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-6">
                 <div className="mb-4">
-                  <NavText variant="depth-small">Depth Small</NavText>
+                  <NavText variant="depth-sm">Depth Small</NavText>
                 </div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">
                   15px · 400 (Regular) · 150% 줄 간격
                 </div>
                 <div className="mt-4">
                   <CodeBlock
-                    code={`<NavText variant="depth-small">하위 항목</NavText>`}
+                    code={`<NavText variant="depth-sm">하위 항목</NavText>`}
                     language="tsx"
                     showLineNumbers={false}
                   />
@@ -139,13 +139,13 @@ export default function NavTextPage() {
               <nav className="bg-gray-50 dark:bg-gray-900 p-6 rounded">
                 <ul className="space-y-4">
                   <li>
-                    <NavText variant="title-large">서비스 소개</NavText>
+                    <NavText variant="tit-lg">서비스 소개</NavText>
                   </li>
                   <li>
-                    <NavText variant="title-large">이용 안내</NavText>
+                    <NavText variant="tit-lg">이용 안내</NavText>
                   </li>
                   <li>
-                    <NavText variant="title-large">고객 지원</NavText>
+                    <NavText variant="tit-lg">고객 지원</NavText>
                   </li>
                 </ul>
               </nav>
@@ -154,9 +154,9 @@ export default function NavTextPage() {
               <CodeBlock
                 code={`<nav>
   <ul>
-    <li><NavText variant="title-large">서비스 소개</NavText></li>
-    <li><NavText variant="title-large">이용 안내</NavText></li>
-    <li><NavText variant="title-large">고객 지원</NavText></li>
+    <li><NavText variant="tit-lg">서비스 소개</NavText></li>
+    <li><NavText variant="tit-lg">이용 안내</NavText></li>
+    <li><NavText variant="tit-lg">고객 지원</NavText></li>
   </ul>
 </nav>`}
                 language="tsx"
@@ -171,16 +171,16 @@ export default function NavTextPage() {
               <nav className="bg-gray-50 dark:bg-gray-900 p-6 rounded">
                 <div className="space-y-4">
                   <div>
-                    <NavText variant="title-small">공지사항</NavText>
+                    <NavText variant="tit-sm">공지사항</NavText>
                     <ul className="mt-2 ml-4 space-y-2">
                       <li>
-                        <NavText variant="depth-medium">시스템 공지</NavText>
+                        <NavText variant="depth-md">시스템 공지</NavText>
                       </li>
                       <li>
-                        <NavText variant="depth-medium">이벤트 소식</NavText>
+                        <NavText variant="depth-md">이벤트 소식</NavText>
                       </li>
                       <li>
-                        <NavText variant="depth-medium">업데이트 내역</NavText>
+                        <NavText variant="depth-md">업데이트 내역</NavText>
                       </li>
                     </ul>
                   </div>
@@ -190,11 +190,11 @@ export default function NavTextPage() {
             <div className="mt-4">
               <CodeBlock
                 code={`<nav>
-  <NavText variant="title-small">공지사항</NavText>
+  <NavText variant="tit-sm">공지사항</NavText>
   <ul>
-    <li><NavText variant="depth-medium">시스템 공지</NavText></li>
-    <li><NavText variant="depth-medium">이벤트 소식</NavText></li>
-    <li><NavText variant="depth-medium">업데이트 내역</NavText></li>
+    <li><NavText variant="depth-md">시스템 공지</NavText></li>
+    <li><NavText variant="depth-md">이벤트 소식</NavText></li>
+    <li><NavText variant="depth-md">업데이트 내역</NavText></li>
   </ul>
 </nav>`}
                 language="tsx"
@@ -207,23 +207,23 @@ export default function NavTextPage() {
             <h3 className="text-xl font-semibold mb-4">다양한 HTML 태그</h3>
             <ComponentPreview>
               <div className="space-y-2">
-                <NavText as="a" variant="title-large">
+                <NavText as="a" variant="tit-lg">
                   링크로 렌더링
                 </NavText>
-                <NavText as="button" variant="depth-medium">
+                <NavText as="button" variant="depth-md">
                   버튼으로 렌더링
                 </NavText>
-                <NavText as="span" variant="depth-small">
+                <NavText as="span" variant="depth-sm">
                   span으로 렌더링
                 </NavText>
               </div>
             </ComponentPreview>
             <div className="mt-4">
               <CodeBlock
-                code={`<NavText as="a" variant="title-large">
+                code={`<NavText as="a" variant="tit-lg">
   링크로 렌더링
 </NavText>
-<NavText as="button" variant="depth-medium">
+<NavText as="button" variant="depth-md">
   버튼으로 렌더링
 </NavText>`}
                 language="tsx"
@@ -238,12 +238,12 @@ export default function NavTextPage() {
               <nav className="bg-gray-50 dark:bg-gray-900 p-6 rounded">
                 <ul className="space-y-2">
                   <li>
-                    <NavText variant="depth-medium" className="text-primary-60">
+                    <NavText variant="depth-md" className="text-primary-60">
                       현재 페이지
                     </NavText>
                   </li>
                   <li>
-                    <NavText variant="depth-medium">다른 페이지</NavText>
+                    <NavText variant="depth-md">다른 페이지</NavText>
                   </li>
                 </ul>
               </nav>
@@ -251,7 +251,7 @@ export default function NavTextPage() {
             <div className="mt-4">
               <CodeBlock
                 code={`<NavText
-  variant="depth-medium"
+  variant="depth-md"
   className="text-primary-60"
 >
   현재 페이지
@@ -288,7 +288,7 @@ export default function NavTextPage() {
               ⚠ 주의사항
             </h3>
             <ul className="list-disc list-inside space-y-2 text-amber-800 dark:text-amber-200">
-              <li>title 변형은 메뉴 제목/그룹명에 사용</li>
+              <li>tit 변형은 메뉴 제목/그룹명에 사용</li>
               <li>depth 변형은 실제 링크 항목에 사용</li>
               <li>계층 구조가 명확히 드러나도록 구성</li>
               <li>활성 상태는 색상이나 굵기로 명확히 표시</li>
@@ -330,41 +330,34 @@ export default function NavTextPage() {
                   <code>variant</code>
                 </td>
                 <td className="py-3 px-4">
-                  <code>&quot;title&quot; | &quot;depth&quot;</code>
+                  <code>"tit-lg" | "tit-sm" | "depth-md" | "depth-sm"</code>
                 </td>
                 <td className="py-3 px-4">
-                  <code>&quot;title&quot;</code>
+                  <code>"depth-md"</code>
                 </td>
-                <td className="py-3 px-4">
-                  네비게이션 스타일 변형 (title: 메뉴 제목, depth: 메뉴 항목)
-                </td>
+                <td className="py-3 px-4">네비게이션 텍스트 스타일</td>
               </tr>
               <tr className="border-b border-gray-200 dark:border-gray-800">
                 <td className="py-3 px-4">
-                  <code>size</code>
+                  <code>weight</code>
                 </td>
                 <td className="py-3 px-4">
-                  <code>&quot;lg&quot; | &quot;sm&quot; | &quot;md&quot;</code>
+                  <code>"regular" | "bold"</code>
                 </td>
                 <td className="py-3 px-4">
-                  <code>&quot;lg&quot;</code>
+                  <code>"regular"</code>
                 </td>
-                <td className="py-3 px-4">
-                  텍스트 크기 (title: large/small, depth: medium/small)
-                </td>
+                <td className="py-3 px-4">글자 굵기 (tit-* 에는 자동 적용)</td>
               </tr>
               <tr className="border-b border-gray-200 dark:border-gray-800">
                 <td className="py-3 px-4">
                   <code>as</code>
                 </td>
                 <td className="py-3 px-4">
-                  <code>
-                    &quot;span&quot; | &quot;div&quot; | &quot;a&quot; |
-                    &quot;button&quot;
-                  </code>
+                  <code>"span" | "div" | "a" | "button"</code>
                 </td>
                 <td className="py-3 px-4">
-                  <code>&quot;span&quot;</code>
+                  <code>"span"</code>
                 </td>
                 <td className="py-3 px-4">렌더링할 HTML 태그</td>
               </tr>
@@ -418,10 +411,10 @@ export default function NavTextPage() {
         </h2>
         <div className="rounded-lg border border-blue-200 dark:border-blue-900 bg-blue-50 dark:bg-blue-950/30 p-6">
           <ul className="space-y-2 text-blue-900 dark:text-blue-100">
-            <li>✓ title 변형은 Bold (700) 폰트 굵기</li>
+            <li>✓ tit 변형은 Bold (700) 폰트 굵기</li>
             <li>✓ depth 변형은 Regular (400) 폰트 굵기</li>
             <li>✓ 150% 줄 간격으로 가독성 확보</li>
-            <li>✓ 반응형 크기 (title 변형은 PC/모바일 최적화)</li>
+            <li>✓ 반응형 크기 (tit 변형은 PC/모바일 최적화)</li>
             <li>✓ Pretendard GOV 폰트 적용</li>
           </ul>
         </div>
