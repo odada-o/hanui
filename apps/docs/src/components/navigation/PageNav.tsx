@@ -51,7 +51,7 @@ export function PageNav() {
     <nav className="hidden xl:block w-64 flex-shrink-0">
       <div className="sticky top-24 pl-8">
         <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-4">
-          On This Page
+          이 페이지 구성
         </h4>
         <ul className="space-y-1.5 text-sm">
           {headings.map((heading) => {

@@ -35,7 +35,7 @@ export default function StackPage() {
 
       {/* Overview */}
       <PageSection>
-        <Stack spacing="title-body-medium">
+        <Stack spacing="heading-content">
           <Heading level="h2">개요</Heading>
           <Body className="text-gray-700 dark:text-gray-300 leading-relaxed">
             Stack 계열 컴포넌트는 요소들을 수직 또는 수평으로 정렬하고{' '}
@@ -62,20 +62,135 @@ export default function StackPage() {
         <Installation componentName="stack" />
       </PageSection>
 
+      {/* Spacing Guide */}
+      <PageSection>
+        <Stack spacing="heading-content">
+          <Heading level="h2">Spacing 선택 가이드</Heading>
+          <Body>
+            요소 간 <strong>관계</strong>에 따라 spacing을 선택하세요. HTML
+            태그가 아닌 맥락으로 생각하면 쉽습니다.
+          </Body>
+        </Stack>
+
+        <Stack spacing="content-loose" className="mt-2 md:mt-4">
+          <Stack spacing="heading-tight">
+            <Heading level="h3">Section Level - 큰 블록 구분</Heading>
+            <Body>주요 섹션을 구분할 때 사용합니다.</Body>
+            <ComponentPreview>
+              <Stack spacing="section" className="w-full">
+                <div className="bg-blue-100 dark:bg-blue-900/30 p-6 rounded">
+                  <h2 className="font-bold text-lg mb-2">첫 번째 섹션</h2>
+                  <p>주요 내용...</p>
+                </div>
+                <div className="bg-blue-100 dark:bg-blue-900/30 p-6 rounded">
+                  <h2 className="font-bold text-lg mb-2">두 번째 섹션</h2>
+                  <p>주요 내용...</p>
+                </div>
+              </Stack>
+            </ComponentPreview>
+            <CodeBlock
+              code={`<Stack spacing="section">  {/* 40px/80px */}
+  <Section1 />
+  <Section2 />
+</Stack>`}
+              language="tsx"
+              showLineNumbers={false}
+            />
+          </Stack>
+
+          <Stack spacing="heading-tight">
+            <Heading level="h3">Heading-Content - 제목과 설명</Heading>
+            <Body>제목과 바로 아래 설명/내용이 긴밀할 때 사용합니다.</Body>
+            <ComponentPreview>
+              <Stack spacing="heading-content">
+                <h3 className="font-bold text-lg">제품 소개</h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  이 제품은 KRDS 기반으로 설계된 디자인 시스템입니다.
+                </p>
+              </Stack>
+            </ComponentPreview>
+            <CodeBlock
+              code={`<Stack spacing="heading-content">  {/* 12px/20px */}
+  <Heading>제목</Heading>
+  <Body>설명...</Body>
+</Stack>`}
+              language="tsx"
+              showLineNumbers={false}
+            />
+          </Stack>
+
+          <Stack spacing="heading-tight">
+            <Heading level="h3">Content - 같은 레벨 요소</Heading>
+            <Body>
+              문단, 카드, 리스트 아이템 등 동등한 요소들 사이에 사용합니다.
+            </Body>
+            <ComponentPreview>
+              <Stack spacing="content">
+                <div className="bg-green-100 dark:bg-green-900/30 p-4 rounded">
+                  카드 1
+                </div>
+                <div className="bg-green-100 dark:bg-green-900/30 p-4 rounded">
+                  카드 2
+                </div>
+                <div className="bg-green-100 dark:bg-green-900/30 p-4 rounded">
+                  카드 3
+                </div>
+              </Stack>
+            </ComponentPreview>
+            <CodeBlock
+              code={`<Stack spacing="content">  {/* 16px/24px */}
+  <Card>...</Card>
+  <Card>...</Card>
+  <Card>...</Card>
+</Stack>`}
+              language="tsx"
+              showLineNumbers={false}
+            />
+          </Stack>
+
+          <Stack spacing="heading-tight">
+            <Heading level="h3">Inline - 작은 요소</Heading>
+            <Body>태그, 칩, 배지 같은 작은 요소들을 나열할 때 사용합니다.</Body>
+            <ComponentPreview>
+              <HStack spacing="inline" className="flex-wrap">
+                <span className="bg-purple-100 dark:bg-purple-900/30 px-3 py-1 rounded-full text-sm">
+                  React
+                </span>
+                <span className="bg-purple-100 dark:bg-purple-900/30 px-3 py-1 rounded-full text-sm">
+                  TypeScript
+                </span>
+                <span className="bg-purple-100 dark:bg-purple-900/30 px-3 py-1 rounded-full text-sm">
+                  Tailwind
+                </span>
+              </HStack>
+            </ComponentPreview>
+            <CodeBlock
+              code={`<HStack spacing="inline">  {/* 8px/12px */}
+  <Tag>React</Tag>
+  <Tag>TypeScript</Tag>
+  <Tag>Tailwind</Tag>
+</HStack>`}
+              language="tsx"
+              showLineNumbers={false}
+            />
+          </Stack>
+        </Stack>
+      </PageSection>
+
       {/* Usage */}
       <PageSection>
-        <Stack spacing="title-body-medium">
+        <Stack spacing="heading-content">
           <Heading level="h2">Usage</Heading>
           <Body>Stack, VStack, HStack 세 가지 컴포넌트를 제공합니다:</Body>
         </Stack>
 
-        <Stack spacing="h3-h3" className="mt-2 md:mt-4">
-          <Stack spacing="h3-content">
+        <Stack spacing="content-loose" className="mt-2 md:mt-4">
+          <Stack spacing="heading-tight">
             <Heading level="h3">Stack - 기본 수직 레이아웃</Heading>
             <CodeBlock
               code={`import { Stack } from '@hanui/react'
 
-<Stack spacing="md">
+<Stack spacing="content">
   <div>첫 번째</div>
   <div>두 번째</div>
 </Stack>`}
@@ -84,12 +199,12 @@ export default function StackPage() {
             />
           </Stack>
 
-          <Stack spacing="h3-content">
+          <Stack spacing="heading-tight">
             <Heading level="h3">VStack - 명시적 수직 레이아웃</Heading>
             <CodeBlock
               code={`import { VStack } from '@hanui/react'
 
-<VStack spacing="md">
+<VStack spacing="content">
   <div>위</div>
   <div>아래</div>
 </VStack>`}
@@ -98,12 +213,12 @@ export default function StackPage() {
             />
           </Stack>
 
-          <Stack spacing="h3-content">
+          <Stack spacing="heading-tight">
             <Heading level="h3">HStack - 수평 레이아웃</Heading>
             <CodeBlock
               code={`import { HStack } from '@hanui/react'
 
-<HStack spacing="md">
+<HStack spacing="inline">
   <div>왼쪽</div>
   <div>오른쪽</div>
 </HStack>`}
@@ -118,9 +233,9 @@ export default function StackPage() {
       <PageSection>
         <Heading level="h2">Examples</Heading>
 
-        <Stack spacing="h3-h3" className="mt-2 md:mt-4">
+        <Stack spacing="content-loose" className="mt-2 md:mt-4">
           {/* VStack */}
-          <Stack spacing="h3-content">
+          <Stack spacing="heading-tight">
             <Heading level="h3">VStack - 수직 스택</Heading>
             <div>
               <ComponentPreview>
@@ -151,7 +266,7 @@ export default function StackPage() {
           </Stack>
 
           {/* HStack */}
-          <Stack spacing="h3-content">
+          <Stack spacing="heading-tight">
             <Heading level="h3">HStack - 수평 스택</Heading>
             <div>
               <ComponentPreview>
@@ -182,11 +297,11 @@ export default function StackPage() {
           </Stack>
 
           {/* Heading Spacing */}
-          <Stack spacing="h3-content">
-            <Heading level="h3">Heading Spacing (h1-h2)</Heading>
+          <Stack spacing="heading-tight">
+            <Heading level="h3">Heading Spacing (heading-loose)</Heading>
             <div>
               <ComponentPreview>
-                <Stack spacing="h1-h2">
+                <Stack spacing="heading-loose">
                   <h1 className="text-3xl font-bold">메인 제목</h1>
                   <h2 className="text-2xl font-semibold text-gray-600 dark:text-gray-400">
                     부제목
@@ -195,7 +310,7 @@ export default function StackPage() {
               </ComponentPreview>
               <div className="mt-4">
                 <CodeBlock
-                  code={`<Stack spacing="h1-h2">
+                  code={`<Stack spacing="heading-loose">  {/* 20px/24px */}
   <h1>메인 제목</h1>
   <h2>부제목</h2>
 </Stack>`}
@@ -207,7 +322,7 @@ export default function StackPage() {
           </Stack>
 
           {/* Form */}
-          <Stack spacing="h3-content">
+          <Stack spacing="heading-tight">
             <Heading level="h3">Form</Heading>
             <div>
               <ComponentPreview>
@@ -250,7 +365,7 @@ export default function StackPage() {
           </Stack>
 
           {/* Alignment */}
-          <Stack spacing="h3-content">
+          <Stack spacing="heading-tight">
             <Heading level="h3">Alignment</Heading>
             <div>
               <ComponentPreview>
@@ -315,7 +430,7 @@ export default function StackPage() {
 
       {/* API Reference */}
       <PageSection>
-        <Stack spacing="title-body-medium">
+        <Stack spacing="heading-content">
           <Heading level="h2">API Reference</Heading>
 
           <Body>
@@ -422,10 +537,10 @@ export default function StackPage() {
         </div>
 
         <div className="mt-8 md:mt-16">
-          <Stack spacing="title-body-medium">
+          <Stack spacing="heading-content">
             <Heading level="h3">Spacing Options</Heading>
             <Body className="text-gray-700 dark:text-gray-300">
-              KRDS 기준에 따른 의미론적 간격 프리셋
+              맥락 기반 KRDS 간격 시스템 (Context-based Spacing)
             </Body>
           </Stack>
           <div className="overflow-x-auto">
