@@ -41,7 +41,7 @@ const navTextVariants = cva(
  * NavText Component Props
  */
 export interface NavTextProps
-  extends React.HTMLAttributes<HTMLElement>,
+  extends Omit<React.HTMLAttributes<HTMLElement>, 'as'>,
     VariantProps<typeof navTextVariants> {
   /**
    * 네비게이션 텍스트 스타일
@@ -65,6 +65,21 @@ export interface NavTextProps
    * 텍스트 내용
    */
   children: React.ReactNode;
+
+  /**
+   * href (when as="a")
+   */
+  href?: string;
+
+  /**
+   * target (when as="a")
+   */
+  target?: string;
+
+  /**
+   * rel (when as="a")
+   */
+  rel?: string;
 }
 
 /**
