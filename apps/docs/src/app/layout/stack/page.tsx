@@ -62,6 +62,105 @@ export default function StackPage() {
         <Installation componentName="stack" />
       </PageSection>
 
+      {/* Why Context-Based Spacing */}
+      <PageSection>
+        <Stack spacing="heading-content">
+          <Heading level="h2">왜 맥락 기반 간격 시스템인가?</Heading>
+          <Body>
+            KRDS Gap-layout 가이드는 매우 세밀한 간격 체계를 제공합니다 (h1-h2,
+            h2-h2, h2-h3, h3-h3, h3-h4, h4-h4, h4-h5, h5-h5, title-body-small,
+            title-body-medium, title-body-large 등). 하지만 이 모든 간격을 개별
+            컴포넌트로 제공하면 <strong>오히려 사용이 어려워집니다</strong>.
+          </Body>
+        </Stack>
+
+        <Stack spacing="content-loose" className="mt-2 md:mt-4">
+          <Stack spacing="heading-tight">
+            <Heading level="h3">문제점: HTML 구조에 종속</Heading>
+            <Body>
+              기존 KRDS 간격 이름(h2-h3, h3-h4 등)은 특정 HTML 태그에
+              종속되어있어:
+            </Body>
+            <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 ml-4">
+              <li>HTML 구조가 바뀌면 spacing도 변경해야 함</li>
+              <li>
+                같은 관계(제목→내용)여도 태그에 따라 다른 spacing을 찾아야 함
+              </li>
+              <li>개발자가 12가지 이상의 간격 이름을 외워야 함</li>
+              <li>잘못된 spacing을 선택할 가능성이 높음</li>
+            </ul>
+          </Stack>
+
+          <Stack spacing="heading-tight">
+            <Heading level="h3">해결책: 관계 중심 패턴 발견</Heading>
+            <Body>
+              KRDS의 모든 간격을 분석한 결과, 실제로는{' '}
+              <strong>4가지 관계 패턴</strong>으로 단순화할 수 있습니다:
+            </Body>
+            <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg">
+              <Stack spacing="content-tight">
+                <div>
+                  <strong className="text-blue-700 dark:text-blue-300">
+                    1. Section Level
+                  </strong>{' '}
+                  - 큰 블록 간 구분 (40px/80px, 32px/64px)
+                </div>
+                <div>
+                  <strong className="text-blue-700 dark:text-blue-300">
+                    2. Heading-Content
+                  </strong>{' '}
+                  - 제목과 내용의 긴밀한 관계 (8px/16px ~ 20px/24px)
+                </div>
+                <div>
+                  <strong className="text-blue-700 dark:text-blue-300">
+                    3. Content Level
+                  </strong>{' '}
+                  - 동등한 콘텐츠 요소 간격 (12px/16px ~ 24px/40px)
+                </div>
+                <div>
+                  <strong className="text-blue-700 dark:text-blue-300">
+                    4. Inline/Compact
+                  </strong>{' '}
+                  - 작은 요소 나열 (4px/8px, 8px/12px)
+                </div>
+              </Stack>
+            </div>
+          </Stack>
+
+          <Stack spacing="heading-tight">
+            <Heading level="h3">실무적 이점</Heading>
+            <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 ml-4">
+              <li>
+                <strong>배우기 쉬움:</strong> 7개 핵심 이름만 기억 (vs 12개
+                이상)
+              </li>
+              <li>
+                <strong>HTML 독립적:</strong> 구조 변경해도 spacing 유지
+              </li>
+              <li>
+                <strong>의미 명확:</strong> 관계로 생각하니 실수가 적음
+              </li>
+              <li>
+                <strong>KRDS 준수:</strong> 실제 간격 값은 모두 KRDS 기준 유지
+              </li>
+              <li>
+                <strong>GS 인증 대비:</strong> KRDS의 의도(관계 기반 간격)를
+                정확히 반영하면서도 실용적
+              </li>
+            </ul>
+          </Stack>
+
+          <Stack spacing="heading-tight">
+            <Heading level="h3">하위 호환성</Heading>
+            <Body>
+              기존 KRDS 이름(h1-h2, h2-h3, title-body-medium 등)도{' '}
+              <strong>모두 지원</strong>합니다. 레거시 코드는 그대로 작동하며,
+              새 코드에서는 맥락 기반 이름 사용을 권장합니다.
+            </Body>
+          </Stack>
+        </Stack>
+      </PageSection>
+
       {/* Spacing Guide */}
       <PageSection>
         <Stack spacing="heading-content">
